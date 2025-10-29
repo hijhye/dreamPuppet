@@ -1,0 +1,273 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/*section1*/
+.creative1 {
+  height: 100vh;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+  gap: 50px;
+  width: 100%;
+}
+.left .text h4 {
+  color: #999;
+  font-weight: normal;
+}
+.left .text h3 {
+  font-size: 36px;
+}
+.left ul {
+  /* border: 1px solid red; */
+  width: 200px;
+  height: 200px;
+  margin: 150px 0px 0px 50px;
+}
+.left ul li {
+  border: 1px solid #999;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.left ul li.on {
+  background-color: #ff8f1c;
+  color: #fff;
+}
+.right {
+  /* border: 1px solid red; */
+  position: relative;
+}
+.right ul {
+  opacity: 0;
+}
+.right .play {
+  display: flex;
+  gap: 50px;
+  opacity: 1;
+}
+.play li {
+  width: 500px;
+  height: 600px;
+}
+.play img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.play h5 {
+  font-size: 24px;
+  margin: 30px 0px 10px;
+}
+.play p {
+  font-size: 14px;
+}
+.doll {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  top: 0px;
+}
+.doll li {
+  width: 500px;
+  height: 600px;
+}
+.doll img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.doll h5 {
+  font-size: 24px;
+  margin: 30px 0px 10px;
+}
+.doll p {
+  font-size: 14px;
+}
+.found {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  top: 0px;
+}
+.found li {
+  width: 500px;
+  height: 600px;
+}
+.found img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.found h5 {
+  font-size: 24px;
+  margin: 30px 0px 10px;
+}
+.found p {
+  font-size: 14px;
+}
+/*section2*/
+.creative2 {
+  background-image: linear-gradient(#fff, #fff5bc);
+  width: 100%;
+}
+.sub1 {
+  width: 1400px;
+  margin: 0px auto;
+  height: 80vh;
+}
+.creative2 .text {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.creative2 h3 {
+  font-size: 36px;
+}
+.creative2 h4 {
+  color: #999;
+  font-weight: normal;
+}
+.creative2 ul {
+  display: flex;
+  /* border: 1px solid red; */
+
+  gap: 50px;
+}
+.creative2 li {
+  width: 300px;
+  height: 300px;
+  width: calc(100% / 3);
+}
+.creative2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.creative2 h5 {
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0px 10px;
+}
+.creative2 p {
+  font-size: 14px;
+}
+/*creative3*/
+.creative3 {
+  background-color: #fff5bc;
+  width: 100%;
+  height: 150vh;
+}
+.creative3 .sub2 {
+  margin: 0px auto;
+  width: 1400px;
+}
+.creative3 .text {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.creative3 h3 {
+  font-size: 36px;
+}
+.creative3 h4 {
+  font-weight: normal;
+  color: #999;
+}
+.creative3 ul {
+  width: 100%;
+}
+.creative3 li {
+  margin-bottom: 30px;
+  position: relative;
+}
+.creative3Img {
+  width: 1400px;
+  height: 100px;
+
+  margin: 0px auto;
+  filter: grayscale(100%);
+}
+.big {
+  width: 1400px;
+  height: 700px;
+  filter: grayscale(0%);
+}
+.creative3Img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.creative3 p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  width: 700px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+.creative3 p.show {
+  opacity: 1;
+}
+/*creative4*/
+.creative4 {
+  width: 1000px;
+  margin: 100px auto;
+}
+.creative4 .text {
+  margin: 50px 0px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.creative4 h3 {
+  font-size: 36px;
+}
+.creative4 h4 {
+  font-weight: normal;
+  color: #999;
+}
+.creative4 ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.creative4 li {
+  width: 600px;
+  height: 400px;
+}
+.creative4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.creative4 p {
+  font-size: 15px;
+}
