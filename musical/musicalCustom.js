@@ -206,6 +206,30 @@ window.addEventListener("scroll", () => {
 });
 
 /*con02*/
+
+let con2Category = document.querySelectorAll(".con02 .category li");
+let con02List = document.querySelectorAll(".con02 .listWrapAll > li");
+let con03List = document.querySelectorAll(".con03 .cardListWrapAll > li");
+console.log(con2Category, con02List, con03List);
+con2Category.forEach((category, categoryIndex) => {
+  category.addEventListener("click", () => {
+    con2Category.forEach((category) => {
+      category.classList.remove("active");
+    });
+    category.classList.add("active");
+    // console.log(categoryIndex);
+    con02List.forEach((list) => {
+      list.classList.remove("active");
+    });
+    con02List[categoryIndex].classList.add("active");
+
+    con03List.forEach((list) => {
+      list.classList.remove("active");
+    });
+    con03List[categoryIndex].classList.add("active");
+  });
+});
+
 $(function () {
   $(".con02 .list").simplyScroll({
     speed: 1, //숫자가 클 수록 움직임이 빨라짐
@@ -240,10 +264,13 @@ $(".con02 .list li").on("click", function (e) {
   $(".con03 .cardList > li").eq(i).addClass("on");
   let targetPosition = target.offset().top;
   $("html, body").animate(
-    {
-      scrollTop: targetPosition,
-    },
-    1000 * (i + 1)
+    { scrollTop: targetPosition },
+    1000 * (i + 1),
+    function () {
+      window.addEventListener("scroll", () => {
+        $(".con03 .cardList > li").removeClass("on");
+      });
+    }
   );
 });
 
