@@ -207,7 +207,9 @@ window.addEventListener("scroll", () => {
 
 /*con02*/
 $(function () {
-  $(".con02 .list").simplyScroll();
+  $(".con02 .list").simplyScroll({
+    speed: 1, //숫자가 클 수록 움직임이 빨라짐
+  });
 });
 
 /*con03 con02에서 클릭하면 클릭한거 바로 올라오기 or 스크롤하면 스티키되는거처럼 올라오기*/
@@ -224,9 +226,18 @@ $(function () {
 //   });
 // });
 /* con02 클릭 시 con03으로 스크롤 이동 */
+$(".con02 .list li").on("mouseenter", function () {
+  $(this).addClass("on");
+});
+$(".con02 .list li").on("mouseleave", function () {
+  $(this).removeClass("on");
+});
+
 $(".con02 .list li").on("click", function (e) {
   let i = $(this).index();
   let target = $(".con03 .cardList > li").eq(i);
+  $(".con03 .cardList > li").removeClass("on");
+  $(".con03 .cardList > li").eq(i).addClass("on");
   let targetPosition = target.offset().top;
   $("html, body").animate(
     {
@@ -237,15 +248,6 @@ $(".con02 .list li").on("click", function (e) {
 });
 
 /* Footer Accordion */
-$(".accordion-toggle").on("click", function () {
-  $(this).next("ul").slideToggle();
-  const indicator = $(this).find(".indicator");
-  if (indicator.text() === "+") {
-    indicator.text("-");
-  } else {
-    indicator.text("+");
-  }
-});
 
 let footer = document.querySelector("footer");
 
@@ -265,4 +267,14 @@ footer.addEventListener("mouseover", () => {
 });
 footer.addEventListener("mouseleave", () => {
   footer.style.transform = "translateY(90%)";
+});
+
+$(".accordion-toggle").on("click", function () {
+  $(this).next("ul").slideToggle();
+  const indicator = $(this).find(".indicator");
+  if (indicator.text() === "+") {
+    indicator.text("-");
+  } else {
+    indicator.text("+");
+  }
 });
