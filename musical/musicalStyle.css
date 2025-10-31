@@ -519,7 +519,13 @@ footer .menu h4 {
   cursor: pointer;
   display: flex;
 }
-
+footer .menu li:hover {
+  color: #ffb060;
+}
+footer .bottom {
+  width: 90%;
+  /* border: 1px solid red; */
+}
 footer .link {
   display: flex;
   gap: 0.625rem;
@@ -535,6 +541,12 @@ footer .link li {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s;
+}
+
+footer .link li:hover {
+  background-color: #000;
+  color: #fff;
 }
 footer .info {
   font-size: 0.6rem;
@@ -584,14 +596,143 @@ footer .flower03 {
 }
 footer .flower04 {
   width: 50px;
-  left: 20%;
-  bottom: 10%;
+  left: 30%;
+  bottom: 15%;
   animation-delay: -0.3s;
 }
 footer .flower05 {
   width: 70px;
   right: 30%;
   top: 20%;
+}
+
+/* 플로팅 버튼 */
+#floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 50;
+}
+
+/*  */
+#floating .top {
+  padding-bottom: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#floating .topInner {
+  /* width: 80px; */
+  background-color: white;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  color: #ff8f1c;
+  border-radius: 5px;
+  /* display: none; */
+  /* transform: translateY(80px); */
+  cursor: pointer;
+}
+#floating .top i {
+  transition: 0.3s;
+}
+#floating .top:hover i {
+  transform: translateY(-5px);
+}
+
+/*  */
+#floating .floatFix {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: aqua;
+  background: url(../assets/images/main-logo.png) center no-repeat;
+  background-size: cover; /*??*/
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+}
+#floating .floatFix p {
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+/*  */
+#floating .inquery {
+  width: 500px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  left: -400px;
+  top: 0;
+  /* left: -100%;*/
+  /* transform: translateX(-80%); */
+  text-align: left;
+  opacity: 0;
+  /* z-index: 50; */
+}
+/* .inquery.up {
+  top: -450px;
+  display: block;
+} */
+#floating .inquery i {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#floating .inquery h4 {
+  font-size: 23px;
+}
+#floating .inquery p {
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+#floating .inquery ul {
+}
+#floating .inquery li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+#floating .inquery li input {
+  width: 250px;
+  height: 30px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  border: 0.5px solid black;
+}
+#floating .inquery li:nth-child(3) {
+  align-items: flex-start; /*흠..*/
+}
+#floating .inquery li:nth-child(3) input {
+  height: 100px;
+  border-radius: 20px;
+}
+/* input::placeholder {
+        align-content: start;
+      } */
+#floating .inquery button {
+  display: block;
+  margin-left: auto;
+  background-color: #ff8f1c;
+  border: none;
+  padding: 10px;
+  border-radius: 10px; /*통일?*/
+  cursor: pointer;
+  color: white;
 }
 
 @media (max-width: 768px) {
