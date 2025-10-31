@@ -121,7 +121,7 @@ ul {
   animation: orbit 3s linear infinite;
 }
 .con01 .move4 {
-  transform-origin: 0% 260px; /* 개체의 회전 중심점 설정 (부모 반지름만큼) */
+  transform-origin: 0% 260px;
   top: -8px;
   left: 50%;
   transform: translateX(-50%);
@@ -179,7 +179,7 @@ ul {
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%); /*??*/
+  transform: translate(-50%, -50%);
 }
 .con01 .values > div:nth-child(2) {
   position: absolute;
@@ -199,7 +199,7 @@ ul {
   position: absolute;
   top: calc(50% - 12px); /*수동계산.. 다른방법?*/
   left: 50%;
-  transform: translate(-50%, -50%); /*??*/
+  transform: translate(-50%, -50%);
   align-content: center;
 }
 .con01 ul h3 {
@@ -221,12 +221,6 @@ ul {
 .con01 li {
   display: none;
   opacity: 0;
-  /* transform: rotateX(180deg); */
-  /* perspective: 800px; */
-}
-.con01 li:nth-child(1) {
-  /* display: block;
-  opacity: 1; */
 }
 .con01 li.up {
   display: block;
@@ -244,15 +238,6 @@ ul {
 }
 
 /* con02 */
-/* .con02 h2 {
-  font-size: 36px;
-  margin: 30px 0px;
-}
-.con02 h2 span {
-  font-size: 24px;
-  font-weight: normal;
-  margin-left: 7px;
-} */
 section h2 {
   font-size: 36px;
   margin: 30px 0px;
@@ -262,7 +247,6 @@ section h2 span {
   font-weight: normal;
   margin-left: 7px;
 }
-
 .con02 > div {
   width: 1100px;
   height: 700px;
@@ -275,35 +259,27 @@ section h2 span {
   width: 1100px;
   height: 700px;
   display: flex;
-  /* position:relative 
--> 형제한테는 안먹음?
-*/
 }
 .con02 .bg li {
   width: 100%;
   height: 100%;
   border-radius: 30px;
   display: none;
-  /* opacity: 0; */
-  /* transition: 0.3s; 
-  -> 흠... 어케 못하나
-  */
 }
 .con02 .bg li.look {
   display: block;
-  /* opacity: 1; */
 }
 .con02 .bg li:nth-child(1) {
-  background: url(../assets/images/img_sample01.jpg) no-repeat center / cover;
+  background: url(img/pic1.jpg) no-repeat center / cover;
 }
 .con02 .bg li:nth-child(2) {
-  background: url(../assets/images/img_sample02.jpg) no-repeat center / cover;
+  background: url(img/pic2.jpg) no-repeat center / cover;
 }
 .con02 .bg li:nth-child(3) {
-  background: url(../assets/images/img_sample03.jpg) no-repeat center / cover;
+  background: url(img/pic3.jpg) no-repeat center / cover;
 }
 .con02 .bg li:nth-child(4) {
-  background: url(../assets/images/img_sample01.jpg) no-repeat center / cover;
+  background: url(img/pic4.jpg) no-repeat center / cover;
 }
 
 /*.con02_title*/
@@ -326,29 +302,14 @@ section h2 span {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0px 0px 30px 30px;
   padding: 20px;
-  /* transition: 0.3s; */
   overflow: hidden;
 }
 .con02 .title li h3 {
   font-size: 24px;
-  /* transform: translateX(150%);
-  transition: 0.5s;
-  transition-duration: 1s; */
 }
-/* .con02 .title li p {
-  transform: translateX(150%);
-  transition: 0.5s;
-  transition-duration: 0.3s;
-} */
 .con02 .title li.look {
   display: flex;
 }
-/* .con02 .title li.look h3 {
-  transform: translateX(0px);
-}
-.con02 .title li.look p {
-  transform: translateX(0px);
-} */
 
 /* .con02_menu */
 .con02 .menu {
@@ -370,7 +331,8 @@ section h2 span {
 .con02 .menu li.look {
   color: #ff8f1c;
 }
-/*  */
+
+/* .con02_img */
 .con02 img {
   width: 10%;
   position: absolute;
@@ -381,7 +343,7 @@ section h2 span {
 /*.con03*/
 .con03 .simply-scroll-clip {
   width: 100%;
-  overflow: hidden; /* 이렇게 넣으면 자동으로 ul 속 이미지들이 움직이게 됨 */
+  overflow: hidden;
 }
 .con03 ul {
   display: flex;
@@ -415,7 +377,7 @@ section h2 span {
 }
 .con03 li:hover img:nth-child(2) {
   opacity: 0;
-} /*이 방법 말고...?*/
+}
 
 /*.con04*/
 .con04 {
@@ -453,7 +415,7 @@ section h2 span {
   z-index: 50;
 }
 
-/*  */
+/* 플로팅_top버튼 */
 .top {
   padding-bottom: 15px;
   position: absolute;
@@ -462,15 +424,12 @@ section h2 span {
   transform: translate(-50%, -50%);
 }
 .topInner {
-  /* width: 80px; */
   background-color: white;
   display: inline-block;
   padding: 10px;
   text-align: center;
   color: #ff8f1c;
   border-radius: 5px;
-  /* display: none; */
-  /* transform: translateY(80px); */
   cursor: pointer;
 }
 .top i {
@@ -480,7 +439,7 @@ section h2 span {
   transform: translateY(-5px);
 }
 
-/*  */
+/* 플로팅_메인 컨택트 버튼 */
 .floatFix {
   width: 100px;
   aspect-ratio: 1/1;
@@ -501,7 +460,7 @@ section h2 span {
   color: white;
 }
 
-/*  */
+/* 플로팅_문의창 */
 .inquery {
   width: 500px;
   backdrop-filter: blur(5px);
@@ -513,16 +472,9 @@ section h2 span {
   position: absolute;
   left: -400px;
   top: 0;
-  /* left: -100%;*/
-  /* transform: translateX(-80%); */
   text-align: left;
   opacity: 0;
-  /* z-index: 50; */
 }
-/* .inquery.up {
-  top: -450px;
-  display: block;
-} */
 .inquery i {
   position: absolute;
   right: 30px;
@@ -536,8 +488,6 @@ section h2 span {
 .inquery p {
   padding: 10px 0px;
   border-bottom: 1px solid black;
-}
-.inquery ul {
 }
 .inquery li {
   display: flex;
