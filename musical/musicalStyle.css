@@ -182,8 +182,7 @@ body {
 
 /*con02*/
 .con02 {
-  width: 90%;
-  max-width: 75rem;
+  width: 1200px;
   height: 80vh;
   margin: 0 auto;
   display: flex;
@@ -192,12 +191,24 @@ body {
   overflow: hidden;
 }
 .con02 .title {
+  /* border: 1px solid red; */
+  width: 1200px;
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   gap: 0.625rem;
   margin-bottom: 1.25rem;
+  box-sizing: border-box;
 }
-
+.con02 .title .category {
+  /* border: 1px solid red; */
+}
+.con02 .title .category li {
+  cursor: pointer;
+}
+.con02 .title .category li.active {
+  font-weight: 800;
+}
 .simply-scroll-clip {
   width: 100vw;
   height: 30rem;
@@ -209,7 +220,12 @@ body {
   display: flex;
   gap: 0.625rem;
 }
-
+.con02 .listWrap {
+  display: none;
+}
+.con02 .listWrap.active {
+  display: block;
+}
 .con02 .list li {
   /* border: 1px solid red; */
   width: 300px;
@@ -262,22 +278,118 @@ body {
 .con02 li .imgWrap:hover p {
   opacity: 1;
 }
-.con02 li:nth-child(1) .imgWrap div {
+/*카테고리1 사진*/
+.con02 .listWrap01 li:nth-child(1) .imgWrap div {
   background: url(images/img_sample01.jpg);
 }
-.con02 li:nth-child(2) .imgWrap div {
+.con02 .listWrap01 li:nth-child(2) .imgWrap div {
   background: url(images/img_sample02.jpg);
 }
-.con02 li:nth-child(3) .imgWrap div {
+.con02 .listWrap01 li:nth-child(3) .imgWrap div {
   background: url(images/img_sample03.jpg);
 }
-.con02 li:nth-child(4) .imgWrap div {
+.con02 .listWrap01 li:nth-child(4) .imgWrap div {
   background: url(images/img_sample01.jpg);
 }
-.con02 li:nth-child(5) .imgWrap div {
+.con02 .listWrap01 li:nth-child(5) .imgWrap div {
   background: url(images/img_sample02.jpg);
 }
-.con02 li:nth-child(6) .imgWrap div {
+.con02 .listWrap01 li:nth-child(6) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+/*카테고리2 사진*/
+.con02 .listWrap02 li:nth-child(1) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap02 li:nth-child(2) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap02 li:nth-child(3) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+.con02 .listWrap02 li:nth-child(4) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap02 li:nth-child(5) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap02 li:nth-child(6) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+/*카테고리3 사진*/
+.con02 .listWrap03 li:nth-child(1) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap03 li:nth-child(2) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap03 li:nth-child(3) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+.con02 .listWrap03 li:nth-child(4) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap03 li:nth-child(5) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap03 li:nth-child(6) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+/*카테고리4 사진*/
+.con02 .listWrap04 li:nth-child(1) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap04 li:nth-child(2) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap04 li:nth-child(3) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+.con02 .listWrap04 li:nth-child(4) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap04 li:nth-child(5) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap04 li:nth-child(6) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+/*카테고리5 사진*/
+.con02 .listWrap05 li:nth-child(1) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap05 li:nth-child(2) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap05 li:nth-child(3) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+.con02 .listWrap05 li:nth-child(4) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap05 li:nth-child(5) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap05 li:nth-child(6) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+/*카테고리6 사진*/
+.con02 .listWrap06 li:nth-child(1) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap06 li:nth-child(2) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap06 li:nth-child(3) .imgWrap div {
+  background: url(images/img_sample03.jpg);
+}
+.con02 .listWrap06 li:nth-child(4) .imgWrap div {
+  background: url(images/img_sample01.jpg);
+}
+.con02 .listWrap06 li:nth-child(5) .imgWrap div {
+  background: url(images/img_sample02.jpg);
+}
+.con02 .listWrap06 li:nth-child(6) .imgWrap div {
   background: url(images/img_sample03.jpg);
 }
 
@@ -294,6 +406,12 @@ body {
   transition: 1s;
   padding-top: 5vh;
   position: relative;
+}
+.con03 .cardListWrap {
+  display: none;
+}
+.con03 .cardListWrap.active {
+  display: block;
 }
 .con03 .cardList {
   display: flex;
@@ -312,15 +430,18 @@ body {
   position: sticky;
   top: 1.875rem;
   transition: 1s;
+  scale: 0.9;
 }
 
 .con03 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   background-color: rgb(226, 226, 100);
+  scale: 1;
 }
 .con03 .card.on {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   background-color: rgb(226, 226, 100);
+  scale: 1;
 }
 .con03 .card .left,
 .con03 .card .imgWrap {
