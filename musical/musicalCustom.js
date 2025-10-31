@@ -210,7 +210,8 @@ window.addEventListener("scroll", () => {
 let con2Category = document.querySelectorAll(".con02 .category li");
 let con02List = document.querySelectorAll(".con02 .listWrapAll > li");
 let con03List = document.querySelectorAll(".con03 .cardListWrapAll > li");
-console.log(con2Category, con02List, con03List);
+// console.log(con2Category, con02List, con03List);
+
 con2Category.forEach((category, categoryIndex) => {
   category.addEventListener("click", () => {
     con2Category.forEach((category) => {
@@ -249,6 +250,7 @@ $(function () {
 //     con03_cardList[con02_index].classList.add("on");
 //   });
 // });
+
 /* con02 클릭 시 con03으로 스크롤 이동 */
 $(".con02 .list li").on("mouseenter", function () {
   $(this).addClass("on");
@@ -259,16 +261,21 @@ $(".con02 .list li").on("mouseleave", function () {
 
 $(".con02 .list li").on("click", function (e) {
   let i = $(this).index();
-  let target = $(".con03 .cardList > li").eq(i);
-  $(".con03 .cardList > li").removeClass("on");
-  $(".con03 .cardList > li").eq(i).addClass("on");
+  let target = $(".con03 .cardListWrapAll > li.active .cardList > li").eq(i);
+  console.log(target); //->무조건 카드리스트 firstchild의 eq i li 로 잡힘
+
+  $(".con03 .cardListWrapAll > li.active .cardList > li").removeClass("on");
+  $(".con03 .cardListWrapAll > li.active .cardList > li").eq(i).addClass("on");
   let targetPosition = target.offset().top;
+
   $("html, body").animate(
     { scrollTop: targetPosition },
     1000 * (i + 1),
     function () {
       window.addEventListener("scroll", () => {
-        $(".con03 .cardList > li").removeClass("on");
+        $(".con03 .cardListWrapAll > li.active .cardList > li").removeClass(
+          "on"
+        );
       });
     }
   );

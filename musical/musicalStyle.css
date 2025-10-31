@@ -464,6 +464,7 @@ body {
   object-fit: cover;
 }
 
+/*footer*/
 footer {
   width: 100%;
   height: 40vh;
@@ -490,6 +491,13 @@ footer .inner {
   justify-content: flex-end;
   gap: 3.125rem;
   /* border: 1px solid red; */
+  position: relative;
+}
+footer .logo {
+  width: 250px;
+}
+footer .logo img {
+  width: 100%;
 }
 footer:hover {
   transform: translateY(0%);
@@ -511,19 +519,7 @@ footer .menu h4 {
   cursor: pointer;
   display: flex;
 }
-.indicator {
-  margin-left: auto;
-  padding-left: 1rem;
-}
-footer .menu ul {
-  display: none;
-}
-footer .menu li {
-  margin-bottom: 0.3125rem;
-}
-footer .menu h4:hover {
-  color: #ffc848;
-}
+
 footer .link {
   display: flex;
   gap: 0.625rem;
@@ -543,6 +539,59 @@ footer .link li {
 footer .info {
   font-size: 0.6rem;
   padding: 0.625rem 0 1.25rem;
+}
+
+footer .flowerImgWrap {
+  position: absolute;
+  animation: spin 10s infinite linear;
+  scale: 0.8;
+  transition: 1s;
+}
+footer .flowerImgWrap:hover {
+  scale: 1;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+footer .flowerImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .flower01 {
+  width: 150px;
+  left: 50px;
+  top: 50%;
+  animation-delay: -1s;
+}
+footer .flower02 {
+  width: 100px;
+  right: 10%;
+  top: 45%;
+  animation-delay: -0.8s;
+}
+footer .flower03 {
+  width: 100px;
+  right: 40%;
+  bottom: 15%;
+  animation-delay: -1.2s;
+}
+footer .flower04 {
+  width: 50px;
+  left: 20%;
+  bottom: 10%;
+  animation-delay: -0.3s;
+}
+footer .flower05 {
+  width: 70px;
+  right: 30%;
+  top: 20%;
 }
 
 @media (max-width: 768px) {
