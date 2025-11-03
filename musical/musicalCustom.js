@@ -281,7 +281,7 @@ $(".con02 .list li").on("click", function (e) {
   );
 });
 
-/* Footer Accordion */
+/* Footer*/
 
 let footer = document.querySelector("footer");
 
@@ -301,16 +301,6 @@ footer.addEventListener("mouseover", () => {
 });
 footer.addEventListener("mouseleave", () => {
   footer.style.transform = "translateY(90%)";
-});
-
-$(".accordion-toggle").on("click", function () {
-  $(this).next("ul").slideToggle();
-  const indicator = $(this).find(".indicator");
-  if (indicator.text() === "+") {
-    indicator.text("-");
-  } else {
-    indicator.text("+");
-  }
 });
 
 // 플로팅
