@@ -132,11 +132,12 @@ body {
   display: block;
 }
 .con01 .imgList li {
-  border-radius: 50%;
+  border-radius: 40%;
   overflow: hidden;
   /* border: 1px solid red; */
   position: absolute;
   animation: float 7s ease-in-out infinite alternate;
+  transition: 1s;
 }
 .con01 .imgList li:nth-child(1) {
   width: 20vw;
@@ -157,6 +158,11 @@ body {
   top: 65%;
   left: 25%;
   animation-delay: -5s;
+}
+.con01 .imgList li:hover {
+  scale: 1.5;
+  border-radius: 30%;
+  z-index: 10;
 }
 .con01 .imgList img {
   width: 200%;
@@ -245,9 +251,10 @@ body {
   position: relative;
 }
 
-.con02 li .imgWrap div {
+.con02 li .imgWrap img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 0.625rem;
   position: absolute;
   top: 0;
@@ -272,125 +279,11 @@ body {
   transition: 1s;
 }
 
-.con02 li .imgWrap:hover div {
+.con02 li .imgWrap:hover img {
   filter: brightness(0.35);
 }
 .con02 li .imgWrap:hover p {
   opacity: 1;
-}
-/*카테고리1 사진*/
-.con02 .listWrap01 li:nth-child(1) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap01 li:nth-child(2) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap01 li:nth-child(3) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-.con02 .listWrap01 li:nth-child(4) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap01 li:nth-child(5) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap01 li:nth-child(6) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-/*카테고리2 사진*/
-.con02 .listWrap02 li:nth-child(1) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap02 li:nth-child(2) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap02 li:nth-child(3) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-.con02 .listWrap02 li:nth-child(4) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap02 li:nth-child(5) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap02 li:nth-child(6) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-/*카테고리3 사진*/
-.con02 .listWrap03 li:nth-child(1) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap03 li:nth-child(2) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap03 li:nth-child(3) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-.con02 .listWrap03 li:nth-child(4) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap03 li:nth-child(5) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap03 li:nth-child(6) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-/*카테고리4 사진*/
-.con02 .listWrap04 li:nth-child(1) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap04 li:nth-child(2) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap04 li:nth-child(3) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-.con02 .listWrap04 li:nth-child(4) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap04 li:nth-child(5) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap04 li:nth-child(6) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-/*카테고리5 사진*/
-.con02 .listWrap05 li:nth-child(1) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap05 li:nth-child(2) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap05 li:nth-child(3) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-.con02 .listWrap05 li:nth-child(4) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap05 li:nth-child(5) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap05 li:nth-child(6) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-/*카테고리6 사진*/
-.con02 .listWrap06 li:nth-child(1) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap06 li:nth-child(2) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap06 li:nth-child(3) .imgWrap div {
-  background: url(img/img_sample03.jpg);
-}
-.con02 .listWrap06 li:nth-child(4) .imgWrap div {
-  background: url(img/img_sample01.jpg);
-}
-.con02 .listWrap06 li:nth-child(5) .imgWrap div {
-  background: url(img/img_sample02.jpg);
-}
-.con02 .listWrap06 li:nth-child(6) .imgWrap div {
-  background: url(img/img_sample03.jpg);
 }
 
 .con02 li h3 {
