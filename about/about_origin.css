@@ -1,0 +1,2306 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+ul {
+  list-style: none;
+}
+
+@media (min-width: 1220px) {
+  /**/
+  .con01 {
+    height: 100vh;
+    position: relative;
+    background-image: url(img/line02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px;
+    margin-top: 100px;
+  }
+  .one,
+  .two {
+    height: 500px;
+  }
+
+  /*.con01_큰 궤도*/
+  .con01 .center {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+  }
+  .circle-one {
+    width: 500px;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  .circle-two {
+    width: 450px;
+    border: 1px solid #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+  .circle-three {
+    width: 400px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+  }
+
+  /*.con01_큰 궤도_원 움직임*/
+  .con01 .big {
+    width: 20px;
+    background-color: #ff8f1c;
+    /* animation: orbit 7s linear infinite; */
+  }
+  .con01 .move1 {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 260px;
+    animation: orbit 5s linear infinite;
+  }
+  .con01 .move2 {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 235px 0px;
+    animation: orbit 6s linear infinite;
+  }
+  .con01 .move3 {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: -190px 0px;
+    animation: orbit 7s linear infinite;
+  }
+
+  /*.con01_작은 궤도*/
+  .circle-four {
+    width: 250px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+  }
+  .circle-five {
+    width: 200px;
+    border: 1px solid #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+  }
+  .circle-six {
+    width: 150px;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  /*.con01_작은 궤도_원 움직임*/
+  .con01 .small {
+    width: 16px;
+    background-color: #fff147;
+    animation: orbit 3s linear infinite;
+  }
+  .con01 .move4 {
+    transform-origin: 0% 260px; /* 개체의 회전 중심점 설정 (부모 반지름만큼) */
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 133px;
+  }
+  .con01 .move5 {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 108px 0px;
+  }
+  .con01 .move6 {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: -67px 0px;
+  }
+
+  /*.con01_원 움직임_애니메이션*/
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*.con01_중앙 이미지*/
+  .con01 img {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+  }
+
+  /*.con01_values */
+  .con01 .values p {
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 11;
+    animation: upDown infinite 0.7s alternate linear;
+  }
+  @keyframes upDown {
+    0% {
+      transform: translateY(4px);
+    }
+    100% {
+      transform: translateY(-4px);
+    }
+  }
+  .con01 .values > div {
+    position: absolute;
+    transition: 0.4s;
+  }
+  .con01 .values > div.sizeUp {
+    font-size: 21px;
+  }
+  .con01 .values > div:nth-child(1) {
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%); /*??*/
+  }
+  .con01 .values > div:nth-child(2) {
+    bottom: 30px;
+    left: -50px;
+  }
+  .con01 .values > div:nth-child(3) {
+    bottom: 30px;
+    right: -30px;
+  }
+
+  /*.con01_텍스트*/
+  .con01 ul {
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: calc(50% - 12px); /*수동계산.. 다른방법?*/
+    left: 50%;
+    transform: translate(-50%, -50%); /*??*/
+    align-content: center;
+  }
+  .con01 ul h3 {
+    font-size: 36px;
+  }
+  .con01 ul li div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .con01 .line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+  .con01 ul p {
+    margin: 8px 0px;
+    align-content: center;
+  }
+  .con01 li {
+    display: none;
+    opacity: 0;
+    /* transform: rotateX(180deg); */
+    /* perspective: 800px; */
+  }
+  .con01 li:nth-child(1) {
+    /* display: block;
+  opacity: 1; */
+  }
+  .con01 li.up {
+    display: block;
+    opacity: 1;
+  }
+  .con01 li h3 {
+    /* transform-origin: bottom; */
+    backface-visibility: hidden;
+  }
+  .con01 li .second {
+    font-size: 24px;
+    font-weight: bold;
+    /* transform-origin: bottom; */
+    backface-visibility: hidden;
+  }
+
+  /* con02 */
+  /* .con02 h2 {
+  font-size: 36px;
+  margin: 30px 0px;
+}
+.con02 h2 span {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 7px;
+} */
+  section h2 {
+    font-size: 36px;
+    margin: 30px 0px;
+  }
+  section h2 span {
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: 7px;
+  }
+
+  .con02 > div {
+    width: 1100px;
+    height: 700px;
+    position: relative;
+    margin: 0px auto;
+  }
+
+  /*.con02_배경*/
+  .con02 .bg {
+    width: 1100px;
+    height: 700px;
+    display: flex;
+    /* position:relative 
+-> 형제한테는 안먹음?
+*/
+  }
+  .con02 .bg li {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: none;
+    /* opacity: 0; */
+    /* transition: 0.3s; 
+  -> 흠... 어케 못하나
+  */
+  }
+  .con02 .bg li.look {
+    display: block;
+    /* opacity: 1; */
+  }
+  .con02 .bg li:nth-child(1) {
+    background: url(img/pic1.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(2) {
+    background: url(img/pic2.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(3) {
+    background: url(img/pic3.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(4) {
+    background: url(img/pic4.jpg) no-repeat center / cover;
+  }
+
+  /*.con02_title*/
+  .con02 .title {
+    width: calc(1100px / 3);
+    height: calc(700px / 4 * 3);
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    display: flex;
+  }
+  .con02 .title li {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0px 0px 30px 30px;
+    padding: 20px;
+    /* transition: 0.3s; */
+    overflow: hidden;
+  }
+  .con02 .title li h3 {
+    font-size: 24px;
+    /* transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 1s; */
+  }
+  /* .con02 .title li p {
+  transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 0.3s;
+} */
+  .con02 .title li.look {
+    display: flex;
+  }
+  /* .con02 .title li.look h3 {
+  transform: translateX(0px);
+}
+.con02 .title li.look p {
+  transform: translateX(0px);
+} */
+
+  /* .con02_menu */
+  .con02 .menu {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 25px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 10px 40px;
+  }
+  .con02 .menu li {
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .con02 .menu li.look {
+    color: #ff8f1c;
+  }
+  /*  */
+  .con02 img {
+    width: 10%;
+    position: absolute;
+    top: -100px;
+    right: 100px;
+  }
+
+  /*.con03*/
+  .con03 {
+    height: 700px;
+    background-image: url(img/line02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px;
+  }
+  .con03 .simply-scroll-clip {
+    width: 100%;
+    overflow: hidden; /* 이렇게 넣으면 자동으로 ul 속 이미지들이 움직이게 됨 */
+  }
+  .con03 ul {
+    display: flex;
+    text-align: center;
+  }
+  .con03 .images {
+    height: 250px;
+    position: relative;
+  }
+  .con03 .images img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+  .con03 li img:nth-child(1) {
+    opacity: 0;
+  }
+  .con03 li {
+    width: 400px;
+    flex-shrink: 0;
+  }
+  .con03 li h4 {
+    font-size: 18px;
+    margin: 15px 0px;
+  }
+  .con03 li:hover img:nth-child(1) {
+    z-index: 2;
+    opacity: 1;
+  }
+  .con03 li:hover img:nth-child(2) {
+    opacity: 0;
+  } /*이 방법 말고...?*/
+
+  /*.con04*/
+  .con04 {
+    width: 100%;
+    height: 900px;
+    align-content: center;
+    background-image: linear-gradient(180deg, #fff, #fff5bc);
+  }
+  .con04 h3 {
+    text-align: center;
+    font-size: 60px;
+    overflow: hidden;
+  }
+  .con04 h3.up {
+    animation: up 0.5s linear;
+  }
+  .con04 h3 span {
+    color: #ff8f1c;
+  }
+  @keyframes up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* 플로팅 버튼 */
+  #floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 50;
+  }
+
+  /*  */
+  .top {
+    padding-bottom: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .topInner {
+    /* width: 80px; */
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    color: #ff8f1c;
+    border-radius: 5px;
+    /* display: none; */
+    /* transform: translateY(80px); */
+    cursor: pointer;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  }
+  .top i {
+    transition: 0.3s;
+  }
+  .top:hover i {
+    transform: translateY(-5px);
+  }
+
+  /*  */
+  .floatFix {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: aqua;
+    background: url(img/p7.jpg) center no-repeat;
+    background-size: cover; /*??*/
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  }
+  .floatFix p {
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  /*  */
+  .inquery {
+    width: 500px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    left: -400px;
+    top: 0;
+    /* left: -100%;*/
+    /* transform: translateX(-80%); */
+    text-align: left;
+    opacity: 0;
+    /* z-index: 50; */
+  }
+  /* .inquery.up {
+  top: -450px;
+  display: block;
+} */
+  .inquery i {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .inquery h4 {
+    font-size: 23px;
+  }
+  .inquery p {
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+  }
+  .inquery ul {
+  }
+  .inquery li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .inquery li input {
+    width: 250px;
+    height: 30px;
+    padding: 5px 20px;
+    border-radius: 15px;
+    border: 0.5px solid black;
+  }
+  .inquery li:nth-child(3) {
+    align-items: flex-start; /*흠..*/
+  }
+  .inquery li:nth-child(3) input {
+    height: 100px;
+    border-radius: 20px;
+  }
+  /* input::placeholder {
+        align-content: start;
+      } */
+  .inquery button {
+    display: block;
+    margin-left: auto;
+    background-color: #ff8f1c;
+    border: none;
+    padding: 10px;
+    border-radius: 10px; /*통일?*/
+    cursor: pointer;
+    color: white;
+  }
+}
+@media (min-width: 720px) and (max-width: 1220px) {
+  /**/
+  .con01 {
+    height: 100vh;
+    position: relative;
+    background-image: url(img/line02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px;
+    margin-top: 100px;
+  }
+  .one,
+  .two {
+    height: 500px;
+  }
+
+  /*.con01_큰 궤도*/
+  .con01 .center {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+  }
+  .circle-one {
+    width: 500px;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  .circle-two {
+    width: 450px;
+    border: 1px solid #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+  .circle-three {
+    width: 400px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+  }
+
+  /*.con01_큰 궤도_원 움직임*/
+  .con01 .big {
+    width: 20px;
+    background-color: #ff8f1c;
+    /* animation: orbit 7s linear infinite; */
+  }
+  .con01 .move1 {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 260px;
+    animation: orbit 5s linear infinite;
+  }
+  .con01 .move2 {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 235px 0px;
+    animation: orbit 6s linear infinite;
+  }
+  .con01 .move3 {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: -190px 0px;
+    animation: orbit 7s linear infinite;
+  }
+
+  /*.con01_작은 궤도*/
+  .circle-four {
+    width: 250px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+  }
+  .circle-five {
+    width: 200px;
+    border: 1px solid #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+  }
+  .circle-six {
+    width: 150px;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  /*.con01_작은 궤도_원 움직임*/
+  .con01 .small {
+    width: 16px;
+    background-color: #fff147;
+    animation: orbit 3s linear infinite;
+  }
+  .con01 .move4 {
+    transform-origin: 0% 260px; /* 개체의 회전 중심점 설정 (부모 반지름만큼) */
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 133px;
+  }
+  .con01 .move5 {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 108px 0px;
+  }
+  .con01 .move6 {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: -67px 0px;
+  }
+
+  /*.con01_원 움직임_애니메이션*/
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*.con01_중앙 이미지*/
+  .con01 img {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+  }
+
+  /*.con01_values */
+  .con01 .values p {
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 11;
+    animation: upDown infinite 0.7s alternate linear;
+  }
+  @keyframes upDown {
+    0% {
+      transform: translateY(4px);
+    }
+    100% {
+      transform: translateY(-4px);
+    }
+  }
+  .con01 .values > div {
+    position: absolute;
+    transition: 0.4s;
+  }
+  .con01 .values > div.sizeUp {
+    font-size: 21px;
+  }
+  .con01 .values > div:nth-child(1) {
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%); /*??*/
+  }
+  .con01 .values > div:nth-child(2) {
+    bottom: 30px;
+    left: -50px;
+  }
+  .con01 .values > div:nth-child(3) {
+    bottom: 30px;
+    right: -30px;
+  }
+
+  /*.con01_텍스트*/
+  .con01 ul {
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: calc(50% - 12px); /*수동계산.. 다른방법?*/
+    left: 50%;
+    transform: translate(-50%, -50%); /*??*/
+    align-content: center;
+  }
+  .con01 ul h3 {
+    font-size: 36px;
+  }
+  .con01 ul li div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .con01 .line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+  .con01 ul p {
+    margin: 8px 0px;
+    align-content: center;
+  }
+  .con01 li {
+    display: none;
+    opacity: 0;
+    /* transform: rotateX(180deg); */
+    /* perspective: 800px; */
+  }
+  .con01 li:nth-child(1) {
+    /* display: block;
+  opacity: 1; */
+  }
+  .con01 li.up {
+    display: block;
+    opacity: 1;
+  }
+  .con01 li h3 {
+    /* transform-origin: bottom; */
+    backface-visibility: hidden;
+  }
+  .con01 li .second {
+    font-size: 24px;
+    font-weight: bold;
+    /* transform-origin: bottom; */
+    backface-visibility: hidden;
+  }
+
+  /* con02 */
+  /* .con02 h2 {
+  font-size: 36px;
+  margin: 30px 0px;
+}
+.con02 h2 span {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 7px;
+} */
+  section h2 {
+    font-size: 36px;
+    margin: 30px 0px;
+  }
+  section h2 span {
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: 7px;
+  }
+
+  .con02 > div {
+    width: 1100px;
+    height: 700px;
+    position: relative;
+    margin: 0px auto;
+  }
+
+  /*.con02_배경*/
+  .con02 .bg {
+    width: 1100px;
+    height: 700px;
+    display: flex;
+    /* position:relative 
+-> 형제한테는 안먹음?
+*/
+  }
+  .con02 .bg li {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: none;
+    /* opacity: 0; */
+    /* transition: 0.3s; 
+  -> 흠... 어케 못하나
+  */
+  }
+  .con02 .bg li.look {
+    display: block;
+    /* opacity: 1; */
+  }
+  .con02 .bg li:nth-child(1) {
+    background: url(img/pic1.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(2) {
+    background: url(img/pic2.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(3) {
+    background: url(img/pic3.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(4) {
+    background: url(img/pic4.jpg) no-repeat center / cover;
+  }
+
+  /*.con02_title*/
+  .con02 .title {
+    width: calc(1100px / 3);
+    height: calc(700px / 4 * 3);
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    display: flex;
+  }
+  .con02 .title li {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0px 0px 30px 30px;
+    padding: 20px;
+    /* transition: 0.3s; */
+    overflow: hidden;
+  }
+  .con02 .title li h3 {
+    font-size: 24px;
+    /* transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 1s; */
+  }
+  /* .con02 .title li p {
+  transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 0.3s;
+} */
+  .con02 .title li.look {
+    display: flex;
+  }
+  /* .con02 .title li.look h3 {
+  transform: translateX(0px);
+}
+.con02 .title li.look p {
+  transform: translateX(0px);
+} */
+
+  /* .con02_menu */
+  .con02 .menu {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 25px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 10px 40px;
+  }
+  .con02 .menu li {
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .con02 .menu li.look {
+    color: #ff8f1c;
+  }
+  /*  */
+  .con02 img {
+    width: 10%;
+    position: absolute;
+    top: -100px;
+    right: 100px;
+  }
+
+  /*.con03*/
+  .con03 {
+    height: 700px;
+    background-image: url(img/line02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px;
+  }
+  .con03 .simply-scroll-clip {
+    width: 100%;
+    overflow: hidden; /* 이렇게 넣으면 자동으로 ul 속 이미지들이 움직이게 됨 */
+  }
+  .con03 ul {
+    display: flex;
+    text-align: center;
+  }
+  .con03 .images {
+    height: 250px;
+    position: relative;
+  }
+  .con03 .images img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+  .con03 li img:nth-child(1) {
+    opacity: 0;
+  }
+  .con03 li {
+    width: 400px;
+    flex-shrink: 0;
+  }
+  .con03 li h4 {
+    font-size: 18px;
+    margin: 15px 0px;
+  }
+  .con03 li:hover img:nth-child(1) {
+    z-index: 2;
+    opacity: 1;
+  }
+  .con03 li:hover img:nth-child(2) {
+    opacity: 0;
+  } /*이 방법 말고...?*/
+
+  /*.con04*/
+  .con04 {
+    width: 100%;
+    height: 900px;
+    align-content: center;
+    background-image: linear-gradient(180deg, #fff, #fff5bc);
+  }
+  .con04 h3 {
+    text-align: center;
+    font-size: 60px;
+    overflow: hidden;
+  }
+  .con04 h3.up {
+    animation: up 0.5s linear;
+  }
+  .con04 h3 span {
+    color: #ff8f1c;
+  }
+  @keyframes up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* 플로팅 버튼 */
+  #floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 50;
+  }
+
+  /*  */
+  .top {
+    padding-bottom: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .topInner {
+    /* width: 80px; */
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    color: #ff8f1c;
+    border-radius: 5px;
+    /* display: none; */
+    /* transform: translateY(80px); */
+    cursor: pointer;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  }
+  .top i {
+    transition: 0.3s;
+  }
+  .top:hover i {
+    transform: translateY(-5px);
+  }
+
+  /*  */
+  .floatFix {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: aqua;
+    background: url(img/p7.jpg) center no-repeat;
+    background-size: cover; /*??*/
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  }
+  .floatFix p {
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  /*  */
+  .inquery {
+    width: 500px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    left: -400px;
+    top: 0;
+    /* left: -100%;*/
+    /* transform: translateX(-80%); */
+    text-align: left;
+    opacity: 0;
+    /* z-index: 50; */
+  }
+  /* .inquery.up {
+  top: -450px;
+  display: block;
+} */
+  .inquery i {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .inquery h4 {
+    font-size: 23px;
+  }
+  .inquery p {
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+  }
+  .inquery ul {
+  }
+  .inquery li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .inquery li input {
+    width: 250px;
+    height: 30px;
+    padding: 5px 20px;
+    border-radius: 15px;
+    border: 0.5px solid black;
+  }
+  .inquery li:nth-child(3) {
+    align-items: flex-start; /*흠..*/
+  }
+  .inquery li:nth-child(3) input {
+    height: 100px;
+    border-radius: 20px;
+  }
+  /* input::placeholder {
+        align-content: start;
+      } */
+  .inquery button {
+    display: block;
+    margin-left: auto;
+    background-color: #ff8f1c;
+    border: none;
+    padding: 10px;
+    border-radius: 10px; /*통일?*/
+    cursor: pointer;
+    color: white;
+  }
+}
+@media (max-width: 720px) {
+  /**/
+  .con01 {
+    height: 100vh;
+    position: relative;
+    background-image: url(img/line02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px;
+    margin-top: 100px;
+  }
+  .one,
+  .two {
+    height: 500px;
+  }
+
+  /*.con01_큰 궤도*/
+  .con01 .center {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+  }
+  .circle-one {
+    width: 500px;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  .circle-two {
+    width: 450px;
+    border: 1px solid #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+  .circle-three {
+    width: 400px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+  }
+
+  /*.con01_큰 궤도_원 움직임*/
+  .con01 .big {
+    width: 20px;
+    background-color: #ff8f1c;
+    /* animation: orbit 7s linear infinite; */
+  }
+  .con01 .move1 {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 260px;
+    animation: orbit 5s linear infinite;
+  }
+  .con01 .move2 {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 235px 0px;
+    animation: orbit 6s linear infinite;
+  }
+  .con01 .move3 {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: -190px 0px;
+    animation: orbit 7s linear infinite;
+  }
+
+  /*.con01_작은 궤도*/
+  .circle-four {
+    width: 250px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+  }
+  .circle-five {
+    width: 200px;
+    border: 1px solid #999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+  }
+  .circle-six {
+    width: 150px;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  /*.con01_작은 궤도_원 움직임*/
+  .con01 .small {
+    width: 16px;
+    background-color: #fff147;
+    animation: orbit 3s linear infinite;
+  }
+  .con01 .move4 {
+    transform-origin: 0% 260px; /* 개체의 회전 중심점 설정 (부모 반지름만큼) */
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 133px;
+  }
+  .con01 .move5 {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 108px 0px;
+  }
+  .con01 .move6 {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: -67px 0px;
+  }
+
+  /*.con01_원 움직임_애니메이션*/
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*.con01_중앙 이미지*/
+  .con01 img {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+  }
+
+  /*.con01_values */
+  .con01 .values p {
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 11;
+    animation: upDown infinite 0.7s alternate linear;
+  }
+  @keyframes upDown {
+    0% {
+      transform: translateY(4px);
+    }
+    100% {
+      transform: translateY(-4px);
+    }
+  }
+  .con01 .values > div {
+    position: absolute;
+    transition: 0.4s;
+  }
+  .con01 .values > div.sizeUp {
+    font-size: 21px;
+  }
+  .con01 .values > div:nth-child(1) {
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%); /*??*/
+  }
+  .con01 .values > div:nth-child(2) {
+    bottom: 30px;
+    left: -50px;
+  }
+  .con01 .values > div:nth-child(3) {
+    bottom: 30px;
+    right: -30px;
+  }
+
+  /*.con01_텍스트*/
+  .con01 ul {
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: calc(50% - 12px); /*수동계산.. 다른방법?*/
+    left: 50%;
+    transform: translate(-50%, -50%); /*??*/
+    align-content: center;
+  }
+  .con01 ul h3 {
+    font-size: 36px;
+  }
+  .con01 ul li div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .con01 .line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+  .con01 ul p {
+    margin: 8px 0px;
+    align-content: center;
+  }
+  .con01 li {
+    display: none;
+    opacity: 0;
+    /* transform: rotateX(180deg); */
+    /* perspective: 800px; */
+  }
+  .con01 li:nth-child(1) {
+    /* display: block;
+  opacity: 1; */
+  }
+  .con01 li.up {
+    display: block;
+    opacity: 1;
+  }
+  .con01 li h3 {
+    /* transform-origin: bottom; */
+    backface-visibility: hidden;
+  }
+  .con01 li .second {
+    font-size: 24px;
+    font-weight: bold;
+    /* transform-origin: bottom; */
+    backface-visibility: hidden;
+  }
+
+  /* con02 */
+  /* .con02 h2 {
+  font-size: 36px;
+  margin: 30px 0px;
+}
+.con02 h2 span {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 7px;
+} */
+  section h2 {
+    font-size: 36px;
+    margin: 30px 0px;
+  }
+  section h2 span {
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: 7px;
+  }
+
+  .con02 > div {
+    width: 1100px;
+    height: 700px;
+    position: relative;
+    margin: 0px auto;
+  }
+
+  /*.con02_배경*/
+  .con02 .bg {
+    width: 1100px;
+    height: 700px;
+    display: flex;
+    /* position:relative 
+-> 형제한테는 안먹음?
+*/
+  }
+  .con02 .bg li {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: none;
+    /* opacity: 0; */
+    /* transition: 0.3s; 
+  -> 흠... 어케 못하나
+  */
+  }
+  .con02 .bg li.look {
+    display: block;
+    /* opacity: 1; */
+  }
+  .con02 .bg li:nth-child(1) {
+    background: url(img/pic1.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(2) {
+    background: url(img/pic2.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(3) {
+    background: url(img/pic3.jpg) no-repeat center / cover;
+  }
+  .con02 .bg li:nth-child(4) {
+    background: url(img/pic4.jpg) no-repeat center / cover;
+  }
+
+  /*.con02_title*/
+  .con02 .title {
+    width: calc(1100px / 3);
+    height: calc(700px / 4 * 3);
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    display: flex;
+  }
+  .con02 .title li {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0px 0px 30px 30px;
+    padding: 20px;
+    /* transition: 0.3s; */
+    overflow: hidden;
+  }
+  .con02 .title li h3 {
+    font-size: 24px;
+    /* transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 1s; */
+  }
+  /* .con02 .title li p {
+  transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 0.3s;
+} */
+  .con02 .title li.look {
+    display: flex;
+  }
+  /* .con02 .title li.look h3 {
+  transform: translateX(0px);
+}
+.con02 .title li.look p {
+  transform: translateX(0px);
+} */
+
+  /* .con02_menu */
+  .con02 .menu {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 25px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 10px 40px;
+  }
+  .con02 .menu li {
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .con02 .menu li.look {
+    color: #ff8f1c;
+  }
+  /*  */
+  .con02 img {
+    width: 10%;
+    position: absolute;
+    top: -100px;
+    right: 100px;
+  }
+
+  /*.con03*/
+  .con03 {
+    height: 700px;
+    background-image: url(img/line02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px;
+  }
+  .con03 .simply-scroll-clip {
+    width: 100%;
+    overflow: hidden; /* 이렇게 넣으면 자동으로 ul 속 이미지들이 움직이게 됨 */
+  }
+  .con03 ul {
+    display: flex;
+    text-align: center;
+  }
+  .con03 .images {
+    height: 250px;
+    position: relative;
+  }
+  .con03 .images img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+  .con03 li img:nth-child(1) {
+    opacity: 0;
+  }
+  .con03 li {
+    width: 400px;
+    flex-shrink: 0;
+  }
+  .con03 li h4 {
+    font-size: 18px;
+    margin: 15px 0px;
+  }
+  .con03 li:hover img:nth-child(1) {
+    z-index: 2;
+    opacity: 1;
+  }
+  .con03 li:hover img:nth-child(2) {
+    opacity: 0;
+  } /*이 방법 말고...?*/
+
+  /*.con04*/
+  .con04 {
+    width: 100%;
+    height: 900px;
+    align-content: center;
+    background-image: linear-gradient(180deg, #fff, #fff5bc);
+  }
+  .con04 h3 {
+    text-align: center;
+    font-size: 60px;
+    overflow: hidden;
+  }
+  .con04 h3.up {
+    animation: up 0.5s linear;
+  }
+  .con04 h3 span {
+    color: #ff8f1c;
+  }
+  @keyframes up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* 플로팅 버튼 */
+  #floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 50;
+  }
+
+  /*  */
+  .top {
+    padding-bottom: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .topInner {
+    /* width: 80px; */
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    color: #ff8f1c;
+    border-radius: 5px;
+    /* display: none; */
+    /* transform: translateY(80px); */
+    cursor: pointer;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  }
+  .top i {
+    transition: 0.3s;
+  }
+  .top:hover i {
+    transform: translateY(-5px);
+  }
+
+  /*  */
+  .floatFix {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: aqua;
+    background: url(img/p7.jpg) center no-repeat;
+    background-size: cover; /*??*/
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  }
+  .floatFix p {
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  /*  */
+  .inquery {
+    width: 500px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    left: -400px;
+    top: 0;
+    /* left: -100%;*/
+    /* transform: translateX(-80%); */
+    text-align: left;
+    opacity: 0;
+    /* z-index: 50; */
+  }
+  /* .inquery.up {
+  top: -450px;
+  display: block;
+} */
+  .inquery i {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .inquery h4 {
+    font-size: 23px;
+  }
+  .inquery p {
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+  }
+  .inquery ul {
+  }
+  .inquery li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .inquery li input {
+    width: 250px;
+    height: 30px;
+    padding: 5px 20px;
+    border-radius: 15px;
+    border: 0.5px solid black;
+  }
+  .inquery li:nth-child(3) {
+    align-items: flex-start; /*흠..*/
+  }
+  .inquery li:nth-child(3) input {
+    height: 100px;
+    border-radius: 20px;
+  }
+  /* input::placeholder {
+        align-content: start;
+      } */
+  .inquery button {
+    display: block;
+    margin-left: auto;
+    background-color: #ff8f1c;
+    border: none;
+    padding: 10px;
+    border-radius: 10px; /*통일?*/
+    cursor: pointer;
+    color: white;
+  }
+}
+/**/
+.con01 {
+  height: 100vh;
+  position: relative;
+  background-image: url(img/line02.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 300px;
+  margin-top: 100px;
+}
+.one,
+.two {
+  height: 500px;
+}
+
+/*.con01_큰 궤도*/
+.con01 .center {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+}
+.circle-one {
+  width: 500px;
+  border: 1px solid #ddd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.circle-two {
+  width: 450px;
+  border: 1px solid #999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+.circle-three {
+  width: 400px;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+/*.con01_큰 궤도_원 움직임*/
+.con01 .big {
+  width: 20px;
+  background-color: #ff8f1c;
+  /* animation: orbit 7s linear infinite; */
+}
+.con01 .move1 {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: 0% 260px;
+  animation: orbit 5s linear infinite;
+}
+.con01 .move2 {
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 235px 0px;
+  animation: orbit 6s linear infinite;
+}
+.con01 .move3 {
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: -190px 0px;
+  animation: orbit 7s linear infinite;
+}
+
+/*.con01_작은 궤도*/
+.circle-four {
+  width: 250px;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+}
+.circle-five {
+  width: 200px;
+  border: 1px solid #999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+.circle-six {
+  width: 150px;
+  border: 1px solid #ddd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/*.con01_작은 궤도_원 움직임*/
+.con01 .small {
+  width: 16px;
+  background-color: #fff147;
+  animation: orbit 3s linear infinite;
+}
+.con01 .move4 {
+  transform-origin: 0% 260px; /* 개체의 회전 중심점 설정 (부모 반지름만큼) */
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: 0% 133px;
+}
+.con01 .move5 {
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 108px 0px;
+}
+.con01 .move6 {
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: -67px 0px;
+}
+
+/*.con01_원 움직임_애니메이션*/
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*.con01_중앙 이미지*/
+.con01 img {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+/*.con01_values */
+.con01 .values p {
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 11;
+  animation: upDown infinite 0.7s alternate linear;
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+.con01 .values > div {
+  position: absolute;
+  transition: 0.4s;
+}
+.con01 .values > div.sizeUp {
+  font-size: 21px;
+}
+.con01 .values > div:nth-child(1) {
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%, -50%); /*??*/
+}
+.con01 .values > div:nth-child(2) {
+  bottom: 30px;
+  left: -50px;
+}
+.con01 .values > div:nth-child(3) {
+  bottom: 30px;
+  right: -30px;
+}
+
+/*.con01_텍스트*/
+.con01 ul {
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: calc(50% - 12px); /*수동계산.. 다른방법?*/
+  left: 50%;
+  transform: translate(-50%, -50%); /*??*/
+  align-content: center;
+}
+.con01 ul h3 {
+  font-size: 36px;
+}
+.con01 ul li div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.con01 .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+.con01 ul p {
+  margin: 8px 0px;
+  align-content: center;
+}
+.con01 li {
+  display: none;
+  opacity: 0;
+  /* transform: rotateX(180deg); */
+  /* perspective: 800px; */
+}
+.con01 li:nth-child(1) {
+  /* display: block;
+  opacity: 1; */
+}
+.con01 li.up {
+  display: block;
+  opacity: 1;
+}
+.con01 li h3 {
+  /* transform-origin: bottom; */
+  backface-visibility: hidden;
+}
+.con01 li .second {
+  font-size: 24px;
+  font-weight: bold;
+  /* transform-origin: bottom; */
+  backface-visibility: hidden;
+}
+
+/* con02 */
+/* .con02 h2 {
+  font-size: 36px;
+  margin: 30px 0px;
+}
+.con02 h2 span {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 7px;
+} */
+section h2 {
+  font-size: 36px;
+  margin: 30px 0px;
+}
+section h2 span {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 7px;
+}
+
+.con02 > div {
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  margin: 0px auto;
+}
+
+/*.con02_배경*/
+.con02 .bg {
+  width: 1100px;
+  height: 700px;
+  display: flex;
+  /* position:relative 
+-> 형제한테는 안먹음?
+*/
+}
+.con02 .bg li {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: none;
+  /* opacity: 0; */
+  /* transition: 0.3s; 
+  -> 흠... 어케 못하나
+  */
+}
+.con02 .bg li.look {
+  display: block;
+  /* opacity: 1; */
+}
+.con02 .bg li:nth-child(1) {
+  background: url(img/pic1.jpg) no-repeat center / cover;
+}
+.con02 .bg li:nth-child(2) {
+  background: url(img/pic2.jpg) no-repeat center / cover;
+}
+.con02 .bg li:nth-child(3) {
+  background: url(img/pic3.jpg) no-repeat center / cover;
+}
+.con02 .bg li:nth-child(4) {
+  background: url(img/pic4.jpg) no-repeat center / cover;
+}
+
+/*.con02_title*/
+.con02 .title {
+  width: calc(1100px / 3);
+  height: calc(700px / 4 * 3);
+  position: absolute;
+  left: 150px;
+  top: 0px;
+  display: flex;
+}
+.con02 .title li {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 30px 30px;
+  padding: 20px;
+  /* transition: 0.3s; */
+  overflow: hidden;
+}
+.con02 .title li h3 {
+  font-size: 24px;
+  /* transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 1s; */
+}
+/* .con02 .title li p {
+  transform: translateX(150%);
+  transition: 0.5s;
+  transition-duration: 0.3s;
+} */
+.con02 .title li.look {
+  display: flex;
+}
+/* .con02 .title li.look h3 {
+  transform: translateX(0px);
+}
+.con02 .title li.look p {
+  transform: translateX(0px);
+} */
+
+/* .con02_menu */
+.con02 .menu {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 25px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  padding: 10px 40px;
+}
+.con02 .menu li {
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.con02 .menu li.look {
+  color: #ff8f1c;
+}
+/*  */
+.con02 img {
+  width: 10%;
+  position: absolute;
+  top: -100px;
+  right: 100px;
+}
+
+/*.con03*/
+.con03 {
+  height: 700px;
+  background-image: url(img/line02.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 300px;
+}
+.con03 .simply-scroll-clip {
+  width: 100%;
+  overflow: hidden; /* 이렇게 넣으면 자동으로 ul 속 이미지들이 움직이게 됨 */
+}
+.con03 ul {
+  display: flex;
+  text-align: center;
+}
+.con03 .images {
+  height: 250px;
+  position: relative;
+}
+.con03 .images img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.con03 li img:nth-child(1) {
+  opacity: 0;
+}
+.con03 li {
+  width: 400px;
+  flex-shrink: 0;
+}
+.con03 li h4 {
+  font-size: 18px;
+  margin: 15px 0px;
+}
+.con03 li:hover img:nth-child(1) {
+  z-index: 2;
+  opacity: 1;
+}
+.con03 li:hover img:nth-child(2) {
+  opacity: 0;
+} /*이 방법 말고...?*/
+
+/*.con04*/
+.con04 {
+  width: 100%;
+  height: 900px;
+  align-content: center;
+  background-image: linear-gradient(180deg, #fff, #fff5bc);
+}
+.con04 h3 {
+  text-align: center;
+  font-size: 60px;
+  overflow: hidden;
+}
+.con04 h3.up {
+  animation: up 0.5s linear;
+}
+.con04 h3 span {
+  color: #ff8f1c;
+}
+@keyframes up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 플로팅 버튼 */
+#floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 50;
+}
+
+/*  */
+.top {
+  padding-bottom: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.topInner {
+  /* width: 80px; */
+  background-color: white;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  color: #ff8f1c;
+  border-radius: 5px;
+  /* display: none; */
+  /* transform: translateY(80px); */
+  cursor: pointer;
+  /* border: 1px solid #ddd; */
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+}
+.top i {
+  transition: 0.3s;
+}
+.top:hover i {
+  transform: translateY(-5px);
+}
+
+/*  */
+.floatFix {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: aqua;
+  background: url(img/p7.jpg) center no-repeat;
+  background-size: cover; /*??*/
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.floatFix p {
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+/*  */
+.inquery {
+  width: 500px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  left: -400px;
+  top: 0;
+  /* left: -100%;*/
+  /* transform: translateX(-80%); */
+  text-align: left;
+  opacity: 0;
+  /* z-index: 50; */
+}
+/* .inquery.up {
+  top: -450px;
+  display: block;
+} */
+.inquery i {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.inquery h4 {
+  font-size: 23px;
+}
+.inquery p {
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+.inquery ul {
+}
+.inquery li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+.inquery li input {
+  width: 250px;
+  height: 30px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  border: 0.5px solid black;
+}
+.inquery li:nth-child(3) {
+  align-items: flex-start; /*흠..*/
+}
+.inquery li:nth-child(3) input {
+  height: 100px;
+  border-radius: 20px;
+}
+/* input::placeholder {
+        align-content: start;
+      } */
+.inquery button {
+  display: block;
+  margin-left: auto;
+  background-color: #ff8f1c;
+  border: none;
+  padding: 10px;
+  border-radius: 10px; /*통일?*/
+  cursor: pointer;
+  color: white;
+}
