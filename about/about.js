@@ -157,14 +157,14 @@ float.addEventListener("mouseleave", (e) => {
   if (goTop === check) {
     return;
   }
-  gsap.timeline().to("#floating .top", { top: "50%" });
+  gsap.to("#floating .top", { top: "50%" });
 });
 goTop.addEventListener("mouseleave", (e) => {
   check = e.relatedTarget;
   if (float === check) {
     return;
   }
-  gsap.timeline().to("#floating .top", { top: "50%" });
+  gsap.to("#floating .top", { top: "50%" });
 });
 
 float.addEventListener("click", () => {
