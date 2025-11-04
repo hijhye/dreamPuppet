@@ -1,49 +1,27 @@
-$(function () {
-  // .con02
-  $(".con02 .menu li").on("mouseenter", function () {
-    let i = $(this).index();
-    $(".con02 .title li").removeClass("look");
-    $(".con02 .title li").eq(i).addClass("look");
-  });
-
-  // .con03
-  $(function () {
-    $(".con03 ul").simplyScroll({
-      speed: 1.5,
-      pauseOnHover: true,
-      pauseOnTouch: false,
-    });
-  });
-});
-
-// .con04
-gsap.registerPlugin(ScrollTrigger);
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".con04",
-      start: "top 50%",
-      markers: false,
-    },
-  })
-  .fromTo(
-    ".con04 h3:nth-child(1) p",
-    { y: "150%", opacity: 0 },
-    { y: 0, opacity: 1 },
-    0
-  )
-  .fromTo(
-    ".con04 h3:nth-child(2) p",
-    { y: "150%", opacity: 0 },
-    { y: 0, opacity: 1 },
-    0.5
-  );
-
 // con01
 let values = document.querySelectorAll(".con01 .values div");
 let text = document.querySelectorAll(".con01 ul li");
+
 values.forEach((i, index) => {
-  i.addEventListener("mouseover", function () {
+  i.addEventListener("mouseenter", () => {
+    // values.forEach((i) => {
+    //   i.classList.remove("sizeUp");
+    // });
+    values[index].classList.add("sizeUp");
+  });
+  i.addEventListener("mouseleave", () => {
+    values.forEach((i) => {
+      i.classList.remove("sizeUp");
+    });
+    // values[index].classList.add("sizeUp");
+  });
+
+  i.addEventListener("click", function () {
+    values.forEach((i) => {
+      i.classList.remove("active");
+    });
+    i.classList.add("active");
+
     text.forEach(function (i, index) {
       gsap.to(i, { opacity: 0, duration: 1.5 });
       i.classList.remove("up");
@@ -64,6 +42,12 @@ values.forEach((i, index) => {
 });
 
 // con02
+$(".con02 .menu li").on("mouseenter", function () {
+  let i = $(this).index();
+  $(".con02 .title li").removeClass("look");
+  $(".con02 .title li").eq(i).addClass("look");
+});
+
 gsap
   .timeline()
   .fromTo(".con02 .title h3", { x: "150%" }, { x: "0%" }, 0.5)
@@ -97,6 +81,67 @@ menu.forEach((i, index) => {
   });
 });
 
+// .con03
+$(function () {
+  $(".con03 ul").simplyScroll({
+    speed: 1.5,
+    pauseOnHover: true,
+    pauseOnTouch: false,
+  });
+
+  // 2️⃣ 약간 지연 후 clip 요소 탐색 (simplyScroll이 구조 생성할 시간 필요)
+  setTimeout(() => {
+    let frame = document.querySelector(".con03 .simply-scroll-clip");
+    let isDown = false;
+    let startX, scrollLeft;
+
+    // 3️⃣ jQuery 이벤트 연결
+    $(frame)
+      .on("mousedown", function (e) {
+        isDown = true;
+        startX = e.pageX - $(this).offset().left;
+        scrollLeft = this.scrollLeft;
+      })
+      .on("mouseleave mouseup", function () {
+        isDown = false;
+      })
+      .on("mousemove", function (e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - $(this).offset().left;
+        const walk = (x - startX) * 2; // 스크롤 속도 조절
+        this.scrollLeft = scrollLeft - walk;
+      });
+  }, 300); // 0.3초 후 실행
+});
+
+//
+
+// .con04
+gsap.registerPlugin(ScrollTrigger);
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".con04",
+      start: "top 60%",
+      end: "30% 50%",
+      scrub: 2,
+      markers: false,
+    },
+  })
+  .fromTo(
+    ".con04 h3:nth-child(1) p",
+    { y: "150%", opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.6 },
+    0
+  )
+  .fromTo(
+    ".con04 h3:nth-child(2) p",
+    { y: "150%", opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.6 },
+    0.5
+  );
+
 // 플로팅
 let float = document.querySelector("#floating .floatFix");
 let goTop = document.querySelector("#floating .top");
@@ -112,14 +157,14 @@ float.addEventListener("mouseleave", (e) => {
   if (goTop === check) {
     return;
   }
-  gsap.timeline().to("#floating .top", { top: "50%" });
+  gsap.to("#floating .top", { top: "50%" });
 });
 goTop.addEventListener("mouseleave", (e) => {
   check = e.relatedTarget;
   if (float === check) {
     return;
   }
-  gsap.timeline().to("#floating .top", { top: "50%" });
+  gsap.to("#floating .top", { top: "50%" });
 });
 
 float.addEventListener("click", () => {
@@ -129,5 +174,6 @@ close.addEventListener("click", () => {
   gsap.timeline().to(inquery, { top: 0, display: "none", opacity: 0 });
 });
 $(goTop).on("click", function () {
-  $("html, body").animate({ scrollTop: 0 }, 300);
+  let conTop = $(".con01").offset().top;
+  $("html, body").animate({ scrollTop: conTop }, 800);
 });
