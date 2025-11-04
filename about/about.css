@@ -19,7 +19,7 @@ ul {
     height: 100vh;
     position: relative;
     background-image: linear-gradient(-90deg, #fff, #fff5bc);
-    padding-top: 150px;
+    padding-top: 170px;
   }
   .con01::after {
     width: 100%;
@@ -41,28 +41,24 @@ ul {
     position: absolute;
     background-color: white;
   }
-  .circle-one {
-    width: 500px;
-    border: 1px solid #ddd;
+  .con01 .orbit {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .circle-one {
+    width: 500px;
+    border: 1px solid #ddd;
     z-index: 5;
   }
   .circle-two {
     width: 450px;
     border: 1px solid #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 6;
   }
   .circle-three {
     width: 400px;
     border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 7;
   }
 
@@ -98,25 +94,16 @@ ul {
   .circle-four {
     width: 250px;
     border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 8;
   }
   .circle-five {
     width: 200px;
     border: 1px solid #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 9;
   }
   .circle-six {
     width: 150px;
     border: 1px solid #ddd;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10;
   }
 
@@ -158,7 +145,7 @@ ul {
 
   /*.con01_중앙 이미지*/
   .con01 img {
-    width: 100px;
+    width: 150px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -356,9 +343,9 @@ ul {
   .con02 .menu li.look {
     color: #ff8f1c;
   }
-  /*  */
+  /* .con02_이미지 */
   .con02 img {
-    width: 10%;
+    width: 500px;
     position: absolute;
     top: -100px;
     right: 100px;
@@ -390,11 +377,17 @@ ul {
     position: relative;
   }
   .con03 .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.3s;
+  }
+  .con03 .images img:nth-child(1) {
+    /* object-fit: none; */
   }
   .con03 li img:nth-child(1) {
     opacity: 0;
@@ -567,7 +560,7 @@ ul {
     height: 100vh;
     position: relative;
     background-image: linear-gradient(-90deg, #fff, #fff5bc);
-    padding-top: 150px;
+    padding-top: 200px;
   }
   .con01::after {
     width: 100%;
@@ -589,28 +582,24 @@ ul {
     position: absolute;
     background-color: white;
   }
+  .con01 .orbit {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .circle-one {
     width: 500px;
     border: 1px solid #ddd;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 5;
   }
   .circle-two {
     width: 450px;
     border: 1px solid #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 6;
   }
   .circle-three {
     width: 400px;
     border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 7;
   }
 
@@ -646,25 +635,16 @@ ul {
   .circle-four {
     width: 250px;
     border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 8;
   }
   .circle-five {
     width: 200px;
     border: 1px solid #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 9;
   }
   .circle-six {
     width: 150px;
     border: 1px solid #ddd;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10;
   }
 
@@ -706,9 +686,9 @@ ul {
 
   /*.con01_중앙 이미지*/
   .con01 img {
-    width: 100px;
+    width: 150px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
@@ -909,12 +889,12 @@ ul {
   .con02 .menu li.look {
     color: #ff8f1c;
   }
-  /*  */
+  /* .con02_이미지 */
   .con02 img {
-    width: 10%;
+    width: 50%;
     position: absolute;
-    top: -100px;
-    right: 100px;
+    top: -40px;
+    right: 10%;
   }
 
   /*.con03*/
@@ -943,7 +923,10 @@ ul {
     position: relative;
   }
   .con03 .images img {
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1121,7 +1104,7 @@ ul {
     height: 100vh;
     position: relative;
     background-image: linear-gradient(-90deg, #fff, #fff5bc);
-    padding-top: 150px;
+    /* padding-top: 150px; */
   }
   .con01::after {
     width: 100%;
@@ -1143,34 +1126,46 @@ ul {
     position: absolute;
     background-color: white;
   }
-  .circle-one {
-    width: 280px;
-    border: 1px solid #ddd;
-    top: 50%;
+  .con01 .orbit {
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .circle-one {
+    width: 70%;
+    border: 1px solid #ddd;
     z-index: 5;
   }
   .circle-two {
-    width: 230px;
+    width: 60%;
     border: 1px solid #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 6;
   }
   .circle-three {
-    width: 180px;
+    width: 50%;
     border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 7;
   }
 
-  /*.con01_큰 궤도_원 움직임*/
+  /*.con01_원 움직임용 궤도*/
+  .con01 .wrapper1 {
+    width: 100%;
+    height: 100%;
+    animation: orbit 5s linear infinite;
+  }
+  .con01 .wrapper2 {
+    width: 100%;
+    height: 100%;
+    animation: orbit 4s linear infinite;
+  }
+  .con01 .wrapper3 {
+    width: 100%;
+    height: 100%;
+    animation: orbit 3s linear infinite;
+  }
+  /*.con01_큰 궤도_원*/
   .con01 .big {
-    width: 14px;
+    width: 16px;
     background-color: #ff8f1c;
     /* animation: orbit 7s linear infinite; */
   }
@@ -1179,48 +1174,36 @@ ul {
     left: 50%;
     transform: translateX(-50%);
     transform-origin: 0% 132px;
-    animation: orbit 3s linear infinite;
   }
   .con01 .move2 {
     left: -7px;
     top: 50%;
     transform: translateY(-50%);
     transform-origin: 107px 0px;
-    animation: orbit 4s linear infinite;
   }
   .con01 .move3 {
     right: -7px;
     top: 50%;
     transform: translateY(-50%);
     transform-origin: -68px 0px;
-    animation: orbit 5s linear infinite;
   }
 
   /*.con01_작은 궤도*/
   .circle-four {
     width: 250px;
     border: 1px solid black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 8;
     display: none;
   }
   .circle-five {
     width: 200px;
     border: 1px solid #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 9;
     display: none;
   }
   .circle-six {
     width: 150px;
     border: 1px solid #ddd;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10;
     display: none;
   }
@@ -1256,17 +1239,19 @@ ul {
   @keyframes orbit {
     0% {
       transform: rotate(0deg);
+      /* top: 0px; */
     }
     100% {
       transform: rotate(360deg);
+      /* bottom: 0px; */
     }
   }
 
   /*.con01_중앙 이미지*/
   .con01 img {
-    width: 100px;
+    width: 25%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
@@ -1278,7 +1263,6 @@ ul {
     font-weight: bold;
     z-index: 11;
     animation: upDown infinite 0.7s alternate linear;
-    font-size: 15px;
   }
   @keyframes upDown {
     0% {
@@ -1291,12 +1275,13 @@ ul {
   .con01 .values > div {
     position: absolute;
     transition: 0.4s;
+    font-size: 15px;
   }
   .con01 .values > div.sizeUp {
-    font-size: 22px;
+    font-size: 19px;
   }
   .con01 .values > div.active {
-    font-size: 22px;
+    font-size: 19px;
     color: #ffc848;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
   }
@@ -1325,20 +1310,21 @@ ul {
     align-content: center;
   }
   .con01 ul h3 {
-    font-size: 40px;
+    font-size: 30px;
     backface-visibility: hidden;
   }
   .con01 ul p {
     margin: 15px 0px;
     align-content: center;
     text-align: right;
+    font-size: 13px;
   }
   .con01 ul li div:nth-child(2) {
     display: flex;
     justify-content: space-between;
   }
   .con01 ul li div:nth-child(2) p {
-    font-size: 18px;
+    font-size: 15px;
   }
   .con01 ul li div:nth-child(2) .second {
     font-size: 25px;
@@ -1416,7 +1402,7 @@ ul {
   /*.con02_title*/
   .con02 .title {
     width: calc(100% / 3);
-    height: 70%;
+    height: 65%;
     position: absolute;
     left: 10%;
     top: 0px;
@@ -1439,7 +1425,7 @@ ul {
     font-size: 3.5vw;
   }
   .con02 .title li p {
-    line-height: 25px;
+    line-height: 20px;
     font-size: 1.8vw;
   }
   .con02 .title li.look {
@@ -1458,7 +1444,7 @@ ul {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
     padding: 10px 40px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .con02 .menu li {
     font-weight: bold;
@@ -1468,9 +1454,9 @@ ul {
   .con02 .menu li.look {
     color: #ff8f1c;
   }
-  /*  */
+  /* .con02_이미지 */
   .con02 img {
-    width: 10%;
+    width: 50%;
     position: absolute;
     top: -100px;
     right: 100px;
@@ -1502,7 +1488,10 @@ ul {
     position: relative;
   }
   .con03 .images img {
-    width: 35%;
+    /* width: 45%; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1513,11 +1502,11 @@ ul {
     opacity: 0;
   }
   .con03 li {
-    width: 400px;
+    width: 300px;
     flex-shrink: 0;
   }
   .con03 li h4 {
-    font-size: 18px;
+    font-size: 16px;
     margin: 15px 0px;
   }
   .con03 li:hover img:nth-child(1) {
@@ -1527,6 +1516,9 @@ ul {
   .con03 li:hover img:nth-child(2) {
     opacity: 0;
   } /*이 방법 말고...?*/
+  .con03 li p {
+    font-size: 14px;
+  }
 
   /*.con04*/
   .con04 {
@@ -1612,15 +1604,15 @@ ul {
 
   /*플로팅_문의창*/
   .inquery {
-    width: 500px;
+    width: 300px;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 50px;
+    padding: 40px;
     border-radius: 30px;
     box-sizing: border-box;
     display: none;
     position: absolute;
-    left: -400px;
+    left: -200px;
     top: 0;
     text-align: left;
     opacity: 0;
@@ -1629,15 +1621,16 @@ ul {
     position: absolute;
     right: 30px;
     top: 30px;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
   }
   .inquery h4 {
-    font-size: 23px;
+    font-size: 20px;
   }
   .inquery p {
     padding: 10px 0px;
     border-bottom: 1px solid black;
+    font-size: 13px;
   }
   .inquery li {
     display: flex;
@@ -1645,11 +1638,14 @@ ul {
     align-items: center;
     margin: 20px 0px;
   }
+  .inquery li span {
+    font-size: 14px;
+  }
   .inquery li input {
-    width: 250px;
-    height: 30px;
+    width: 100px;
+    height: 20px;
     padding: 5px 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 0.5px solid black;
   }
   .inquery li:nth-child(3) {
