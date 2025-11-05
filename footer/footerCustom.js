@@ -1,13 +1,4 @@
-/* Footer Accordion */
-$(".accordion-toggle").on("click", function () {
-  $(this).next("ul").slideToggle();
-  const indicator = $(this).find(".indicator");
-  if (indicator.text() === "+") {
-    indicator.text("-");
-  } else {
-    indicator.text("+");
-  }
-});
+/* Footer*/
 
 let footer = document.querySelector("footer");
 
