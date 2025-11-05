@@ -4,16 +4,12 @@ let text = document.querySelectorAll(".con01 ul li");
 
 values.forEach((i, index) => {
   i.addEventListener("mouseenter", () => {
-    // values.forEach((i) => {
-    //   i.classList.remove("sizeUp");
-    // });
     values[index].classList.add("sizeUp");
   });
   i.addEventListener("mouseleave", () => {
     values.forEach((i) => {
       i.classList.remove("sizeUp");
     });
-    // values[index].classList.add("sizeUp");
   });
 
   i.addEventListener("click", function () {
@@ -115,8 +111,6 @@ $(function () {
   }, 300); // 0.3초 후 실행
 });
 
-//
-
 // .con04
 gsap.registerPlugin(ScrollTrigger);
 gsap
@@ -148,30 +142,52 @@ let goTop = document.querySelector("#floating .top");
 let inquery = document.querySelector("#floating .inquery");
 let close = document.querySelector(".inquery i");
 
+let isActive = false;
+
+function change() {
+  gsap.to(".floatFix img", { opacity: 0, duration: 0.5 });
+  gsap.to(".floatFix p", { opacity: 1 });
+}
+function reset() {
+  gsap.to(".floatFix img", { opacity: 1 });
+  gsap.to(".floatFix p", { opacity: 0, duration: 0.5 });
+}
+
 float.addEventListener("mouseenter", () => {
-  gsap.timeline().to("#floating .top", { top: "-35%" });
+  gsap.to("#floating .top", { opacity: 1, top: "-35%" });
+  change();
 });
 
 float.addEventListener("mouseleave", (e) => {
+  if (isActive) return;
+
+  reset();
+
   check = e.relatedTarget;
   if (goTop === check) {
     return;
   }
-  gsap.to("#floating .top", { top: "50%" });
+  gsap.to("#floating .top", { opacity: 0, top: "50%" });
 });
 goTop.addEventListener("mouseleave", (e) => {
   check = e.relatedTarget;
   if (float === check) {
     return;
   }
-  gsap.to("#floating .top", { top: "50%" });
+  gsap.to("#floating .top", { opacity: 0, top: "50%" });
 });
 
 float.addEventListener("click", () => {
-  gsap.timeline().to(inquery, { top: "-500px", display: "block", opacity: 1 });
+  isActive = true;
+
+  gsap.to(inquery, { top: "-500px", display: "block", opacity: 1 });
+  change();
 });
 close.addEventListener("click", () => {
-  gsap.timeline().to(inquery, { top: 0, display: "none", opacity: 0 });
+  isActive = false;
+
+  gsap.to(inquery, { top: 0, display: "none", opacity: 0 });
+  reset();
 });
 $(goTop).on("click", function () {
   let conTop = $(".con01").offset().top;
