@@ -3,11 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Community - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/sub.css" />
+    <title>뉴스 & 공지사항</title>
+    <link rel="stylesheet" href="css/communitystyle.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/community.js" defer></script>
   </head>
   <body>
-    <script src="js/sub.js"></script>
+    <nav>
+      <li class="active">뉴스</li>
+      <li>공지사항</li>
+      <div class="highlight"></div>
+    </nav>
+
+    <div id="page1">
+      <!-- 뉴스 영역 -->
+      <div class="news-wrap">
+        <div class="table-header">총 <span id="total-count">9</span>건</div>
+        <table>
+          <thead>
+            <tr>
+              <th>제목</th>
+              <th>날짜</th>
+              <th>작성자</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025년 행정안전부 안전교육 인형극 극단 선정</td>
+              <td>2025-10-27</td>
+              <td>jpuppetadmin</td>
+            </tr>
+            <tr>
+              <td>2024년 행정안전부 안전교육 인형극 극단 선정</td>
+              <td>2024-06-21</td>
+              <td>jpuppetadmin</td>
+            </tr>
+            <tr>
+              <td>2023년 행정안전부 안전교육 인형극 극단 선정</td>
+              <td>2024-04-04</td>
+              <td>jpuppetadmin</td>
+            </tr>
+            <tr>
+              <td>2022년 경기도 식생활안전 순회 뮤지컬 극단 선정</td>
+              <td>2022-08-10</td>
+              <td>jpuppetadmin</td>
+            </tr>
+            <tr>
+              <td>[MOU]제이퍼펫-수정노인복지관 업무협약식</td>
+              <td>2019-04-08</td>
+              <td>jpuppetadmin</td>
+            </tr>
+            <tr>
+              <td>
+                2019년 남양주시 찾아가는 문화활동, 문화예술 활동 사업자 선정
+              </td>
+              <td>2019-03-15</td>
+              <td>jpuppetadmin</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="page-nav">
+          <a href="#" class="active" data-page="1">1</a>
+          <a href="#" data-page="2">2</a>
+        </div>
+      </div>
+
+      <!-- 공지사항 영역 -->
+      <div class="notice_wrap">
+        <div class="notice_set">
+          <ul>
+            <li>
+              <div><img src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2020/02/06/F776_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5D%ED%8F%AC%EC%8A%A4%ED%84%B0_%ED%8E%B8%EC%8B%9D%EC%9D%80%20%EC%95%88%EB%8F%BC%EC%9A%94.jpg" alt="" /></div>
+              <h3> <span>[세계최초기획! 퍼핀뮤지컬]</span> 급식센터,보건소 전용 뮤지컬 신청 받습니다</h3>
+            </li>
+            <li>
+              <div><img
+        src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2019/10/08/F398_KakaoTalk_Photo_2019-01-09-15-34-53.png"
+        alt="이벤트 이미지2" /></div>
+              <h3>공연뿐만 아니라 행사 전체를 책임지고 진행해드립니다!</h3>
+            </li>
+            <li>
+              <div><img src="http://jpuppet.cafe24.com/wp-content/uploads/2024/08/B_%EC%97%98%EB%A6%AC%EC%95%BC_%EA%B7%B8%EB%A6%AC%ED%8C%85_5.jpg" alt=""></div>
+              <h3>보건복지부-질병관리본부 전국 순회 대공연 진행중!</h3>
+            </li>
+            <li>
+              <div><img src="http://jpuppet.cafe24.com/wp-content/uploads/2024/08/A_%EC%97%98%EB%A6%AC%EC%95%BC_%EA%B4%80%EA%B0%9D%EC%B0%B8%EC%97%AC_1-1080x675.jpg" alt=""></div>
+              <h3>제이퍼펫 2월 자선공연 안내</h3>
+            </li>
+            <li>
+              <div><img src="http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220818_114329002_B8721B4F-B32B-4050-B9D8-1AFF9E677221.jpg"  alt="이벤트 이미지1" /></div>
+              <h3>2019년 제이퍼펫 자선(무료)공연 안내</h3>
+            </li>
+            <li>
+              <div><img src="http://jpuppet.com/?mb_ext=file&path=2018%2F12%2F24%2FF40_%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8C%80%EA%B3%B5%EC%9B%90%20%EA%B3%B5%EC%97%B0%20%ED%8F%AC%EC%8A%A4%ED%84%B0.jpeg" alt="" /></div>
+              <h3>크리스마스 공연 보러 오세요^^-어린이대공원</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <div id="page2">
+  <h2>이벤트 <span>Event</span></h2>
+
+  <!-- 1줄 -->
+  <div class="row row1">
+    <div class="img">
+      <img src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2022/08/30/F1517_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5DP20220823_134126752_1F70849E-FA40-49B7-99E4-5B6B71BC5FE1.JPG" alt="이벤트 이미지1">
+    </div>
+    <div class="box">
+      <h4>어린이 대공원에서 펼쳐지는 마법같은 시간</h4>
+      <h2>어린이와 함께하는 무료 공연</h2>
+      <h4>2025-10-20 ~ 2025-11-09</h4>
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+  </div>
+
+  <!-- 2줄 -->
+  <div class="row row2">
+    <div class="img">
+      <img src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2019/10/07/F286_P20181226_103005653_F5E314A8-A956-4468-BC3E-8DBE1FEA3D99-1080x1080.jpg" alt="이벤트 이미지2">
+    </div>
+    <div class="box">
+      <h4>도심 속에서 즐기는 환상의 공연</h4>
+      <h2>어린이 문화 예술 축제</h2>
+      <h4>2025-11-10 ~ 2025-11-30</h4>
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+  </div>
+
+  <!-- 3줄 -->
+  <div class="row row3">
+    <div class="img">
+      <img src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2023/11/21/F2283_image.png" alt="이벤트 이미지3">
+    </div>
+    <div class="box">
+      <h4>아이들의 웃음이 가득한 순간</h4>
+      <h2>겨울방학 특별 인형극 공연</h2>
+      <h4>2025-12-15 ~ 2026-01-05</h4>
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
