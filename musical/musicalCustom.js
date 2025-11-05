@@ -139,7 +139,7 @@ window.addEventListener("scroll", () => {
   let progress = scrollY - con01.offsetTop;
   let progressPercent = Math.round((progress / scrollableDuration) * 100);
   // console.log(progressPercent);
-  if (progressPercent >= 0 && progressPercent <= 100 / 6) {
+  if (progressPercent >= 0 && progressPercent <= 100 / 5) {
     con01_txtList.forEach((txt) => {
       txt.classList.remove("active");
     });
@@ -148,7 +148,7 @@ window.addEventListener("scroll", () => {
     });
     con01_txtList[0].classList.add("active");
     con01_imgList[0].classList.add("active");
-  } else if (progressPercent >= 100 / 6 && progressPercent <= (100 / 6) * 2) {
+  } else if (progressPercent >= 100 / 5 && progressPercent <= (100 / 5) * 2) {
     con01_txtList.forEach((txt) => {
       txt.classList.remove("active");
     });
@@ -158,8 +158,8 @@ window.addEventListener("scroll", () => {
     con01_txtList[1].classList.add("active");
     con01_imgList[1].classList.add("active");
   } else if (
-    progressPercent >= (100 / 6) * 2 &&
-    progressPercent <= (100 / 6) * 3
+    progressPercent >= (100 / 5) * 2 &&
+    progressPercent <= (100 / 5) * 3
   ) {
     con01_txtList.forEach((txt) => {
       txt.classList.remove("active");
@@ -170,8 +170,8 @@ window.addEventListener("scroll", () => {
     con01_txtList[2].classList.add("active");
     con01_imgList[2].classList.add("active");
   } else if (
-    progressPercent >= (100 / 6) * 3 &&
-    progressPercent <= (100 / 6) * 4
+    progressPercent >= (100 / 5) * 3 &&
+    progressPercent <= (100 / 5) * 4
   ) {
     con01_txtList.forEach((txt) => {
       txt.classList.remove("active");
@@ -182,8 +182,8 @@ window.addEventListener("scroll", () => {
     con01_txtList[3].classList.add("active");
     con01_imgList[3].classList.add("active");
   } else if (
-    progressPercent >= (100 / 6) * 4 &&
-    progressPercent <= (100 / 6) * 5
+    progressPercent >= (100 / 5) * 4 &&
+    progressPercent <= (100 / 5) * 5
   ) {
     con01_txtList.forEach((txt) => {
       txt.classList.remove("active");
@@ -193,15 +193,6 @@ window.addEventListener("scroll", () => {
     });
     con01_txtList[4].classList.add("active");
     con01_imgList[4].classList.add("active");
-  } else if (progressPercent >= (100 / 6) * 5 && progressPercent <= 100) {
-    con01_txtList.forEach((txt) => {
-      txt.classList.remove("active");
-    });
-    con01_imgList.forEach((img) => {
-      img.classList.remove("active");
-    });
-    con01_txtList[5].classList.add("active");
-    con01_imgList[5].classList.add("active");
   }
 });
 
@@ -265,8 +256,8 @@ $(".con02 .list li").on("click", function (e) {
   console.log(target); //->무조건 카드리스트 firstchild의 eq i li 로 잡힘
 
   $(".con03 .cardListWrapAll > li.active .cardList > li").removeClass("on");
-  $(".con03 .cardListWrapAll > li.active .cardList > li").eq(i).addClass("on");
   let targetPosition = target.offset().top;
+  target.addClass("on");
 
   $("html, body").animate(
     { scrollTop: targetPosition },
@@ -277,6 +268,7 @@ $(".con02 .list li").on("click", function (e) {
           "on"
         );
       });
+      target.addClass("on");
     }
   );
 });
