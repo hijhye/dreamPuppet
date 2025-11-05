@@ -45,7 +45,7 @@
   text-decoration: none;
 }
 
-.logo img {
+header .logo img {
   height: 50px;
   transition: transform 0.3s ease;
 }
@@ -305,7 +305,7 @@ body.nav-open #main-header {
   .nav-container {
     padding: 0 1rem;
   }
-  .logo img {
+  nav .logo img {
     height: 40px;
   }
   .desktop-nav {
