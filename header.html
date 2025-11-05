@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="nav-container">
+        <div class="cloud-container">
+          <img class="ps ps1" src="images/sun.png" alt="sun" />
+          <img class="ps ps2" src="images/cloud-1.png" alt="cloud-1" />
+          <img class="ps ps3" src="images/cloud-2.png" alt="cloud-2" />
+        </div>
+        <a href="index.html" class="logo">
+          <img src="images/logo_bk.png" alt="J-PUPPET" />
+        </a>
+        <nav class="desktop-nav">
+          <a href="about.html" class="nav-link">ABOUT</a>
+          <a href="musical/musical.html" class="nav-link">MUSICAL</a>
+          <a href="creative.html" class="nav-link">CREATIVE</a>
+          <a href="community.html" class="nav-link">COMMUNITY</a>
+          <div class="btnWrap">
+            <!-- 수정: aria-label 추가 -->
+            <button class="contactBtn" aria-label="문의하기">CONTACT</button>
+            <p class="contactTxt">어떤 프로젝트를 함께 하시겠어요?</p>
+          </div>
+        </nav>
+        <!-- 수정: aria-label 추가 -->
+        <div
+          class="hamburger-menu"
+          role="button"
+          aria-label="메뉴 열기"
+          tabindex="0"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav">
+      <a href="about.html" class="nav-link">ABOUT US</a>
+      <a href="musical/musical.html" class="nav-link">MUSICAL</a>
+      <a href="creative.html" class="nav-link">CREATIVE</a>
+      <a href="community.html" class="nav-link">COMMUNITY</a>
+    </nav>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
