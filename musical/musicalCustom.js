@@ -256,8 +256,8 @@ $(".con02 .list li").on("click", function (e) {
   console.log(target); //->무조건 카드리스트 firstchild의 eq i li 로 잡힘
 
   $(".con03 .cardListWrapAll > li.active .cardList > li").removeClass("on");
-  $(".con03 .cardListWrapAll > li.active .cardList > li").eq(i).addClass("on");
   let targetPosition = target.offset().top;
+  target.addClass("on");
 
   $("html, body").animate(
     { scrollTop: targetPosition },
@@ -268,6 +268,7 @@ $(".con02 .list li").on("click", function (e) {
           "on"
         );
       });
+      target.addClass("on");
     }
   );
 });
