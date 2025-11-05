@@ -11,7 +11,25 @@ a {
 }
 body {
   word-break: keep-all;
-  height: 312.5rem;
+  font-family: "SchoolSafeUniverse";
+  line-height: 1.5;
+}
+@font-face {
+  font-family: "NationalPension";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SchoolSafeUniverse";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+h2 {
+  font-family: "NationalPension";
 }
 /*visual*/
 #visual {
@@ -103,22 +121,23 @@ body {
   font-size: 4vh;
   display: flex;
   flex-direction: column;
-  gap: 0.1875rem;
+  font-family: "SchoolSafeUniverse";
 }
 .con01 .txtList li.active {
   font-size: 1.875rem;
   color: #000;
   font-size: 6vh;
   font-weight: bold;
+  font-family: "NationalPension";
 }
 
 /*imgList*/
 @keyframes float {
   0% {
-    transform: translateY(0);
+    margin-top: translateY(0);
   }
   50% {
-    transform: translateY(-0.9375rem);
+    transform: translateY(15px);
     scale: 1.1; /* 위로 15px 이동 */
   }
   100% {
@@ -132,12 +151,15 @@ body {
   display: block;
 }
 .con01 .imgList li {
-  border-radius: 40%;
+  border-radius: 50%;
   overflow: hidden;
   /* border: 1px solid red; */
   position: absolute;
   animation: float 7s ease-in-out infinite alternate;
   transition: 1s;
+  border: 1px solid rgba(87, 87, 20, 0.1);
+  box-shadow: 3px 3px 5px rgba(87, 87, 20, 0.1);
+  transform-origin: left center;
 }
 .con01 .imgList li:nth-child(1) {
   width: 20vw;
@@ -160,7 +182,6 @@ body {
   animation-delay: -5s;
 }
 .con01 .imgList li:hover {
-  scale: 1.5;
   border-radius: 30%;
   z-index: 10;
 }
@@ -292,7 +313,7 @@ body {
 
 /*con03*/
 .con03 {
-  width: 90%;
+  width: 1200px;
   max-width: 75rem;
   height: 100vh;
   margin: 0 auto;
@@ -318,26 +339,30 @@ body {
   border-radius: 1.875rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 60vh;
   transition: 1s;
   position: sticky;
   top: 1.875rem;
   transition: 1s;
-  scale: 0.9;
+  scale: 1;
 }
 
 .con03 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   background-color: rgb(226, 226, 100);
-  scale: 1;
+  scale: 1.1;
 }
 .con03 .card.on {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   background-color: rgb(226, 226, 100);
-  scale: 1;
+  scale: 1.1;
+  z-index: 10;
+  margin-top: 50px;
 }
-.con03 .card .left,
+
 .con03 .card .imgWrap {
+  height: 90%;
   width: 45%;
   /* border: 1px solid red; */
 }
@@ -345,10 +370,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 40%;
+  height: 80%;
+  margin-left: 5%;
 }
 .con03 .card .left h3 {
   font-size: 6vh;
   margin-bottom: 1.25rem;
+  font-family: "NationalPension";
 }
 .card .imgWrap img {
   width: 100%;
