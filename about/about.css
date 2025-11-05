@@ -532,7 +532,6 @@ h2 {
   }
   .floatFix img {
     width: 80px;
-    /* aspect-ratio: 1/1; */
     border-radius: 50%;
     object-fit: contain;
     animation: circle 10s linear infinite;
@@ -615,17 +614,16 @@ h2 {
     border-radius: 20px;
   }
   .inquery li:nth-child(3) input::placeholder {
-    position: relative;
-    top: -30px;
+    /* position: relative;
+    top: -30px; */
   }
-
   .inquery button {
     display: block;
     margin-left: auto;
     background-color: #ff8f1c;
     border: none;
     padding: 10px;
-    border-radius: 10px; /*통일?*/
+    border-radius: 10px;
     cursor: pointer;
     color: white;
   }
@@ -1083,6 +1081,7 @@ h2 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
   }
   .topInner {
     background-color: white;
@@ -1106,20 +1105,42 @@ h2 {
     width: 100px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: aqua;
-    background: url(img/p7.jpg) center no-repeat;
-    background-size: cover; /*??*/
+    /* background-color: #ffcd7c; */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
     position: relative;
     cursor: pointer;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  }
+  .floatFix img {
+    width: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+    animation: circle 10s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes circle {
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
   .floatFix p {
-    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-weight: bold;
     position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #ff8f1c;
+    align-content: center;
+    text-align: center;
     color: white;
+    opacity: 0;
   }
 
   /*플로팅_문의창*/
@@ -1165,20 +1186,26 @@ h2 {
     border: 0.5px solid black;
   }
   .inquery li:nth-child(3) {
-    align-items: flex-start; /*흠..*/
+    align-items: flex-start;
+  }
+  .inquery li:nth-child(3) span {
+    margin-top: 5px;
   }
   .inquery li:nth-child(3) input {
     height: 100px;
     border-radius: 20px;
   }
-
+  .inquery li:nth-child(3) input::placeholder {
+    /* position: relative;
+    top: -30px; */
+  }
   .inquery button {
     display: block;
     margin-left: auto;
     background-color: #ff8f1c;
     border: none;
     padding: 10px;
-    border-radius: 10px; /*통일?*/
+    border-radius: 10px;
     cursor: pointer;
     color: white;
   }
@@ -1642,116 +1669,6 @@ h2 {
     right: 20px;
     text-align: center;
     z-index: 50;
-  }
-
-  /*플로팅_top버튼*/
-  .top {
-    padding-bottom: 15px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .topInner {
-    background-color: white;
-    display: inline-block;
-    padding: 10px;
-    text-align: center;
-    color: #ff8f1c;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-  }
-  .top i {
-    transition: 0.3s;
-  }
-  .top:hover i {
-    transform: translateY(-5px);
-  }
-
-  /*플로팅_메인 contact 버튼*/
-  .floatFix {
-    width: 100px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: aqua;
-    background: url(img/p7.jpg) center no-repeat;
-    background-size: cover; /*??*/
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-  }
-  .floatFix p {
-    font-size: 12px;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-  }
-
-  /*플로팅_문의창*/
-  .inquery {
-    width: 300px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 40px;
-    border-radius: 30px;
-    box-sizing: border-box;
     display: none;
-    position: absolute;
-    left: -200px;
-    top: 0;
-    text-align: left;
-    opacity: 0;
-  }
-  .inquery i {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  .inquery h4 {
-    font-size: 20px;
-  }
-  .inquery p {
-    padding: 10px 0px;
-    border-bottom: 1px solid black;
-    font-size: 13px;
-  }
-  .inquery li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0px;
-  }
-  .inquery li span {
-    font-size: 14px;
-  }
-  .inquery li input {
-    width: 100px;
-    height: 20px;
-    padding: 5px 20px;
-    border-radius: 10px;
-    border: 0.5px solid black;
-  }
-  .inquery li:nth-child(3) {
-    align-items: flex-start; /*흠..*/
-  }
-  .inquery li:nth-child(3) input {
-    height: 100px;
-    border-radius: 20px;
-  }
-
-  .inquery button {
-    display: block;
-    margin-left: auto;
-    background-color: #ff8f1c;
-    border: none;
-    padding: 10px;
-    border-radius: 10px; /*통일?*/
-    cursor: pointer;
-    color: white;
   }
 }

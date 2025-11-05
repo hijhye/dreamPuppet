@@ -160,15 +160,14 @@ float.addEventListener("mouseenter", () => {
 
 float.addEventListener("mouseleave", (e) => {
   if (isActive) return;
-
   reset();
-
   check = e.relatedTarget;
   if (goTop === check) {
     return;
   }
   gsap.to("#floating .top", { opacity: 0, top: "50%" });
 });
+
 goTop.addEventListener("mouseleave", (e) => {
   check = e.relatedTarget;
   if (float === check) {
@@ -179,13 +178,15 @@ goTop.addEventListener("mouseleave", (e) => {
 
 float.addEventListener("click", () => {
   isActive = true;
-
+  if (!goTop.matches(":hover")) {
+    gsap.to("#floating .top", { opacity: 0, top: "50%" });
+  }
   gsap.to(inquery, { top: "-500px", display: "block", opacity: 1 });
   change();
 });
+
 close.addEventListener("click", () => {
   isActive = false;
-
   gsap.to(inquery, { top: 0, display: "none", opacity: 0 });
   reset();
 });
