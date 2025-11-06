@@ -1,7 +1,9 @@
 /*sub_visual*/
 gsap.registerPlugin(ScrollTrigger);
 $(window).resize(function () {
-  document.location.reload();
+  if ($(window).width() > 1220) {
+    document.location.reload();
+  }
 });
 
 let tl = gsap.timeline({
