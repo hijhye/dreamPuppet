@@ -634,6 +634,7 @@ h2 {
     padding: 1.875rem;
     border-radius: 1.875rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     height: 60vh;
     transition: 1s;
@@ -654,11 +655,6 @@ h2 {
     background-color: rgb(226, 226, 100);
     scale: 1.1;
     z-index: 5;
-  }
-  .con03 .card .left,
-  .con03 .card .imgWrap {
-    width: 45%;
-    /* border: 1px solid red; */
   }
   .con03 .card .left {
     display: flex;
