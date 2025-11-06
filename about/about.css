@@ -27,8 +27,8 @@ ul {
 
 body {
   font-family: "SchoolSafeUniverse";
-  background-image: url(characterIMG/star01.png), url(characterIMG/star01.png),
-    url(characterIMG/star01.png);
+  background-image: url(../characterIMG/star01.png),
+    url(../characterIMG/star01.png), url(../characterIMG/star01.png);
   background-repeat: no-repeat;
   background-position: left 10% bottom 10%, top 10% left 40%,
     right 10% bottom 30%;
@@ -318,16 +318,16 @@ h2 {
     display: block;
   }
   .con02 .bg li:nth-child(1) {
-    background: url(img/pic1.jpg) no-repeat center / cover;
+    background: url(../img/pic1.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(2) {
-    background: url(img/pic2.jpg) no-repeat center / cover;
+    background: url(../img/pic2.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(3) {
-    background: url(img/pic3.jpg) no-repeat center / cover;
+    background: url(../img/pic3.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(4) {
-    background: url(img/pic4.jpg) no-repeat center / cover;
+    background: url(../img/pic4.jpg) no-repeat center / cover;
   }
 
   /*.con02_title*/
@@ -400,7 +400,7 @@ h2 {
   /*.con03*/
   .con03 {
     height: 700px;
-    background-image: url(img/line02.png);
+    background-image: url(../img/line02.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -493,7 +493,7 @@ h2 {
   }
 
   /*플로팅_top버튼*/
-  .top {
+  #floating .top {
     padding-bottom: 15px;
     position: absolute;
     left: 50%;
@@ -501,7 +501,7 @@ h2 {
     transform: translate(-50%, -50%);
     opacity: 0;
   }
-  .topInner {
+  #floating .topInner {
     background-color: white;
     display: inline-block;
     padding: 10px;
@@ -511,10 +511,10 @@ h2 {
     cursor: pointer;
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
   }
-  .top i {
+  #floating .top i {
     transition: 0.3s;
   }
-  .top:hover i {
+  #floating .top:hover i {
     transform: translateY(-5px);
   }
 
@@ -906,16 +906,16 @@ h2 {
     /* opacity: 1; */
   }
   .con02 .bg li:nth-child(1) {
-    background: url(img/pic1.jpg) no-repeat center / cover;
+    background: url(../img/pic1.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(2) {
-    background: url(img/pic2.jpg) no-repeat center / cover;
+    background: url(../img/pic2.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(3) {
-    background: url(img/pic3.jpg) no-repeat center / cover;
+    background: url(../img/pic3.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(4) {
-    background: url(img/pic4.jpg) no-repeat center / cover;
+    background: url(../img/pic4.jpg) no-repeat center / cover;
   }
 
   /*.con02_title*/
@@ -986,7 +986,7 @@ h2 {
   /*.con03*/
   .con03 {
     height: 700px;
-    background-image: url(img/line02.png);
+    background-image: url(../img/line02.png);
     background-repeat: no-repeat;
     background-size: 150%;
     background-position: center;
@@ -1075,7 +1075,7 @@ h2 {
   }
 
   /*플로팅_top버튼*/
-  .top {
+  #floating .top {
     padding-bottom: 15px;
     position: absolute;
     left: 50%;
@@ -1083,7 +1083,7 @@ h2 {
     transform: translate(-50%, -50%);
     opacity: 0;
   }
-  .topInner {
+  #floating .topInner {
     background-color: white;
     display: inline-block;
     padding: 10px;
@@ -1093,10 +1093,10 @@ h2 {
     cursor: pointer;
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
   }
-  .top i {
+  #floating .top i {
     transition: 0.3s;
   }
-  .top:hover i {
+  #floating .top:hover i {
     transform: translateY(-5px);
   }
 
@@ -1496,16 +1496,16 @@ h2 {
     /* opacity: 1; */
   }
   .con02 .bg li:nth-child(1) {
-    background: url(img/pic1.jpg) no-repeat center / cover;
+    background: url(../img/pic1.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(2) {
-    background: url(img/pic2.jpg) no-repeat center / cover;
+    background: url(../img/pic2.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(3) {
-    background: url(img/pic3.jpg) no-repeat center / cover;
+    background: url(../img/pic3.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(4) {
-    background: url(img/pic4.jpg) no-repeat center / cover;
+    background: url(../img/pic4.jpg) no-repeat center / cover;
   }
 
   /*.con02_title*/
@@ -1580,7 +1580,7 @@ h2 {
   /*.con03*/
   .con03 {
     height: 700px;
-    background-image: url(img/line02.png);
+    background-image: url(../img/line02.png);
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: center;
