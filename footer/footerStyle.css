@@ -22,7 +22,9 @@ body {
   font-weight: normal;
   font-display: swap;
 }
-
+footer {
+  z-index: 1000;
+}
 @media (min-width: 1220px) {
   /*footer*/
   footer {
@@ -103,7 +105,11 @@ body {
     justify-content: center;
     transition: 0.2s;
   }
-
+  footer .link li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   footer .link li:hover {
     background-color: #000;
     color: #fff;
@@ -182,7 +188,7 @@ body {
     width: 100%;
     height: 40vh;
     color: #fff;
-    text-align: center;
+    text-align: right;
     font-size: 0.7rem;
     position: fixed;
     bottom: 0;
@@ -202,7 +208,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    gap: 3.125rem;
+    gap: 0;
     /* border: 1px solid red; */
     position: relative;
   }
@@ -220,7 +226,7 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: left;
   }
   footer .menu {
     display: none;
@@ -241,7 +247,7 @@ body {
   }
   footer .link {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     gap: 0.625rem;
     /* border: 1px solid red; */
   }
@@ -257,7 +263,11 @@ body {
     justify-content: center;
     transition: 0.2s;
   }
-
+  footer .link li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   footer .link li:hover {
     background-color: #000;
     color: #fff;
@@ -404,7 +414,11 @@ body {
     justify-content: center;
     transition: 0.2s;
   }
-
+  footer .link li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   footer .link li:hover {
     background-color: #000;
     color: #fff;
@@ -445,26 +459,26 @@ body {
     display: none;
   }
   footer .flower02 {
-    width: 100px;
-    right: 10%;
-    top: 45%;
+    width: 10vw;
+    right: 15%;
+    bottom: 34%;
     animation-delay: -0.8s;
   }
   footer .flower03 {
-    width: 100px;
+    width: 15vw;
     right: 3%;
-    top: 10%;
+    bottom: 50%;
     animation-delay: -1.2s;
   }
   footer .flower04 {
-    width: 50px;
+    width: 15vw;
     left: 15%;
-    bottom: 25%;
+    bottom: 35%;
     animation-delay: -0.3s;
   }
   footer .flower05 {
-    width: 70px;
-    right: 30%;
-    top: 20%;
+    width: 11vw;
+    right: 10%;
+    bottom: 12%;
   }
 }

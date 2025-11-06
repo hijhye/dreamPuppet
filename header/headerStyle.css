@@ -41,7 +41,7 @@
   padding: 0 2rem;
 }
 
-.logo {
+header .logo {
   text-decoration: none;
 }
 
@@ -50,8 +50,8 @@ header .logo img {
   transition: transform 0.3s ease;
 }
 
-.logo:hover img,
-.logo:focus img {
+header .logo:hover img,
+header .logo:focus img {
   transform: scale(1.05);
 }
 
@@ -174,8 +174,8 @@ header .logo img {
   margin-top: 0.5rem;
   animation: fadeIn 0.3s ease forwards;
 }
-.contactBtn:hover,
-.contactBtn:focus {
+.btnWrap:hover .contactBtn,
+.btnWrap:focus .contactBtn {
   background-color: #ff6b6b;
   transform: rotate(40deg);
   transform-origin: right;
