@@ -583,33 +583,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ======================================
    * To Top Button
    * ====================================== */
-  const toTopButton = document.querySelector(".to-top-button");
-  let ticking = false;
-
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrolled = window.pageYOffset;
-
-        if (toTopButton) {
-          if (scrolled > 500) {
-            toTopButton.classList.add("visible");
-          } else {
-            toTopButton.classList.remove("visible");
-          }
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-
-  if (toTopButton) {
-    toTopButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
-    });
-  }
 
   /* ======================================
    * Story Cards Magnetic Effect
@@ -691,6 +664,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Footer Scroll Behavior *
   //==================================
 
+  $(".accordion-toggle").on("click", function () {
+    $(this).next("ul").slideToggle();
+    const indicator = $(this).find(".indicator");
+    if (indicator.text() === "+") {
+      indicator.text("-");
+    } else {
+      indicator.text("+");
+    }
+  });
+
   let footer = document.querySelector("footer");
 
   window.addEventListener("scroll", () => {
@@ -704,10 +687,5 @@ document.addEventListener("DOMContentLoaded", () => {
       footer.style.transform = "translateY(90%)";
     }
   });
-  footer.addEventListener("mouseover", () => {
-    footer.style.transform = "translateY(0%)";
-  });
-  footer.addEventListener("mouseleave", () => {
-    footer.style.transform = "translateY(90%)";
-  });
+  loadComponent("#footer", "footer/footer.html");
 });
