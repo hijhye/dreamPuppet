@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Main</title>
+    <!--===================G=S=A=P====================-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"
+      integrity="sha512-i8BU+cmsrlyKOPFSCdO4x4wHXvjg6YIXy6K/PsPL0/3F89ccSgk06wDBP5FTyiGDzVNADQhal1dA1DHH2JB0Rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--===================G=S=A=P====================-->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- <section id="intro" class="intro-section">
+    <!-- 수정: id를 "intro"로 통일 -->
+    <section id="intro" class="intro-section">
       <div class="animated-bg"></div>
 
       <div class="intro-container">
+        <!-- 수정: aria-label 추가 -->
+        <button class="skipBtn" aria-label="인트로 건너뛰기">SKIP</button>
         <div class="words-container">
           <div class="word">hello</div>
           <div class="word">innovate</div>
@@ -27,16 +70,27 @@
       <div class="loading-bar">
         <div class="loading-progress"></div>
       </div>
-    </section> -->
+    </section>
+
+    <div id="visual">
+      <div class="inner">
+        <div class="keyword01 keyword">WELCOME</div>
+        <div class="circle"><h2>이야기로 사람의 마음을 움직이다</h2></div>
+        <div class="keyword02 keyword">JPUPPET</div>
+      </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 
     <section class="hero-section">
-      <video
-        id="mySlowVideo"
-        src="assets/video/Performance2.mp4"
-        autoplay
-        loop
-        muted
-      ></video>
       <div class="stars-container">
         <div class="star star-1">★</div>
         <div class="star star-2">★</div>
@@ -46,24 +100,27 @@
       </div>
       <div class="hero-content">
         <div class="hero-character">
-          <img src="assets/images/main-logo.png" alt="JPUPPET Character" />
+          <img src="images/main-logo.png" alt="JPUPPET Character" />
         </div>
         <div class="hero-logo">
           <h1 class="shine" data-text="J-PUPPET">J-PUPPET</h1>
-
           <p class="hero-subtitle">Creative Stage</p>
         </div>
         <div class="moon-decoration">
-          <img src="assets/images/moon.png" alt="moon" />
+          <img src="images/moon.png" alt="moon" />
         </div>
       </div>
-      <div class="wave-decoration"></div>
     </section>
 
     <header id="main-header">
       <div class="nav-container">
+        <div class="cloud-container">
+          <img class="ps ps1" src="images/sun.png" alt="sun" />
+          <img class="ps ps2" src="images/cloud-1.png" alt="cloud-1" />
+          <img class="ps ps3" src="images/cloud-2.png" alt="cloud-2" />
+        </div>
         <a href="index.html" class="logo">
-          <img src="assets/images/jpuppet-textlogo-s.png" alt="J-PUPPET" />
+          <img src="images/logo_bk.png" alt="J-PUPPET" />
         </a>
         <nav class="desktop-nav">
           <a href="index.html" class="nav-link">HOME</a>
@@ -71,8 +128,19 @@
           <a href="musical/musical.html" class="nav-link">MUSICAL</a>
           <a href="creative.html" class="nav-link">CREATIVE</a>
           <a href="community.html" class="nav-link">COMMUNITY</a>
+          <div class="btnWrap">
+            <!-- 수정: aria-label 추가 -->
+            <button class="contactBtn" aria-label="문의하기">CONTACT</button>
+            <p class="contactTxt">어떤 프로젝트를 함께 하시겠어요?</p>
+          </div>
         </nav>
-        <div class="hamburger-menu">
+        <!-- 수정: aria-label 추가 -->
+        <div
+          class="hamburger-menu"
+          role="button"
+          aria-label="메뉴 열기"
+          tabindex="0"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -89,93 +157,157 @@
     </nav>
 
     <section class="our-design-section">
-      <div class="container">
-        <h2 class="section-title">Our Stage</h2>
-        <div class="design-content">
-          <p class="design-text">
-            제이퍼펫은<br />
-            아이들의 상상력과 창의력을 키우는<br />
-            <strong>풍부한 재미 · 감동 · 예술적인 인형극</strong>을<br />
-            제공합니다.
+      <div class="our-design-section-parent">
+        <div class="our-design-header">
+          <h2 class="section-title">Our Stage</h2>
+          <p class="section-subtitle">
+            제이퍼펫은 아이들의 상상력과 창의력을 키우는<br />
+            풍부한 재미 · 감동 · 예술적인 인형극을 제공합니다.
           </p>
-          <div class="jpuppet-textlogo">
-            <img class="ps ps1" src="assets/images/sun.png" alt="sun" />
-            <img class="ps ps2" src="assets/images/cloud-1.png" alt="cloud-1" />
-            <img class="ps ps3" src="assets/images/cloud-2.png" alt="cloud-2" />
-            <img
-              class="textlogo"
-              src="assets/images/jpuppet-textlogo.png"
-              alt="jpuppet text logo"
-            />
+        </div>
+
+        <div class="stage-cards-container">
+          <!-- 카드 1: 재미 -->
+          <div class="stage-card" data-card="1">
+            <div class="stage-card-image">
+              <img
+                src="https://i.pinimg.com/736x/84/7a/cb/847acb45e0d66df0013968a9f42ad105.jpg"
+                alt="재미있는 공연"
+              />
+            </div>
+            <div class="stage-card-content">
+              <span class="stage-card-number">01</span>
+              <h3 class="stage-card-title">풍부한 재미</h3>
+              <p class="stage-card-description">
+                다양한 캐릭터와 신나는 음악, 유쾌한 스토리로 아이들에게 즐거움과
+                웃음을 선사합니다. 매 순간이 특별한 경험이 되도록 세심하게
+                연출된 무대를 만나보세요.
+              </p>
+            </div>
+          </div>
+
+          <!-- 카드 2: 감동 -->
+          <div class="stage-card" data-card="2">
+            <div class="stage-card-image">
+              <img
+                src="https://i.pinimg.com/736x/c9/69/42/c9694206b08af873b2a0d828f279c986.jpg"
+                alt="감동적인 이야기"
+              />
+            </div>
+            <div class="stage-card-content">
+              <span class="stage-card-number">02</span>
+              <h3 class="stage-card-title">깊은 감동</h3>
+              <p class="stage-card-description">
+                우정, 용기, 나눔의 가치를 담은 따뜻한 이야기로 아이들의 마음을
+                어루만집니다. 함께 웃고 울며 진정한 감동을 경험하는 시간을
+                제공합니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 카드 3: 예술성 -->
+          <div class="stage-card" data-card="3">
+            <div class="stage-card-image">
+              <img
+                src="https://i.pinimg.com/736x/06/92/84/0692842b600eca04380c1a10ee1dfcf2.jpg"
+                alt="예술적인 무대"
+              />
+            </div>
+            <div class="stage-card-content">
+              <span class="stage-card-number">03</span>
+              <h3 class="stage-card-title">예술적 가치</h3>
+              <p class="stage-card-description">
+                세련된 무대 디자인과 섬세한 인형 제작, 창의적인 연출로 아이들의
+                예술적 감각을 키웁니다. 수준 높은 공연 예술을 통해 문화적 소양을
+                길러줍니다.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="creative-service-section">
-      <div class="container">
-        <header class="service-header">
-          <div>
-            <p class="service-header-title">왜 제이퍼핏이어야 할까요?</p>
-            <h2 class="section-title">Creative Service</h2>
-          </div>
-          <a href="#" class="service-badge">자세히보기</a>
-        </header>
+      <!-- 수정: HTML 구조 수정 -->
+      <div class="service-header-title">
+        <p>왜 제이퍼핏이어야 할까요?</p>
+      </div>
+      <header class="service-header">
+        <div class="story-header">
+          <h2 class="section-title">Creative Service</h2>
+        </div>
+        <a href="#" class="service-badge">자세히보기</a>
+      </header>
 
-        <div class="service-content">
-          <div class="service-tabs">
-            <div class="service-tab-item active" data-index="0">
-              <span>캐릭터 뮤지컬</span>
-              <span class="icon">▶</span>
-            </div>
-            <div class="service-tab-item" data-index="1">
-              <span>인형극</span>
-              <span class="icon">▶</span>
-            </div>
-            <div class="service-tab-item" data-index="2">
-              <span>이벤트/행사</span>
-              <span class="icon">▶</span>
+      <div class="service-content">
+        <div class="service-tabs" role="tablist">
+          <!-- 수정: data-index 대신 실제 인덱스 사용, role 추가 -->
+          <div
+            class="service-tab-item active"
+            role="tab"
+            tabindex="0"
+            aria-selected="true"
+          >
+            <span>캐릭터 뮤지컬</span>
+            <span class="icon">▶</span>
+          </div>
+          <div
+            class="service-tab-item"
+            role="tab"
+            tabindex="0"
+            aria-selected="false"
+          >
+            <span>인형극</span>
+            <span class="icon">▶</span>
+          </div>
+          <div
+            class="service-tab-item"
+            role="tab"
+            tabindex="0"
+            aria-selected="false"
+          >
+            <span>이벤트/행사</span>
+            <span class="icon">▶</span>
+          </div>
+        </div>
+
+        <div class="service-panels">
+          <div class="service-panel-item active" role="tabpanel">
+            <video
+              src="https://cdn.pixabay.com/video/2020/04/07/35241-407130670_large.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+            <div class="service-text-overlay">
+              <span>교육 전문가가 만드는</span>
+              <span class="large"
+                >최고의 교육 캐릭터 뮤지컬, 재미와 감동을 느껴보세요.</span
+              >
             </div>
           </div>
-
-          <div class="service-panels">
-            <div class="service-panel-item active" id="panel-1">
-              <video
-                src="https://cdn.pixabay.com/video/2020/04/07/35241-407130670_large.mp4"
-                autoplay
-                loop
-                muted
-              ></video>
-              <div class="service-text-overlay">
-                <span>교육 전문가가 만드는</span>
-                <span class="large"
-                  >최고의 교육 캐릭터 뮤지컬, 재미와 감동을 느껴보세요.</span
-                >
-              </div>
+          <div class="service-panel-item" role="tabpanel">
+            <video
+              src="https://cdn.pixabay.com/video/2020/04/07/35236-407130652_large.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+            <div class="service-text-overlay">
+              <span>아이들의 상상력을 자극하는</span>
+              <span class="large">창의적인 인형극 공연을 만나보세요.</span>
             </div>
-            <div class="service-panel-item" id="panel-2">
-              <video
-                src="https://cdn.pixabay.com/video/2020/04/07/35236-407130652_large.mp4"
-                autoplay
-                loop
-                muted
-              ></video>
-              <div class="service-text-overlay">
-                <span>아이들의 상상력을 자극하는</span>
-                <span class="large">창의적인 인형극 공연을 만나보세요.</span>
-              </div>
-            </div>
-            <div class="service-panel-item" id="panel-3">
-              <video
-                src="https://cdn.pixabay.com/video/2020/04/13/35929-409042342_large.mp4"
-                autoplay
-                loop
-                muted
-              ></video>
-              <div class="service-text-overlay">
-                <span>모두가 즐거운</span>
-                <span class="large">특별한 이벤트와 행사를 기획합니다.</span>
-              </div>
+          </div>
+          <div class="service-panel-item" role="tabpanel">
+            <video
+              src="https://cdn.pixabay.com/video/2020/04/13/35929-409042342_large.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+            <div class="service-text-overlay">
+              <span>모두가 즐거운</span>
+              <span class="large">특별한 이벤트와 행사를 기획합니다.</span>
             </div>
           </div>
         </div>
@@ -183,114 +315,103 @@
     </section>
 
     <section class="online-theater-section">
-      <div class="container">
-        <h2 class="section-title">ONLINE THEATER</h2>
-        <p class="section-subtitle">언제 어디서나 즐기는 온라인 인형극</p>
+      <h2 class="section-title">
+        <img
+          src="images/jpuppet-textlogo-s.png"
+          alt="jpuppet-textlogo-s"
+        />ONLINE THEATER
+      </h2>
 
-        <div class="theater-stage">
-          <div class="curtain-left"></div>
-
-          <div class="slider-container">
-            <div class="slider-wrapper">
-              <div class="slide">
-                <img
-                  src="https://images.unsplash.com/photo-1759659335001-57b23abcfd6e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-                  alt="Theater Play"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="https://images.unsplash.com/photo-1758818035036-5c6a3faf9996?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871"
-                  alt="Concert Performance"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1664302669271-c719c0ccfa00?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=719"
-                  alt="Ballet Dancers"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="https://images.unsplash.com/photo-1761229661246-3ce51a8c5296?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
-                  alt="Puppet Show"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="https://images.unsplash.com/photo-1673773773060-127485f92eb4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=967"
-                  alt="Stage Lights"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="https://images.unsplash.com/photo-1666140737974-04e765490bdb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1264"
-                  alt="Opera House"
-                />
-              </div>
-            </div>
-
-            <button class="slider-btn btn-prev">&lt;</button>
-            <button class="slider-btn btn-next">&gt;</button>
-
-            <div class="slider-indicators"></div>
-          </div>
-
-          <div class="curtain-right"></div>
+      <div id="carousel-wrapper">
+        <div id="carousel-container">
+          <div id="content-container"></div>
         </div>
       </div>
     </section>
 
     <section class="new-story-section">
-      <div class="container">
-        <div class="story-header">
-          <h2 class="section-title">New Story</h2>
-          <div class="squirrel-character-small">
-            <img
-              src="assets/images/J-PUPPET STORY CARD.png"
-              alt="Squirrel Character"
-            />
-          </div>
-        </div>
+      <div class="story-header">
+        <img
+          src="images/J-PUPPET STORY CARD.png"
+          alt="Squirrel Character"
+          style="width: 150px"
+        />
+        <h2 class="section-title">New Story</h2>
+      </div>
 
-        <div class="story-cards">
-          <div class="story-card yellow">
-            <h3>모험 이야기 🚀</h3>
-            <p>
-              용감한 친구들의 신나는 모험! 숲 속 깊은 곳의 비밀을 찾아 떠나요.
-              신비한 생물들과 놀라운 발견이 기다리고 있어요.
-            </p>
-          </div>
-          <div class="story-card pink">
-            <h3>우정 이야기 💖</h3>
-            <p>
-              함께하는 즐거움과 소중한 우정. 서로 돕고 이해하며 잊지 못할 추억을
-              만듭니다.
-            </p>
-          </div>
-          <div class="story-card green">
-            <h3>성장 이야기 🌱</h3>
-            <p>배우고 성장하는 아름다운 여정</p>
-          </div>
-          <div class="story-card yellow">
-            <h3>신비한 숲 🌳</h3>
-            <p>마법이 숨 쉬는 숲의 비밀</p>
-          </div>
-          <div class="story-card green">
-            <h3>하늘을 나는 꿈 ☁️</h3>
-            <p>
-              구름 위를 날아다니는 특별한 상상! 우리의 꿈은 경계가 없어요.
-              상상의 나래를 펼쳐보세요.
-            </p>
-          </div>
-          <div class="story-card pink">
-            <h3>작은 영웅 🦸</h3>
-            <p>우리 모두가 작은 영웅!</p>
-          </div>
-          <div class="story-card yellow">
-            <h3>반짝이는 별 ✨</h3>
-            <p>밤하늘의 별을 세어보아요.</p>
-          </div>
+      <div class="story-cards">
+        <!-- 수정: tabindex 추가 -->
+        <div
+          class="story-card yellow"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/1200x/84/7a/cb/847acb45e0d66df0013968a9f42ad105.jpg');
+          "
+        >
+          <h3>모험 이야기</h3>
+          <p>
+            용감한 친구들의 신나는 모험! 숲 속 깊은 곳의 비밀을 찾아 떠나요.
+          </p>
+        </div>
+        <div
+          class="story-card pink"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/1200x/c9/69/42/c9694206b08af873b2a0d828f279c986.jpg');
+          "
+        >
+          <h3>우정 이야기</h3>
+          <p>함께하는 즐거움과 소중한 우정.</p>
+        </div>
+        <div
+          class="story-card green"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/736x/06/92/84/0692842b600eca04380c1a10ee1dfcf2.jpg');
+          "
+        >
+          <h3>성장 이야기</h3>
+          <p>배우고 성장하는 아름다운 여정</p>
+        </div>
+        <div
+          class="story-card yellow"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/1200x/3f/c9/28/3fc9283138cc2b93823f1520bd377c15.jpg');
+          "
+        >
+          <h3>신비한 숲</h3>
+          <p>마법이 숨 쉬는 숲의 비밀</p>
+        </div>
+        <div
+          class="story-card green"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/736x/33/a4/8c/33a48c7547a5a0a02c8e6bf4864dbce3.jpg');
+          "
+        >
+          <h3>하늘을 나는 꿈</h3>
+          <p>구름 위를 날아다니는 특별한 상상!</p>
+        </div>
+        <div
+          class="story-card pink"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/736x/3b/2f/5d/3b2f5d12d864eef93696277e29e8d2b5.jpg');
+          "
+        >
+          <h3>작은 영웅</h3>
+          <p>우리 모두가 작은 영웅!</p>
+        </div>
+        <div
+          class="story-card yellow"
+          tabindex="0"
+          style="
+            --bg: url('https://i.pinimg.com/736x/78/97/2b/78972b39174da3c1aef03d5ff29837f5.jpg');
+          "
+        >
+          <h3>반짝이는 별</h3>
+          <p>밤하늘의 별을 세어보아요.</p>
         </div>
       </div>
     </section>
@@ -299,49 +420,21 @@
     <footer>
       <div class="inner">
         <div class="top">
-          <a href="index.html">
-            <img src="assets/images/logo_wh.png" />
+          <a class="logo" href="index.html">
+            <img src="images/logo_wh.png" />
           </a>
           <ul class="menu">
             <li>
-              <h4 class="accordion-toggle">
-                <a href="about.html">ABOUT US</a
-                ><span class="indicator">+</span>
-              </h4>
-              <ul>
-                <li>About 제이퍼펫</li>
-              </ul>
+              <a href="#">ABOUT US</a>
             </li>
             <li>
-              <h4 class="accordion-toggle">
-                <a href="work.html">MUSICAL</a><span class="indicator">+</span>
-              </h4>
-              <ul>
-                <li>작품소개</li>
-                <li>공연사진</li>
-              </ul>
+              <a href="musical/musical.html">MUSICAL</a>
             </li>
             <li>
-              <h4 class="accordion-toggle">
-                <a href="creative.html">CREATIVE</a
-                ><span class="indicator">+</span>
-              </h4>
-              <ul>
-                <li>연출</li>
-                <li>인형·무대 제작</li>
-                <li>음향작업</li>
-              </ul>
+              <a href="#">CREATIVE</a>
             </li>
             <li>
-              <h4 class="accordion-toggle">
-                <a href="community.html">COMMUNITY</a
-                ><span class="indicator">+</span>
-              </h4>
-              <ul>
-                <li>뉴스</li>
-                <li>공지사항</li>
-                <li>이벤트</li>
-              </ul>
+              <a href="#">COMMUNITY</a>
             </li>
           </ul>
         </div>
@@ -374,29 +467,37 @@
             <span>COPYRIGHT 2018 제이퍼펫 All rights reserved.</span>
           </div>
         </div>
+
+        <div class="flowerImgWrap flower01">
+          <img src="images/flower01.png" />
+        </div>
+        <div class="flowerImgWrap flower02">
+          <img src="images/flower02.png" />
+        </div>
+        <div class="flowerImgWrap flower03">
+          <img src="images/flower03.png" />
+        </div>
+        <div class="flowerImgWrap flower04">
+          <img src="images/flower04.png" />
+        </div>
+        <div class="flowerImgWrap flower05">
+          <img src="images/flower04.png" />
+        </div>
       </div>
     </footer>
-    <!--footer END-->
 
-    <a href="index.html" class="to-top-button">
-      <img src="assets/images/main-logo.png" alt="Top으로 이동" />
+    <!-- 수정: aria-label 추가 -->
+    <a
+      href="index.html"
+      class="to-top-button"
+      aria-label="페이지 상단으로 이동"
+    >
+      <img src="images/main-logo.png" alt="Top으로 이동" />
     </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
     <script src="js/main.js"></script>
-    =======
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
-      <body>
-        <p>공유해욤~</p>
-        >>>>>>> 7ca65f95a20b980f525e09fc0cb1cce6c212dee1
-      </body>
-    </html>
   </body>
 </html>
