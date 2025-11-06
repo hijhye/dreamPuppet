@@ -14,12 +14,6 @@ body {
   word-break: keep-all;
   font-family: "SchoolSafeUniverse";
   line-height: 1.5;
-  background: url(../starIMG/star19.png), url(../starIMG/star16.png),
-    url(../starIMG/star18.png);
-  background-repeat: no-repeat;
-  background-size: 200px, 300px, 150px;
-  background-attachment: fixed;
-  background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
 }
 h2 {
   font-family: "NationalPension";
@@ -43,6 +37,18 @@ h2 {
   #container {
     width: 100%;
   }
+  body {
+    background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+      url(../starIMG/star18.png);
+    background-repeat: no-repeat;
+    background-size: 200px, 300px, 150px;
+    background-attachment: fixed;
+    background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
+  }
+  h2 {
+    font-size: 36px;
+  }
+
   /*con01*/
   .con01 {
     width: 100%;
@@ -333,6 +339,14 @@ h2 {
 }
 
 @media (min-width: 720px) and (max-width: 1220px) {
+  body {
+    background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+      url(../starIMG/star18.png);
+    background-repeat: no-repeat;
+    background-size: 150px, 250px, 100px;
+    background-attachment: fixed;
+    background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
+  }
   /*con01*/
   .con01 {
     width: 100%;
@@ -622,6 +636,14 @@ h2 {
 }
 
 @media (max-width: 720px) {
+  body {
+    background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+      url(../starIMG/star18.png);
+    background-repeat: no-repeat;
+    background-size: 150px, 100px, 100px;
+    background-attachment: fixed;
+    background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
+  }
   /*con01*/
   .con01 {
     width: 100%;
