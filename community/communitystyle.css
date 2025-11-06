@@ -125,6 +125,51 @@ nav li,
   margin-left: 8px;
 }
 
+/* 뉴스 제목 */
+#page1 > h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  color: #222;
+}
+
+/* 👉 span을 확실히 더 작고 회색으로 */
+#page1 > h2 > span {
+  font-size: 0.55em !important; /* 더 작게 */
+  color: #888 !important; /* 회색 */
+  margin-left: 10px;
+  font-weight: 700;
+}
+/* 어디서든 강제로 숨김 */
+.hidden {
+  display: none !important;
+}
+
+/* 제목 스타일: h2와 span 크기/색 다르게 */
+#page1 > h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  color: #222;
+}
+#page1 > h2 span {
+  font-size: 0.55em; /* h2보다 작게 */
+  color: #888; /* 흐린 회색 */
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+#page1 .notice_wrap > h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 24px;
+}
+#page1 .notice_wrap > h2 span {
+  font-size: 0.55em; /* h2보다 작게 */
+  color: #888;
+  /margin-left: 10px;
+  font-weight: 800;
+}
+
 #page2 > h2 {
   margin-bottom: 90px;
 }
