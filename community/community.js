@@ -119,11 +119,7 @@ $(document).ready(function () {
 // === Falling Stars (parallax on scroll) ===
 (function () {
   // 별 파일 경로(순서 중요: star11, star1, star13)
-  const SRC = [
-    "../starIMG/star11.png",
-    "../starIMG/star1.png",
-    "../starIMG/star13.png",
-  ];
+  const SRC = ["../starIMG/star11.png", "../starIMG/star13.png"];
 
   // 각 레이어 설정: x(좌표%), size(px), 시작 Y, 속도, 루프 길이(px)
   const layers = [
@@ -210,7 +206,7 @@ $(document).ready(function () {
     update();
   });
 })();
-// 반짝이는 마우스 포인터
+//반짝이는 마우스 포인터
 
 // <![CDATA[
 var colour = "random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"

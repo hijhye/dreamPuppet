@@ -130,6 +130,9 @@ nav li,
 }
 
 /* ================= 3) 뉴스 ================= */
+#page1 .con01 {
+  padding-top: 100px;
+}
 #page1 .news-wrap {
   position: relative;
 }
@@ -290,7 +293,7 @@ nav li,
   position: relative;
   margin: 60px 0 0;
   /* 상단 흰색 / 하단 노란 띠 */
-  background: linear-gradient(180deg, #ffffff 60%, #ffeaa8 0);
+  background: linear-gradient(180deg, #ffffff, #ffeaa8);
   overflow: hidden;
 }
 .band-inner {
