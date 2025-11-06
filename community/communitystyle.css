@@ -166,7 +166,7 @@ nav li,
 #page1 .notice_wrap > h2 span {
   font-size: 0.55em; /* h2보다 작게 */
   color: #888;
-  /margin-left: 10px;
+  margin-left: 10px;
   font-weight: 800;
 }
 
