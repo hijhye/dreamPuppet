@@ -19,7 +19,28 @@ body {
   color: #333;
   background-color: #fff;
 }
-
+body {
+  word-break: keep-all;
+  font-family: "SchoolSafeUniverse";
+  line-height: 1.5;
+}
+.section-title {
+  font-family: "NationalPension"; /*강조*/
+}
+@font-face {
+  font-family: "NationalPension";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SchoolSafeUniverse";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -377,11 +398,11 @@ img {
 }
 
 /* ========================================
-   헤더 및 네비게이션 (Header & Navigation)
-======================================== */
+         헤더 및 네비게이션 (Header & Navigation)
+      ======================================== */
 #main-header {
   position: fixed;
-  bottom: 10%;
+  top: 10%;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -528,7 +549,7 @@ img {
   padding: 0.8rem 1.5rem;
   color: #333;
   display: none;
-  width: 300px;
+  width: auto;
 }
 .contactBtn {
   position: absolute;
@@ -594,14 +615,16 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #ffc848;
+  background: rgba(255, 255, 255, 0.2); /* 글라스모피즘 배경 */
+  backdrop-filter: blur(15px); /* 블러 효과 */
+  -webkit-backdrop-filter: blur(15px); /* Safari 브라우저 호환성 */
   z-index: 1001;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   visibility: hidden;
 }
@@ -612,7 +635,7 @@ img {
 }
 
 .mobile-nav a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -648,18 +671,50 @@ body.nav-open #main-header {
 }
 
 /* ========================================
+         애니메이션 정의 (Keyframes)
+      ======================================== */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.9375rem) scale(1.1);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
    히어로 섹션 (Hero Section)
 ======================================== */
 .hero-section {
   width: 100%;
   height: 100vh;
-  background-color: #ffc848;
+  /*그라디언트백그라운드*/
+  background: linear-gradient(
+    180deg,
+    rgba(58, 54, 95, 0.8) 0%,
+    rgba(255, 200, 72, 0.8) 100%
+  );
+  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 10;
+  z-index: -1;
 }
 
 .hero-section-parent {
@@ -913,6 +968,21 @@ body.nav-open #main-header {
 
 /* 반응형 */
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .mobile-nav {
+    display: flex;
+  }
   .our-design-section {
     padding: 60px 0;
   }
@@ -945,31 +1015,39 @@ body.nav-open #main-header {
     transform: translateY(-5px) !important;
   }
 }
-
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
 /* ========================================
    Creative Service 섹션
 ======================================== */
 .creative-service-section {
   width: 100%;
-  max-width: 1000px;
+  padding: 20%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 200, 72, 0.8) 100%
+  );
   height: 100vh;
-  margin: 40px auto;
+  margin: 0px auto;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .service-header {
+  margin: 5% 10%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-}
-
-.service-header-title {
-  font-size: 14px;
-  color: #888;
-  font-weight: 700;
-  margin: 0 0 10px 0;
+  justify-content: space-between;
 }
 
 .service-header .section-title {
@@ -977,14 +1055,15 @@ body.nav-open #main-header {
   font-weight: 900;
   color: #111;
   margin: 0;
-  line-height: 1.2;
 }
 
 .service-badge {
   display: inline-block;
   background-color: #fff0a0;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 50px;
+  width: 150px;
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
   color: #333;
@@ -997,9 +1076,12 @@ body.nav-open #main-header {
   transform: scale(1.05);
   outline: 2px solid #333;
 }
-
+.service-wrap {
+  width: 30%;
+  padding: 2%;
+}
 .service-content {
-  padding: 5% 0;
+  padding: 5% 10%;
 
   display: flex;
   gap: 20px;
@@ -1105,7 +1187,7 @@ body.nav-open #main-header {
 .online-theater-section {
   background-color: var(--primary-yellow);
   width: 100%;
-  height: 170vh;
+  height: 150vh;
   overflow: hidden;
   color: #fff;
   align-items: center;
@@ -1115,8 +1197,8 @@ body.nav-open #main-header {
 
 .section-title {
   font-size: 48px;
-  text-align: left;
-  margin: 0 0 24px 0;
+  padding: 1% 0;
+  text-align: center;
   color: #2d3561;
   font-weight: bold;
 }
@@ -1271,13 +1353,18 @@ body.nav-open #main-header {
 ======================================== */
 .new-story-section {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 200, 72, 0.8) 100%
+  );
+  height: 150vh;
   padding: 20%;
   position: relative;
 }
 
 .story-header {
-  min-width: 400px;
+  width: 100%; /* min-width: 400px; */
   height: 150px;
   line-height: 240px;
   position: relative;
@@ -1295,11 +1382,13 @@ body.nav-open #main-header {
 }
 
 .story-header .section-title {
-  width: auto;
+  width: 100%;
+  height: 150px;
   font-size: 32px;
   font-weight: 900;
   color: #111;
   margin: 0;
+  padding: 0;
   text-align: left;
 }
 
@@ -1436,175 +1525,13 @@ body.nav-open #main-header {
 .story-card:nth-child(7) {
   grid-column: span 2;
 }
+/* ======================================
+   * To Top Button
+   * ====================================== */
 
-/* ========================================
-   맨 위로 가기 버튼 (Back to Top Button)
-======================================== */
-.to-top-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 70px;
-  height: 70px;
-  z-index: 1000;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-}
-
-.to-top-button.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.to-top-button:hover,
-.to-top-button:focus {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  outline: 2px solid #ffc848;
-}
-
-.to-top-button img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-/* ========================================
-   푸터 (Footer)
-======================================== */
-
-footer {
-  width: 100%;
-  height: 40vh;
-  color: #fff;
-  text-align: center;
-  font-size: 0.7rem;
-  position: fixed;
-  bottom: 0;
-  overflow: hidden;
-  /* border: 1px solid green; */
-  transform: translateY(90%);
-  transition: 1s;
-}
-footer .inner {
-  background: url(../images/footer_bg.png);
-  width: 100%;
-  padding: 2rem 10vw 0px 10vw;
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 3.125rem;
-  /* border: 1px solid red; */
-  position: relative;
-}
-footer .logo {
-  width: 250px;
-}
-footer .logo img {
-  width: 100%;
-}
-footer:hover {
-  transform: translateY(0%);
-}
-footer .top {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-footer .menu {
-  display: flex;
-  gap: 1.875rem;
-}
-footer .menu h4 {
-  margin-bottom: 0.625rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  display: flex;
-}
-
-footer .link {
-  display: flex;
-  gap: 0.625rem;
-  /* border: 1px solid red; */
-}
-footer .link li {
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-footer .info {
-  font-size: 0.6rem;
-  padding: 0.625rem 0 1.25rem;
-}
-
-footer .flowerImgWrap {
-  position: absolute;
-  animation: spin 10s infinite linear;
-  scale: 0.8;
-  transition: 1s;
-}
-footer .flowerImgWrap:hover {
-  scale: 1;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-footer .flowerImgWrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-footer .flower01 {
-  width: 150px;
-  left: 50px;
-  top: 50%;
-  animation-delay: -1s;
-}
-footer .flower02 {
-  width: 100px;
-  right: 10%;
-  top: 45%;
-  animation-delay: -0.8s;
-}
-footer .flower03 {
-  width: 100px;
-  right: 40%;
-  bottom: 15%;
-  animation-delay: -1.2s;
-}
-footer .flower04 {
-  width: 50px;
-  left: 20%;
-  bottom: 10%;
-  animation-delay: -0.3s;
-}
-footer .flower05 {
-  width: 70px;
-  right: 30%;
-  top: 20%;
+.topInner {
+  text-decoration: none;
+  color: inherit;
 }
 /* ========================================
    애니메이션 정의 (Keyframes)
@@ -1781,6 +1708,56 @@ footer .flower05 {
     font-size: 18px;
   }
 
+  .service-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .service-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    flex: 1 1 auto;
+    padding: 5px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .service-tab-item {
+    flex-shrink: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+  .creative-service-section {
+    width: 100%;
+    height: 120vh;
+  }
+
+  .service-tab-item {
+    width: 30%;
+    padding: 2%;
+  }
+
+  .online-theater-section {
+    height: 100vh;
+    margin: 0px auto;
+  }
+
+  .carousel-item {
+    width: 100%;
+  }
+  .item-content {
+    width: 100%;
+  }
+
+  .item-title {
+    font-size: 1.5rem;
+  }
+  .item-description {
+    font-size: 0.8rem;
+  }
   .service-header {
     flex-direction: column;
     align-items: flex-start;

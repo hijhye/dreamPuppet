@@ -46,6 +46,8 @@
     ></script>
     <!--===================G=S=A=P====================-->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="footer/footerStyle.css" />
+    <link rel="stylesheet" href="floating/sub_floatingStyle.css" />
   </head>
   <body>
     <!-- 수정: id를 "intro"로 통일 -->
@@ -72,7 +74,7 @@
       </div>
     </section>
 
-    <div id="visual">
+    <!-- <div id="visual">
       <div class="inner">
         <div class="keyword01 keyword">WELCOME</div>
         <div class="circle"><h2>이야기로 사람의 마음을 움직이다</h2></div>
@@ -88,7 +90,7 @@
         <li></li>
         <li></li>
       </ul>
-    </div>
+    </div> -->
 
     <section class="hero-section">
       <div class="stars-container">
@@ -123,15 +125,17 @@
           <img src="images/logo_bk.png" alt="J-PUPPET" />
         </a>
         <nav class="desktop-nav">
-          <a href="index.html" class="nav-link">HOME</a>
-          <a href="about/about.html" class="nav-link">ABOUT US</a>
+          <a href="about/about.html" class="nav-link">ABOUT</a>
           <a href="musical/musical.html" class="nav-link">MUSICAL</a>
-          <a href="creative.html" class="nav-link">CREATIVE</a>
-          <a href="community.html" class="nav-link">COMMUNITY</a>
+          <a href="creative/creative.html" class="nav-link">CREATIVE</a>
+          <a href="community/community.html" class="nav-link">COMMUNITY</a>
           <div class="btnWrap">
-            <!-- 수정: aria-label 추가 -->
-            <button class="contactBtn" aria-label="문의하기">CONTACT</button>
-            <p class="contactTxt">어떤 프로젝트를 함께 하시겠어요?</p>
+            <button class="contactBtn" aria-label="문의하기">리플렛</button>
+            <p class="contactTxt">
+              <a href="./제이퍼펫.pdf" target="_blank"
+                >어떤 프로젝트를 함께 하시겠어요?</a
+              >
+            </p>
           </div>
         </nav>
         <!-- 수정: aria-label 추가 -->
@@ -149,11 +153,10 @@
     </header>
 
     <nav class="mobile-nav">
-      <a href="index.html" class="nav-link">HOME</a>
-      <a href="about/about.html" class="nav-link">ABOUT US</a>
-      <a href="work.html" class="nav-link">MUSICAL</a>
-      <a href="creative.html" class="nav-link">CREATIVE</a>
-      <a href="community.html" class="nav-link">COMMUNITY</a>
+      <a href="about/about.html" class="nav-link">ABOUT</a>
+      <a href="musical/musical.html" class="nav-link">MUSICAL</a>
+      <a href="creative/creative.html" class="nav-link">CREATIVE</a>
+      <a href="creative/creative.html" class="nav-link">COMMUNITY</a>
     </nav>
 
     <section class="our-design-section">
@@ -171,7 +174,7 @@
           <div class="stage-card" data-card="1">
             <div class="stage-card-image">
               <img
-                src="https://i.pinimg.com/736x/84/7a/cb/847acb45e0d66df0013968a9f42ad105.jpg"
+                src="http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220827_205343650_1717C59E-7372-45E6-B8F2-9A034CB78D8A-1080x675.jpg"
                 alt="재미있는 공연"
               />
             </div>
@@ -190,7 +193,7 @@
           <div class="stage-card" data-card="2">
             <div class="stage-card-image">
               <img
-                src="https://i.pinimg.com/736x/c9/69/42/c9694206b08af873b2a0d828f279c986.jpg"
+                src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2025/11/05/F4521_SE-8944b837-4e8d-4590-ba4c-aa0337fd112d.jpg"
                 alt="감동적인 이야기"
               />
             </div>
@@ -209,7 +212,7 @@
           <div class="stage-card" data-card="3">
             <div class="stage-card-image">
               <img
-                src="https://i.pinimg.com/736x/06/92/84/0692842b600eca04380c1a10ee1dfcf2.jpg"
+                src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2025/11/05/F4518_SE-0936bc66-40c7-4569-aedf-73ad05e3289b.jpg"
                 alt="예술적인 무대"
               />
             </div>
@@ -229,14 +232,15 @@
 
     <section class="creative-service-section">
       <!-- 수정: HTML 구조 수정 -->
-      <div class="service-header-title">
-        <p>왜 제이퍼핏이어야 할까요?</p>
-      </div>
+
       <header class="service-header">
         <div class="story-header">
           <h2 class="section-title">Creative Service</h2>
         </div>
-        <a href="#" class="service-badge">자세히보기</a>
+        <div class="service-wrap">
+          <p>왜 제이퍼핏이어야 할까요?</p>
+          <a href="./제이퍼펫.pdf" class="service-badge">자세히보기</a>
+        </div>
       </header>
 
       <div class="service-content">
@@ -257,7 +261,7 @@
             tabindex="0"
             aria-selected="false"
           >
-            <span>인형극</span>
+            <span> 인형극</span>
             <span class="icon">▶</span>
           </div>
           <div
@@ -273,12 +277,10 @@
 
         <div class="service-panels">
           <div class="service-panel-item active" role="tabpanel">
-            <video
-              src="https://cdn.pixabay.com/video/2020/04/07/35241-407130670_large.mp4"
-              autoplay
-              loop
-              muted
-            ></video>
+            <img
+              src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2021/12/15/F1286_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5DDSCN1042.JPG"
+              alt="jpuppet"
+            />
             <div class="service-text-overlay">
               <span>교육 전문가가 만드는</span>
               <span class="large"
@@ -287,24 +289,20 @@
             </div>
           </div>
           <div class="service-panel-item" role="tabpanel">
-            <video
-              src="https://cdn.pixabay.com/video/2020/04/07/35236-407130652_large.mp4"
-              autoplay
-              loop
-              muted
-            ></video>
+            <img
+              src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2021/12/15/F1287_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5DDSCN1046.JPG"
+              alt="jpuppet"
+            />
             <div class="service-text-overlay">
               <span>아이들의 상상력을 자극하는</span>
               <span class="large">창의적인 인형극 공연을 만나보세요.</span>
             </div>
           </div>
           <div class="service-panel-item" role="tabpanel">
-            <video
-              src="https://cdn.pixabay.com/video/2020/04/13/35929-409042342_large.mp4"
-              autoplay
-              loop
-              muted
-            ></video>
+            <img
+              src="http://jpuppet.cafe24.com/wp-content/uploads/mangboard/2021/12/15/F1284_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5D20211125_095237.jpg"
+              alt="jpuppet"
+            />
             <div class="service-text-overlay">
               <span>모두가 즐거운</span>
               <span class="large">특별한 이벤트와 행사를 기획합니다.</span>
@@ -315,12 +313,7 @@
     </section>
 
     <section class="online-theater-section">
-      <h2 class="section-title">
-        <img
-          src="images/jpuppet-textlogo-s.png"
-          alt="jpuppet-textlogo-s"
-        />ONLINE THEATER
-      </h2>
+      <h2 class="section-title">ONLINE THEATER</h2>
 
       <div id="carousel-wrapper">
         <div id="carousel-container">
@@ -345,7 +338,7 @@
           class="story-card yellow"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/1200x/84/7a/cb/847acb45e0d66df0013968a9f42ad105.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220823_135428209_3B25693E-95FA-43AF-BAFC-ADFEEA0B29E6-768x576.jpg');
           "
         >
           <h3>모험 이야기</h3>
@@ -357,7 +350,7 @@
           class="story-card pink"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/1200x/c9/69/42/c9694206b08af873b2a0d828f279c986.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%9820220824_142035-768x430.jpg');
           "
         >
           <h3>우정 이야기</h3>
@@ -367,7 +360,7 @@
           class="story-card green"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/736x/06/92/84/0692842b600eca04380c1a10ee1dfcf2.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220818_104212113_E37AAF63-6E1B-4FA8-9001-187CE8612CE6-768x576.jpg');
           "
         >
           <h3>성장 이야기</h3>
@@ -377,7 +370,7 @@
           class="story-card yellow"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/1200x/3f/c9/28/3fc9283138cc2b93823f1520bd377c15.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220818_113657605_2D088121-65E0-4A56-96D9-127AC4B7BC36-768x576.jpg');
           "
         >
           <h3>신비한 숲</h3>
@@ -387,7 +380,7 @@
           class="story-card green"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/736x/33/a4/8c/33a48c7547a5a0a02c8e6bf4864dbce3.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%9820220727_192950-768x431.jpg');
           "
         >
           <h3>하늘을 나는 꿈</h3>
@@ -397,7 +390,7 @@
           class="story-card pink"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/736x/3b/2f/5d/3b2f5d12d864eef93696277e29e8d2b5.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%9820220723_165334-768x430.jpg');
           "
         >
           <h3>작은 영웅</h3>
@@ -407,7 +400,7 @@
           class="story-card yellow"
           tabindex="0"
           style="
-            --bg: url('https://i.pinimg.com/736x/78/97/2b/78972b39174da3c1aef03d5ff29837f5.jpg');
+            --bg: url('http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%EB%AA%A8%EC%9E%90%EC%9D%B4%ED%81%ACP20220709_060741000_6ABD546B-9838-4B42-B2E4-667D947B11EE.jpg');
           "
         >
           <h3>반짝이는 별</h3>
@@ -416,7 +409,6 @@
       </div>
     </section>
 
-    <!--footer-->
     <footer>
       <div class="inner">
         <div class="top">
@@ -428,7 +420,7 @@
               <a href="#">ABOUT US</a>
             </li>
             <li>
-              <a href="musical/musical.html">MUSICAL</a>
+              <a href="#">MUSICAL</a>
             </li>
             <li>
               <a href="#">CREATIVE</a>
@@ -486,18 +478,43 @@
       </div>
     </footer>
 
-    <!-- 수정: aria-label 추가 -->
-    <a
-      href="index.html"
-      class="to-top-button"
-      aria-label="페이지 상단으로 이동"
-    >
-      <img src="images/main-logo.png" alt="Top으로 이동" />
-    </a>
+    <div id="floating">
+      <div class="top">
+        <a href="index.html" class="topInner">
+          <i class="fa-solid fa-arrow-up"></i>
+          <p>TOP</p>
+        </a>
+      </div>
+      <div class="floatFix">
+        <img src="characterIMG/png/daram_cute.png" alt="" />
+        <p>CONTACT</p>
+      </div>
+      <div class="inquery">
+        <i class="fa-solid fa-xmark"></i>
+        <h4>온라인으로 간편하게</h4>
+        <p>제이퍼펫에서 꼼꼼하게 확인하여 개별 연락드립니다.</p>
+        <ul>
+          <li>
+            <span>이름</span
+            ><input type="text" placeholder="성함을 입력해주세요" />
+          </li>
+          <li>
+            <span>연락처</span
+            ><input type="text" placeholder="연락처를 입력해주세요" />
+          </li>
+          <li>
+            <span>문의사항</span
+            ><input type="text" placeholder="문의사항을 입력해주세요" />
+          </li>
+        </ul>
+        <button class="send">문의하기</button>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-
+    <script src="floating/sub_floatingCustom.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/include.js"></script>
   </body>
 </html>

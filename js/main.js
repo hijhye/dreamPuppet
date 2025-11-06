@@ -325,14 +325,14 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "인형극 축제",
       description: "경기인형극제 in 수원' 오는 15일부터 28일까지 열려...",
       imageUrl:
-        "https://i.pinimg.com/736x/6a/b4/f7/6ab4f7e02407785821c55754d88dc92f.jpg",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2024/08/20230816_110242.jpg",
     },
     {
       id: 2,
       title: "무대 공연에 사랑스러운 아이들 일러스트",
       description: "무대 공연에 사랑스러운 아이들 PNG 일러스트 를 제공하여...",
       imageUrl:
-        "https://i.pinimg.com/736x/c6/6c/d7/c66cd794111b9852a94a2e5ca60d32a1.jpg",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2024/08/KakaoTalk_20240521_071909557_22.jpg",
     },
     {
       id: 3,
@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         "극장에서 펼쳐지는 눈부신 무대 퍼포먼스에 놀라움과 설렘을 느끼며",
       imageUrl:
-        "https://i.pinimg.com/736x/50/c8/5c/50c85c52a677bcc591d3567b3d84092f.jpg",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220827_205343650_1717C59E-7372-45E6-B8F2-9A034CB78D8A.jpg",
     },
     {
       id: 4,
@@ -348,14 +348,14 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         "극장에서 펼쳐지는 아이들을 위한 환상적인 무대 공연을 만나보세요.",
       imageUrl:
-        "https://i.pinimg.com/736x/b0/5e/60/b05e608d1282cf1c4fd40d70c37f77bd.jpg",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%EB%AA%A8%EC%9E%90%EC%9D%B4%ED%81%ACP20220806_115835288_6AC7FE7A-1AED-4F49-BBEA-3ED0FCF5C9CC.jpg",
     },
     {
       id: 5,
       title: "토이저러스",
       description: "환상적인 공간에서 아이들이 노는 모습을 담았습니다.",
       imageUrl:
-        "https://usnewsper.com/wp-content/uploads/2024/07/1b_7Qgs6obOPAz100XHxelEewnUR8KmsM.png",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220727_184518050_07D0BA15-3530-4DB7-8F86-B10EB9DCD076.jpg",
     },
     {
       id: 6,
@@ -363,21 +363,21 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         "극장에서 펼쳐지는 아이들을 위한 환상적인 무대 공연을 만나보세요.",
       imageUrl:
-        "https://i.pinimg.com/736x/bf/bf/13/bfbf13a4386168d3b27e14d65aa53c4b.jpg",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220823_134126752_1F70849E-FA40-49B7-99E4-5B6B71BC5FE1.jpg",
     },
     {
       id: 7,
       title: "마드리드 극장",
       description: "바이 바이 버디 마드리드 극장에서 펼쳐지다.",
       imageUrl:
-        "https://i.pinimg.com/736x/c1/e8/95/c1e895c0c0601ea1843d43df08a19af2.jpg",
+        "https://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98P20220818_114329002_B8721B4F-B32B-4050-B9D8-1AFF9E677221.jpg",
     },
     {
       id: 8,
       title: "Shadow play",
       description: "어린이들과 함께 빛과 그림자를 이용한 그림자 인형놀이.",
       imageUrl:
-        "https://i.pinimg.com/736x/7a/91/5b/7a915b721dd248b3db1366316dcd6eec.jpg",
+        "http://jpuppet.cafe24.com/wp-content/uploads/2022/08/%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%EB%AA%A8%EC%9E%90%EC%9D%B4%ED%81%AC20220708_111825-1024x574.jpg",
     },
   ];
 
@@ -583,33 +583,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ======================================
    * To Top Button
    * ====================================== */
-  const toTopButton = document.querySelector(".to-top-button");
-  let ticking = false;
-
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrolled = window.pageYOffset;
-
-        if (toTopButton) {
-          if (scrolled > 500) {
-            toTopButton.classList.add("visible");
-          } else {
-            toTopButton.classList.remove("visible");
-          }
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-
-  if (toTopButton) {
-    toTopButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
-    });
-  }
 
   /* ======================================
    * Story Cards Magnetic Effect
@@ -691,6 +664,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Footer Scroll Behavior *
   //==================================
 
+  $(".accordion-toggle").on("click", function () {
+    $(this).next("ul").slideToggle();
+    const indicator = $(this).find(".indicator");
+    if (indicator.text() === "+") {
+      indicator.text("-");
+    } else {
+      indicator.text("+");
+    }
+  });
+
   let footer = document.querySelector("footer");
 
   window.addEventListener("scroll", () => {
@@ -704,10 +687,5 @@ document.addEventListener("DOMContentLoaded", () => {
       footer.style.transform = "translateY(90%)";
     }
   });
-  footer.addEventListener("mouseover", () => {
-    footer.style.transform = "translateY(0%)";
-  });
-  footer.addEventListener("mouseleave", () => {
-    footer.style.transform = "translateY(90%)";
-  });
+  loadComponent("#footer", "footer/footer.html");
 });

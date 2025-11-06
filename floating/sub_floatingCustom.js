@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 // 플로팅
 let float = document.querySelector("#floating .floatFix");
 let goTop = document.querySelector("#floating .top");

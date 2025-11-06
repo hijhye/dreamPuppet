@@ -34,7 +34,7 @@ body {
     right 10% bottom 30%;
   background-size: 80px, 60px, 100px;
   background-attachment: fixed;
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px; */
 }
 p {
   line-height: 1.5;
