@@ -1,15 +1,15 @@
-/* =========================================================
-   1) 폰트 선언 & 전역 기본
-   ========================================================= */
+/* ================= 1) 폰트 & 기본 ================= */
 @font-face {
   font-family: "NationalPension";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2")
+    format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SchoolSafeUniverse";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+    format("woff2");
   font-weight: normal;
   font-display: swap;
 }
@@ -19,31 +19,47 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
   width: 100%;
-  overflow-x: hidden; /* ✅ 가로 스크롤 제거 */
+  overflow-x: hidden;
 }
+
 :root {
-  --accent: #FFC857;
+  --accent: #ffc857;
   --ink: #222;
-  --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   --r: 28px;
 }
+
 body {
   margin: 0;
   word-break: keep-all;
   font-family: "SchoolSafeUniverse", system-ui, sans-serif;
   line-height: 1.5;
   color: #222;
-}
-h1,h2,h3,h4, nav li, .page-nav a.active, .notice_set h3 span {
-  font-family: "NationalPension","SchoolSafeUniverse",sans-serif;
-  color: inherit; /* 강조 폰트 검정색 */
+
+  /* ✨ 별 이미지 배경 */
+  background-image: url("/mnt/data/star (3).png"), url("/mnt/data/star (9).png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 5% top 10%, right 5% bottom 10%;
+  background-attachment: fixed, fixed;
+  background-size: 100px, 120px;
 }
 
-/* =========================================================
-   2) 공통 구조(데스크탑 기본)
-   ========================================================= */
+h1,
+h2,
+h3,
+h4,
+nav li,
+.page-nav a.active,
+.notice_set h3 span {
+  font-family: "NationalPension", "SchoolSafeUniverse", sans-serif;
+  color: inherit;
+}
+
+/* ================= 2) 공통 구조 ================= */
 nav {
   list-style: none;
   display: flex;
@@ -68,18 +84,52 @@ nav li {
   z-index: 2;
   transition: color 0.3s ease;
 }
-nav li.active { color: #fff; }
-nav li:hover { color: #ff8a00; }
+nav li.active {
+  color: #fff;
+}
+nav li:hover {
+  color: #ff8a00;
+}
 nav .highlight {
-  position: absolute; top: 10px; left: 10px;
-  width: 0; height: calc(100% - 20px);
-  background: #ff8a00; border-radius: 30px; z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 0;
+  height: calc(100% - 20px);
+  background: #ff8a00;
+  border-radius: 30px;
+  z-index: 1;
   transition: all 0.35s ease;
 }
 
-/* 뉴스 테이블 */
+/* 공통 페이지 컨테이너 */
+#page1,
+#page2 {
+  max-width: 1100px;
+  margin: 80px auto 120px;
+  padding: 0 20px;
+  position: relative;
+}
+#page1 > h2,
+#page2 > h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+#page1 > h2 span,
+#page2 > h2 span {
+  font-size: 1rem;
+  color: #777;
+  margin-left: 8px;
+}
+
+/* ================= 3) 뉴스 ================= */
+#page1 .news-wrap {
+  position: relative;
+}
+
 .table-header {
-  width: 80%;
+  width: 100%;
   margin: 0 auto 8px;
   text-align: right;
   font-weight: 600;
@@ -89,14 +139,14 @@ nav .highlight {
   margin: 0 auto 30px;
   border-collapse: separate;
   border-spacing: 0;
-  width: 80%;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 #page1 th {
-  background-color: #ff8a00;
+  background: #ff8a00;
   color: #fff;
   font-weight: 700;
   padding: 12px 10px;
@@ -105,10 +155,12 @@ nav .highlight {
 #page1 td {
   padding: 12px 10px;
   border-top: 1px solid #eee;
-  background-color: #fff;
+  background: #fff;
   transition: background-color 0.2s;
 }
-#page1 tr:hover td { background-color: #fff4e0; }
+#page1 tr:hover td {
+  background: #fff4e0;
+}
 
 .page-nav {
   display: flex;
@@ -120,23 +172,24 @@ nav .highlight {
   display: inline-block;
   padding: 8px 14px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
   text-decoration: none;
   color: #333;
-  transition: all 0.2s;
+  transition: 0.2s;
 }
 .page-nav a:hover,
 .page-nav a.active {
-  background-color: #007bff;
+  background: #ff8a00;
   color: #fff;
-  border-color: #007bff;
 }
 
-/* 공지사항 */
+/* ================= 4) 공지사항 ================= */
 .notice_wrap {
   display: none;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 60px;
+  max-width: 1100px;
+  margin: 40px auto;
 }
 .notice_set ul {
   list-style: none;
@@ -145,11 +198,15 @@ nav .highlight {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  justify-items: center;
 }
 .notice_wrap ul li div {
-  width: 350px;
-  height: 300px;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 16/12;
+  margin: 0 auto;
   overflow: hidden;
+  border-radius: 16px;
 }
 .notice_wrap ul li div img {
   width: 100%;
@@ -158,12 +215,21 @@ nav .highlight {
   display: block;
 }
 .notice_set li > div {
-  height: 200px;
-  border-radius: 16px;
   background: #feefb8;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.notice_set li > div > a.card-link {
+  display: block;
+}
+.notice_set li > div > a.card-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .notice_set h3 {
   margin: 12px 0 0;
@@ -172,160 +238,257 @@ nav .highlight {
   color: #3e3e3e;
 }
 
-/* 이벤트 */
-#page2 {
-  max-width: 1100px;
-  margin: 80px auto 120px;
-  padding: 0 20px;
-  position: relative;
-}
-#page2 > h2 {
+/* ===== 페이지 네비게이션 ===== */
+.notice-prev,
+.notice-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 40px;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  z-index: 10;
 }
-#page2 > h2 span {
-  font-size: 1rem;
-  color: #777;
-  margin-left: 8px;
+
+/* 페이지 네비게이션 좌측, 우측 정렬 */
+.notice-prev {
+  left: 10px;
 }
+.notice-next {
+  right: 10px;
+}
+
+.notice-prev:hover,
+.notice-next:hover {
+  color: #ff8a00; /* hover 시 오렌지색 */
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* 페이지1에서 페이지 네비게이션 숨기기 */
+#page1 .notice-prev,
+#page1 .notice-next {
+  display: none; /* #page1에서는 페이지 네비게이션 숨기기 */
+}
+
+/* 페이지2에서 페이지 네비게이션 보이기 */
+#page2 .notice-prev,
+#page2 .notice-next {
+  display: block; /* #page2에서만 페이지 네비게이션 보이게 하기 */
+}
+
+/* 반응형에서 크기 줄이기 */
+@media (max-width: 720px) {
+  .notice-prev,
+  .notice-next {
+    font-size: 1.5rem;
+  }
+  .notice_wrap {
+    padding: 20px 40px;
+  }
+}
+
+/* ================= 5) 다람 이미지 ================= */
+.daram-deco {
+  position: absolute;
+  top: -165px;
+  right: -60px;
+  width: 400px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+  animation: daramFloat 4s ease-in-out infinite;
+}
+
+/* ================= 6) 이벤트 (원래 크기로 복원) ================= */
 #page2 .row {
   position: relative;
-  min-height: 280px;
-  margin-bottom: 90px;
+  min-height: 280px; /* 원래 높이 */
+  margin-bottom: 90px; /* 원래 간격 */
 }
+
 #page2 .row::after {
   content: "";
   display: block;
   clear: both;
 }
+
+/* 이미지: 덮이고(위), 살짝 위로, 독립 float */
 #page2 .row .img {
-  width: 56%;
+  position: relative;
+  width: 56%; /* 원래 비율 */
   border-radius: var(--r);
   overflow: hidden;
   box-shadow: var(--shadow);
+  z-index: 3; /* 텍스트 위로 */
+  top: -30px; /* 살짝 위로 */
+  animation: floatImg 6s ease-in-out infinite;
+  will-change: transform;
 }
-#page2 .row .img img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-}
+
+/* 텍스트 박스: 중앙 정렬 복귀, 독립 float(이미지 후에 시작) */
 #page2 .row .box {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* 원래 중앙 정렬 */
   background: var(--accent);
   border-radius: 28px;
   padding: 32px 40px;
-  width: 44%;
-  min-height: 180px;
+  width: 44%; /* 원래 비율 */
+  min-height: 180px; /* 원래 높이 */
   box-shadow: var(--shadow);
   display: grid;
   gap: 10px;
   z-index: 1;
-}
-#page2 .row .box h4 { margin: 0; font-size: 0.9rem; color: #444; }
-#page2 .row .box h2 { margin: 0; font-size: 1.4rem; font-weight: 800; }
-#page2 .row .box i { justify-self: end; font-size: 1.5rem; }
-#page2 .row1 .img { float: left; }  #page2 .row1 .box { right: 0; }
-#page2 .row2 .img { float: right; } #page2 .row2 .box { left: 0; }
-#page2 .row3 .img { float: left; }  #page2 .row3 .box { right: 0; }
-
-/* 부드러운 애니메이션 */
-@keyframes floaty {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-#page2 > *:not(h2) {
-  animation: floaty 4s ease-in-out infinite;
-  will-change: transform;
+  animation: floatBoxOffset 6s ease-in-out infinite;
+  animation-delay: 1s; /* 이미지가 먼저 → 박스가 나중에 */
+  will-change: margin-top;
 }
 
-/* =========================================================
-   3) 태블릿 (720~1220px)
-   ========================================================= */
+/* 행별 좌우/어긋남 */
+#page2 .row1 .img {
+  float: left;
+  top: -40px;
+  left: 30px;
+}
+#page2 .row1 .box {
+  right: 0;
+}
+
+#page2 .row2 .img {
+  float: right;
+  top: -50px;
+  right: 30px;
+}
+#page2 .row2 .box {
+  left: 0;
+}
+
+#page2 .row3 .img {
+  float: left;
+  top: -35px;
+  left: 40px;
+}
+#page2 .row3 .box {
+  right: 0;
+}
+
+/* 3행 텍스트 일부만 오른쪽으로 */
+#page2 .row3 .box h2,
+#page2 .row3 .box h4 {
+  position: relative;
+  left: 40px;
+}
+
+/* 이미지 요소 */
+#page2 .row .img img {
+  width: 100%;
+  height: 280px; /* 원래 높이 */
+  object-fit: cover;
+  display: block;
+  border-radius: var(--r);
+}
+
+/* 텍스트 요소 */
+#page2 .row .box h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+#page2 .row .box h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+#page2 .row .box i {
+  justify-self: end;
+  font-size: 1.5rem;
+}
+
+#page2 .notice-prev,
+#page2 .notice-next {
+  display: block;
+}
+/* === 개별 float 애니메이션 (동시에 X, 순차로) === */
+@keyframes floatImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* transform(translateY-50%)와 충돌 피하려고 margin-top을 애니메이션 */
+@keyframes floatBoxOffset {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/* ================= 7) 반응형 ================= */
 @media (min-width: 720px) and (max-width: 1220px) {
-  body { overflow-x: hidden; } /* ✅ 스크롤 방지 */
-  nav { gap: 120px; padding: 8px 16px; }
-  nav li { padding: 8px 22px; font-size: 1rem; }
-
-  .table-header, #page1 table {
-    width: 90%; /* ✅ 폭 90% */
-    margin: 0 auto;
+  nav {
+    gap: 120px;
+    padding: 8px 16px;
   }
-  #page1 th, #page1 td {
-    background-color: #fff;
-    border-top: 1px solid #eee;
+  nav li {
+    padding: 8px 22px;
+    font-size: 1rem;
   }
-  #page1 th { background-color: #ff8a00; color: #fff; }
-  #page1 tr:hover td { background-color: #fff4e0; }
 
+  .daram-deco {
+    top: -100px; /* 화면이 줄어드니 살짝 아래로 */
+    right: -40px;
+    width: 280px; /* 적당히 줄임 */
+  }
+
+  #page2 {
+    max-width: 90%;
+    margin: 60px auto 100px;
+  }
   .notice_set ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
-  .notice_wrap ul li div {
-    width: 100%;
-    height: 240px;
-    max-width: 500px;
-    margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  nav {
+    gap: 56px;
+    padding: 6px 12px;
   }
-  .notice_wrap ul li div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
+  nav li {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .daram-deco {
+    top: -50px; /* 너무 위로 가지 않게 */
+    right: -20px; /* 살짝만 띄움 */
+    width: 180px; /* 작게 축소 */
   }
 
   #page2 {
-    max-width: 90%; /* ✅ 폭 90% */
-    margin: 60px auto 100px;
+    max-width: 90%;
+    margin: 56px auto 80px;
   }
-}
-
-/* =========================================================
-   4) 모바일 (≤720px)
-   ========================================================= */
-@media (max-width: 720px) {
-  body { overflow-x: hidden; } /* ✅ 스크롤 방지 */
-  nav { gap: 56px; padding: 6px 12px; }
-  nav li { padding: 8px 14px; font-size: 0.9rem; }
-
-  .table-header, #page1 table {
-    width: 90%; /* ✅ 폭 90% */
-    margin: 0 auto;
-  }
-  #page1 th, #page1 td {
-    background-color: #fff;
-    border-top: 1px solid #eee;
-  }
-  #page1 th {
-    background-color: #ff8a00;
-    color: #fff;
-  }
-  #page1 tr:hover td { background-color: #fff4e0; }
 
   .notice_set ul {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   .notice_wrap ul li div {
-    width: 100%;
-    aspect-ratio: 16 / 9;
     max-width: 400px;
-    margin: 0 auto;
-  }
-  .notice_wrap ul li div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  #page2 {
-    max-width: 90%; /* ✅ 폭 90% */
-    margin: 56px auto 80px;
+    aspect-ratio: 16/9;
   }
 }
