@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const $newsWrap = $("#page1 .news-wrap");
   const $noticeWrap = $("#page1 .notice_wrap");
-  const $navItems = $("nav li");
+  const $navItems = $(".com_tab  li");
   const $title = $("#page1 > h2");
 
   // 스코프를 뉴스 전용 페이지네비로 한정 (숫자 1,2)
@@ -114,6 +114,102 @@ $(document).ready(function () {
   // });
 });
 
+// 떨어지는 별 효과
+
+// === Falling Stars (parallax on scroll) ===
+(function () {
+  // 별 파일 경로(순서 중요: star11, star1, star13)
+  const SRC = [
+    "../starIMG/star11.png",
+    "../starIMG/star1.png",
+    "../starIMG/star13.png",
+  ];
+
+  // 각 레이어 설정: x(좌표%), size(px), 시작 Y, 속도, 루프 길이(px)
+  const layers = [
+    {
+      x: "5%",
+      size: 120,
+      baseY: -120,
+      speed: 0.35,
+      cycle: window.innerHeight + 200,
+    },
+    {
+      x: "95%",
+      size: 100,
+      baseY: -180,
+      speed: 0.55,
+      cycle: window.innerHeight + 200,
+    },
+    {
+      x: "50%",
+      size: 80,
+      baseY: -100,
+      speed: 0.25,
+      cycle: window.innerHeight + 200,
+    },
+  ];
+
+  // 컨테이너 생성 (포인터 이벤트 막고, 화면 고정)
+  const wrap = document.createElement("div");
+  wrap.id = "falling-stars";
+  Object.assign(wrap.style, {
+    position: "fixed",
+    left: "0",
+    top: "0",
+    width: "100%",
+    height: "100%",
+    pointerEvents: "none",
+    zIndex: "0", // 필요하면 1~10으로 올리세요
+    overflow: "hidden",
+  });
+  document.body.appendChild(wrap);
+
+  // 이미지 생성
+  const imgs = SRC.map((src, i) => {
+    const img = new Image();
+    img.src = src;
+    Object.assign(img.style, {
+      position: "absolute",
+      left: layers[i].x,
+      top: "0px",
+      width: layers[i].size + "px",
+      height: "auto",
+      transform: "translate(-50%, 0)",
+      willChange: "transform",
+      imageRendering: "auto",
+    });
+    wrap.appendChild(img);
+    return img;
+  });
+
+  // 스크롤 패럴랙스 업데이트
+  let ticking = false;
+  function update() {
+    const sy = window.scrollY || 0;
+    imgs.forEach((img, i) => {
+      const L = layers[i];
+      const y = (L.baseY + sy * L.speed) % L.cycle; // 아래로 흘러내리게
+      img.style.transform = `translate(-50%, ${y}px)`;
+    });
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  // 초기 실행 및 이벤트
+  update();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", () => {
+    layers.forEach((L) => (L.cycle = window.innerHeight + 200));
+    update();
+  });
+})();
 // 반짝이는 마우스 포인터
 
 // <![CDATA[
