@@ -14,11 +14,12 @@ body {
   word-break: keep-all;
   font-family: "SchoolSafeUniverse";
   line-height: 1.5;
-  background: url(../starIMG/star12.png), url(../starIMG/star13.png);
+  background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+    url(../starIMG/star18.png);
   background-repeat: no-repeat;
-  background-size: 100px;
+  background-size: 200px, 300px, 150px;
   background-attachment: fixed;
-  background-position: left 10% top 20%, right 15% bottom 30%;
+  background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
 }
 h2 {
   font-family: "NationalPension";

@@ -111,20 +111,6 @@ $(function () {
   });
 });
 
-/*con03 con02에서 클릭하면 클릭한거 바로 올라오기 or 스크롤하면 스티키되는거처럼 올라오기*/
-// let con02_cardList = document.querySelectorAll(".con02 .list li");
-// let con03_cardList = document.querySelectorAll(".con03 .cardList > li");
-
-// con02_cardList.forEach((con02_card, con02_index) => {
-//   con02_card.addEventListener("click", () => {
-//     console.log(con02_index);
-//     con03_cardList.forEach((con03_card) => {
-//       con03_card.classList.remove("on");
-//     });
-//     con03_cardList[con02_index].classList.add("on");
-//   });
-// });
-
 /* con02 클릭 시 con03으로 스크롤 이동 */
 $(".con02 .list li").on("mouseenter", function () {
   $(this).addClass("on");
