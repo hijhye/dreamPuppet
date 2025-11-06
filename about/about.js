@@ -78,9 +78,22 @@ menu.forEach((i, index) => {
 });
 
 // .con03
+
+// let screen = window.innerWidth;
+// console.log("d", screen);
+// $(window).resize(function () {
+//   if (screen <= 720) {
+//     const walk = (x - startX) * 1;
+//   } else {
+//     const walk = (x - startX) * 2;
+//   }
+// });
+
+//
+
 $(function () {
   $(".con03 ul").simplyScroll({
-    speed: 1.5,
+    speed: 1,
     pauseOnHover: true,
     pauseOnTouch: false,
   });
@@ -108,10 +121,11 @@ $(function () {
         const walk = (x - startX) * 2; // 스크롤 속도 조절
         this.scrollLeft = scrollLeft - walk;
       });
-  }, 300); // 0.3초 후 실행
+  }, 300);
 });
 
 // .con04
+
 gsap.registerPlugin(ScrollTrigger);
 gsap
   .timeline({
@@ -141,6 +155,10 @@ let float = document.querySelector("#floating .floatFix");
 let goTop = document.querySelector("#floating .top");
 let inquery = document.querySelector("#floating .inquery");
 let close = document.querySelector(".inquery i");
+let send = document.querySelector(".inquery .send");
+let inputs = document.querySelectorAll(".inquery li input");
+
+console.log(inputs);
 
 let isActive = false;
 
@@ -193,4 +211,10 @@ close.addEventListener("click", () => {
 $(goTop).on("click", function () {
   let conTop = $(".con01").offset().top;
   $("html, body").animate({ scrollTop: conTop }, 800);
+});
+
+send.addEventListener("click", () => {
+  inputs.forEach((input) => {
+    input.value = "";
+  });
 });

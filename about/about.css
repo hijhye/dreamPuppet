@@ -98,7 +98,6 @@ h2 {
   .con01 .big {
     width: 20px;
     background-color: #ff8f1c;
-    /* animation: orbit 7s linear infinite; */
   }
   .con01 .move1 {
     top: -10px;
@@ -143,7 +142,6 @@ h2 {
   .con01 .small {
     width: 16px;
     background-color: #fff147;
-    /* animation: orbit 3s linear infinite; */
   }
   .con01 .move4 {
     transform-origin: 0% 260px;
@@ -287,8 +285,9 @@ h2 {
     justify-content: space-evenly;
   }
   section h2 {
+    width: 1200px;
+    margin: 30px auto;
     font-size: 36px;
-    margin: 30px 0px;
   }
   section h2 span {
     font-size: 24px;
@@ -318,16 +317,16 @@ h2 {
     display: block;
   }
   .con02 .bg li:nth-child(1) {
-    background: url(../img/pic1.jpg) no-repeat center / cover;
+    background: url(../img/production01.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(2) {
-    background: url(../img/pic2.jpg) no-repeat center / cover;
+    background: url(../img/production02.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(3) {
-    background: url(../img/pic3.jpg) no-repeat center / cover;
+    background: url(../img/production03.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(4) {
-    background: url(../img/pic4.jpg) no-repeat center / cover;
+    background: url(../img/production04.png) no-repeat center / cover;
   }
 
   /*.con02_title*/
@@ -389,6 +388,7 @@ h2 {
     align-content: center;
     display: flex;
   }
+
   /*.con02_이미지*/
   .con02 img {
     width: 200px;
@@ -617,7 +617,7 @@ h2 {
     /* position: relative;
     top: -30px; */
   }
-  .inquery button {
+  .inquery .send {
     display: block;
     margin-left: auto;
     background-color: #ff8f1c;
@@ -865,7 +865,7 @@ h2 {
     opacity: 1;
   }
 
-  /*.con02 */
+  /*.con02*/
   .con02 {
     height: 100vh;
     display: flex;
@@ -890,7 +890,6 @@ h2 {
 
   /*.con02_배경*/
   .con02 .bg {
-    /* width: 1100px; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -903,25 +902,24 @@ h2 {
   }
   .con02 .bg li.look {
     display: block;
-    /* opacity: 1; */
   }
   .con02 .bg li:nth-child(1) {
-    background: url(../img/pic1.jpg) no-repeat center / cover;
+    background: url(../img/production01.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(2) {
-    background: url(../img/pic2.jpg) no-repeat center / cover;
+    background: url(../img/production02.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(3) {
-    background: url(../img/pic3.jpg) no-repeat center / cover;
+    background: url(../img/production03.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(4) {
-    background: url(../img/pic4.jpg) no-repeat center / cover;
+    background: url(../img/production04.png) no-repeat center / cover;
   }
 
   /*.con02_title*/
   .con02 .title {
     width: calc(100% / 3);
-    height: 70%;
+    height: 75%;
     position: absolute;
     left: 10%;
     top: 0px;
@@ -937,11 +935,13 @@ h2 {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 0px 0px 30px 30px;
-    padding: 20px;
+    padding: 40px 20px;
     overflow: hidden;
+    box-sizing: border-box;
   }
   .con02 .title li h3 {
     font-size: clamp(23px, 3vw, 33px);
+    font-family: "NationalPension";
   }
   .con02 .title li p {
     line-height: 1.7;
@@ -951,7 +951,7 @@ h2 {
     display: flex;
   }
 
-  /* .con02_menu */
+  /*.con02_menu*/
   .con02 .menu {
     position: absolute;
     right: 20px;
@@ -962,7 +962,7 @@ h2 {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
     padding: 10px 40px;
-    font-size: 14px;
+    font-size: 15px;
   }
   .con02 .menu li {
     font-weight: bold;
@@ -972,12 +972,12 @@ h2 {
   .con02 .menu li.look {
     color: #ff8f1c;
   }
-  /* .con02_이미지 */
+
+  /*.con02_이미지*/
   .con02 img {
-    width: 20%;
-    min-width: 150px;
+    width: 150px;
     position: absolute;
-    top: -150px;
+    top: -108px;
     right: 10px;
     transform-origin: 100% 0%;
     transform: translate(0, 0);
@@ -1005,11 +1005,11 @@ h2 {
     text-align: center;
   }
   .con03 li {
-    width: 400px;
+    width: 350px;
     flex-shrink: 0;
   }
   .con03 .images {
-    height: 250px;
+    height: 200px;
     position: relative;
   }
   .con03 .images img {
@@ -1199,7 +1199,7 @@ h2 {
     /* position: relative;
     top: -30px; */
   }
-  .inquery button {
+  .inquery .send {
     display: block;
     margin-left: auto;
     background-color: #ff8f1c;
@@ -1211,7 +1211,6 @@ h2 {
   }
 }
 @media (max-width: 720px) {
-  /**/
   section h2 {
     padding: 0px 50px;
   }
@@ -1262,7 +1261,7 @@ h2 {
     z-index: 7;
   }
 
-  /*.con01_큰 궤도 움직임용*/
+  /*.con01_큰 궤도 움직임용 wrap*/
   .con01 .wrapper1 {
     width: 100%;
     height: 100%;
@@ -1302,49 +1301,18 @@ h2 {
 
   /*.con01_작은 궤도*/
   .circle-four {
-    width: 250px;
-    border: 1px solid black;
-    z-index: 8;
     display: none;
   }
   .circle-five {
-    width: 200px;
-    border: 1px solid #999;
-    z-index: 9;
     display: none;
   }
   .circle-six {
-    width: 150px;
-    border: 1px solid #ddd;
-    z-index: 10;
     display: none;
   }
 
   /*.con01_작은 궤도_원 움직임*/
   .con01 .small {
-    width: 16px;
-    background-color: #fff147;
-    animation: orbit 3s linear infinite;
     display: none;
-  }
-  .con01 .move4 {
-    transform-origin: 0% 260px;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    transform-origin: 0% 133px;
-  }
-  .con01 .move5 {
-    left: -8px;
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: 108px 0px;
-  }
-  .con01 .move6 {
-    right: -8px;
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: -67px 0px;
   }
 
   /*.con01_원 움직임_애니메이션*/
@@ -1455,7 +1423,7 @@ h2 {
     opacity: 1;
   }
 
-  /* con02 */
+  /*.con02*/
   .con02 {
     height: 100vh;
     display: flex;
@@ -1480,7 +1448,6 @@ h2 {
 
   /*.con02_배경*/
   .con02 .bg {
-    /* width: 1100px; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -1493,25 +1460,24 @@ h2 {
   }
   .con02 .bg li.look {
     display: block;
-    /* opacity: 1; */
   }
   .con02 .bg li:nth-child(1) {
-    background: url(../img/pic1.jpg) no-repeat center / cover;
+    background: url(../img/production01.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(2) {
-    background: url(../img/pic2.jpg) no-repeat center / cover;
+    background: url(../img/production02.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(3) {
-    background: url(../img/pic3.jpg) no-repeat center / cover;
+    background: url(../img/production03.jpg) no-repeat center / cover;
   }
   .con02 .bg li:nth-child(4) {
-    background: url(../img/pic4.jpg) no-repeat center / cover;
+    background: url(../img/production04.png) no-repeat center / cover;
   }
 
   /*.con02_title*/
   .con02 .title {
     width: calc(100% / 2.5);
-    height: 65%;
+    height: 70%;
     position: absolute;
     left: 10%;
     top: 0px;
@@ -1527,11 +1493,13 @@ h2 {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 0px 0px 30px 30px;
-    padding: 20px;
+    padding: 30px 20px;
     overflow: hidden;
+    box-sizing: border-box;
   }
   .con02 .title li h3 {
-    font-size: clamp(18px, 3vw, 23px);
+    font-size: clamp(19px, 3.5vw, 23px);
+    font-family: "NationalPension";
   }
   .con02 .title li p {
     height: 150px;
@@ -1547,34 +1515,39 @@ h2 {
     display: flex;
   }
 
-  /* .con02_menu */
+  /*.con02_menu*/
   .con02 .menu {
     position: absolute;
-    left: 50%;
+    /* left: 50%; */
+    right: 20px;
     bottom: 20px;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    gap: 10px;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 30px;
-    padding: 10px 40px;
-    font-size: 14px;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
   }
   .con02 .menu li {
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
+    align-content: center;
   }
   .con02 .menu li.look {
     color: #ff8f1c;
   }
-  /* .con02_이미지 */
+
+  /*.con02_이미지*/
   .con02 img {
-    width: 50%;
+    width: 120px;
     position: absolute;
-    top: -100px;
-    right: 100px;
+    top: -86px;
+    right: 15px;
   }
 
   /*.con03*/
@@ -1599,11 +1572,11 @@ h2 {
     text-align: center;
   }
   .con03 li {
-    width: 300px;
+    width: 220px;
     flex-shrink: 0;
   }
   .con03 .images {
-    height: 180px;
+    height: 150px;
     position: relative;
   }
   .con03 .images img {
@@ -1632,7 +1605,10 @@ h2 {
     margin: 15px 0px;
   }
   .con03 li p {
+    width: 150px;
+    margin: 0px auto;
     font-size: 14px;
+    /* display: none; */
   }
 
   /*.con04*/
@@ -1664,11 +1640,6 @@ h2 {
 
   /*플로팅 아이콘*/
   #floating {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    z-index: 50;
     display: none;
   }
 }
