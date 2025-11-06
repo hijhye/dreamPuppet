@@ -1,11 +1,14 @@
 /*sub_visual*/
 gsap.registerPlugin(ScrollTrigger);
+$(window).resize(function () {
+  document.location.reload();
+});
 
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#visual",
     start: "top top",
-    end: "+=3000",
+    end: "+=2000",
     scrub: 2,
     markers: false,
     pin: true,

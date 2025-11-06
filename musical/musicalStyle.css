@@ -11,814 +11,928 @@ a {
 }
 body {
   word-break: keep-all;
-  height: 312.5rem;
+  word-break: keep-all;
+  font-family: "SchoolSafeUniverse";
+  line-height: 1.5;
 }
-/*visual*/
-#visual {
-  width: 100%;
-  height: 80vh;
+h2 {
+  font-family: "NationalPension";
 }
-#visual .inner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  /* border: 1px solid red; */
-  overflow: hidden;
-  border-radius: 0 0 18.75rem 18.75rem;
+@font-face {
+  font-family: "NationalPension";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
 }
-
-#visual .keyword {
-  /* border: 1px solid red; */
-  position: absolute;
-  font-size: 11.25rem;
-}
-#visual .keyword01 {
-  left: 45%;
-  transform: translateX(-100%);
-}
-#visual .keyword02 {
-  right: 45%;
-  transform: translateX(100%);
+@font-face {
+  font-family: "SchoolSafeUniverse";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
 }
 
-#visual .circle {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: #ffc848;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-#visual h2 {
-  width: 0;
-  overflow: hidden;
-  color: #fff;
-  white-space: nowrap;
-  font-size: 5rem;
-}
-
-#visual ul {
-  display: flex;
-  width: 100%;
-  height: 18.75rem;
-  overflow: hidden;
-  /* border: 1px solid red; */
-  position: absolute;
-  z-index: 0;
-}
-#visual li {
-  background-color: #ffc848;
-  width: 15rem;
-  flex-shrink: 0;
-  height: 15rem;
-  border-radius: 0 0 50% 50%;
-  transform: translatey(-100%);
-}
-/*con01*/
-.con01 {
-  width: 100%;
-  height: 300vh;
-  /* border: 1px solid red; */
-  position: relative;
-  background: url(images/line01.png);
-  background-size: cover;
-}
-.con01 .inner {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.con01 .txtList {
-  text-align: center;
-  color: #666666;
-  font-size: 4vh;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1875rem;
-}
-.con01 .txtList li.active {
-  font-size: 1.875rem;
-  color: #000;
-  font-size: 6vh;
-  font-weight: bold;
-}
-
-/*imgList*/
-@keyframes float {
-  0% {
-    transform: translateY(0);
+@media (min-width: 1220px) {
+  #container {
+    width: 100%;
   }
-  50% {
-    transform: translateY(-0.9375rem);
-    scale: 1.1; /* 위로 15px 이동 */
+  body {
+    background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+      url(../starIMG/star18.png);
+    background-repeat: no-repeat;
+    background-size: 200px, 300px, 150px;
+    background-attachment: fixed;
+    background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
   }
-  100% {
-    transform: translateY(0);
-  }
-}
-.con01 .imgListWrap > li {
-  display: none;
-}
-.con01 .imgListWrap > li.active {
-  display: block;
-}
-.con01 .imgList li {
-  border-radius: 50%;
-  overflow: hidden;
-  /* border: 1px solid red; */
-  position: absolute;
-  animation: float 7s ease-in-out infinite alternate;
-}
-.con01 .imgList li:nth-child(1) {
-  width: 20vw;
-  height: 20vw;
-  top: 18%;
-  left: 23%;
-}
-.con01 .imgList li:nth-child(2) {
-  width: 12vw;
-  height: 12vw;
-  top: 50%;
-  left: 10%;
-  animation-delay: -3s;
-}
-.con01 .imgList li:nth-child(3) {
-  width: 14vw;
-  height: 14vw;
-  top: 65%;
-  left: 25%;
-  animation-delay: -5s;
-}
-.con01 .imgList img {
-  width: 200%;
-  object-fit: cover;
-}
-.con01 .characterWrap {
-  width: 20vw;
-  position: absolute;
-  bottom: 0;
-  right: 10vw;
-  /* border: 1px solid red; */
-}
-.con01 .characterWrap img {
-  width: 100%;
-}
-.con01 .sectionLine {
-  width: 100%;
-  height: 30px;
-  background: linear-gradient(rgb(199, 173, 118), white);
-  position: absolute;
-  bottom: 0;
-}
-
-/*con02*/
-.con02 {
-  width: 1200px;
-  height: 80vh;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  /* border: 1px solid red; */
-  overflow: hidden;
-}
-.con02 .title {
-  /* border: 1px solid red; */
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 0.625rem;
-  margin-bottom: 1.25rem;
-  box-sizing: border-box;
-}
-.con02 .title .category {
-  /* border: 1px solid red; */
-}
-.con02 .title .category li {
-  cursor: pointer;
-}
-.con02 .title .category li.active {
-  font-weight: 800;
-}
-.simply-scroll-clip {
-  width: 100vw;
-  height: 30rem;
-  overflow: hidden;
-  border-radius: 0.625rem;
-}
-
-.con02 ul {
-  display: flex;
-  gap: 0.625rem;
-}
-.con02 .listWrap {
-  display: none;
-}
-.con02 .listWrap.active {
-  display: block;
-}
-.con02 .list li {
-  /* border: 1px solid red; */
-  width: 300px;
-  height: 300px;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: 1s;
-}
-.con02 .list li.on {
-  width: 500px;
-}
-.con02 li .imgWrap {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.625rem;
-  color: #fff;
-  position: relative;
-}
-
-.con02 li .imgWrap div {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.625rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 1s;
-}
-
-.con02 li .imgWrap .subtitle {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  width: 200px;
-  opacity: 0;
-  transition: 1s;
-}
-.con02 li .imgWrap .click {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  opacity: 0;
-  transition: 1s;
-}
-
-.con02 li .imgWrap:hover div {
-  filter: brightness(0.35);
-}
-.con02 li .imgWrap:hover p {
-  opacity: 1;
-}
-/*카테고리1 사진*/
-.con02 .listWrap01 li:nth-child(1) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap01 li:nth-child(2) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap01 li:nth-child(3) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-.con02 .listWrap01 li:nth-child(4) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap01 li:nth-child(5) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap01 li:nth-child(6) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-/*카테고리2 사진*/
-.con02 .listWrap02 li:nth-child(1) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap02 li:nth-child(2) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap02 li:nth-child(3) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-.con02 .listWrap02 li:nth-child(4) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap02 li:nth-child(5) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap02 li:nth-child(6) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-/*카테고리3 사진*/
-.con02 .listWrap03 li:nth-child(1) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap03 li:nth-child(2) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap03 li:nth-child(3) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-.con02 .listWrap03 li:nth-child(4) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap03 li:nth-child(5) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap03 li:nth-child(6) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-/*카테고리4 사진*/
-.con02 .listWrap04 li:nth-child(1) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap04 li:nth-child(2) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap04 li:nth-child(3) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-.con02 .listWrap04 li:nth-child(4) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap04 li:nth-child(5) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap04 li:nth-child(6) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-/*카테고리5 사진*/
-.con02 .listWrap05 li:nth-child(1) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap05 li:nth-child(2) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap05 li:nth-child(3) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-.con02 .listWrap05 li:nth-child(4) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap05 li:nth-child(5) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap05 li:nth-child(6) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-/*카테고리6 사진*/
-.con02 .listWrap06 li:nth-child(1) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap06 li:nth-child(2) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap06 li:nth-child(3) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-.con02 .listWrap06 li:nth-child(4) .imgWrap div {
-  background: url(images/img_sample01.jpg);
-}
-.con02 .listWrap06 li:nth-child(5) .imgWrap div {
-  background: url(images/img_sample02.jpg);
-}
-.con02 .listWrap06 li:nth-child(6) .imgWrap div {
-  background: url(images/img_sample03.jpg);
-}
-
-.con02 li h3 {
-  margin: 10px 0px 0px 20px;
-}
-
-/*con03*/
-.con03 {
-  width: 90%;
-  max-width: 75rem;
-  height: 100vh;
-  margin: 0 auto;
-  transition: 1s;
-  padding-top: 5vh;
-  position: relative;
-}
-.con03 .cardListWrap {
-  display: none;
-}
-.con03 .cardListWrap.active {
-  display: block;
-}
-.con03 .cardList {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding-bottom: 50vh;
-}
-.con03 .card {
-  background-color: rgb(255, 255, 215);
-  padding: 1.875rem;
-  border-radius: 1.875rem;
-  display: flex;
-  justify-content: space-between;
-  height: 60vh;
-  transition: 1s;
-  position: sticky;
-  top: 1.875rem;
-  transition: 1s;
-  scale: 0.9;
-}
-
-.con03 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-  background-color: rgb(226, 226, 100);
-  scale: 1;
-}
-.con03 .card.on {
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-  background-color: rgb(226, 226, 100);
-  scale: 1;
-}
-.con03 .card .left,
-.con03 .card .imgWrap {
-  width: 45%;
-  /* border: 1px solid red; */
-}
-.con03 .card .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.con03 .card .left h3 {
-  font-size: 6vh;
-  margin-bottom: 1.25rem;
-}
-.card .imgWrap img {
-  width: 100%;
-  height: 100%;
-  border-radius: 1.875rem;
-  object-fit: cover;
-}
-
-/*footer*/
-footer {
-  width: 100%;
-  height: 40vh;
-  color: #fff;
-  text-align: center;
-  font-size: 0.7rem;
-  position: fixed;
-  bottom: 0;
-  overflow: hidden;
-  /* border: 1px solid green; */
-  transform: translateY(90%);
-  transition: 1s;
-}
-footer .inner {
-  background: url(images/footer_bg.png);
-  width: 100%;
-  padding: 2rem 10vw 0px 10vw;
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 3.125rem;
-  /* border: 1px solid red; */
-  position: relative;
-}
-footer .logo {
-  width: 250px;
-}
-footer .logo img {
-  width: 100%;
-}
-footer:hover {
-  transform: translateY(0%);
-}
-footer .top {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-footer .menu {
-  display: flex;
-  gap: 1.875rem;
-}
-footer .menu h4 {
-  margin-bottom: 0.625rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  display: flex;
-}
-footer .menu li:hover {
-  color: #ffb060;
-}
-footer .bottom {
-  width: 90%;
-  /* border: 1px solid red; */
-}
-footer .link {
-  display: flex;
-  gap: 0.625rem;
-  /* border: 1px solid red; */
-}
-footer .link li {
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s;
-}
-
-footer .link li:hover {
-  background-color: #000;
-  color: #fff;
-}
-footer .info {
-  font-size: 0.6rem;
-  padding: 0.625rem 0 1.25rem;
-}
-
-footer .flowerImgWrap {
-  position: absolute;
-  animation: spin 10s infinite linear;
-  scale: 0.8;
-  transition: 1s;
-}
-footer .flowerImgWrap:hover {
-  scale: 1;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  h2 {
+    font-size: 36px;
   }
 
-  100% {
-    transform: rotate(360deg);
+  /*con01*/
+  .con01 {
+    width: 100%;
+    height: 300vh;
+    /* border: 1px solid red; */
+    position: relative;
+    background: url(img/line01.png);
+    background-size: cover;
   }
-}
-footer .flowerImgWrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-footer .flower01 {
-  width: 150px;
-  left: 50px;
-  top: 50%;
-  animation-delay: -1s;
-}
-footer .flower02 {
-  width: 100px;
-  right: 10%;
-  top: 45%;
-  animation-delay: -0.8s;
-}
-footer .flower03 {
-  width: 100px;
-  right: 40%;
-  bottom: 15%;
-  animation-delay: -1.2s;
-}
-footer .flower04 {
-  width: 50px;
-  left: 30%;
-  bottom: 15%;
-  animation-delay: -0.3s;
-}
-footer .flower05 {
-  width: 70px;
-  right: 30%;
-  top: 20%;
-}
+  .con01 .inner {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .con01 .txtList {
+    text-align: center;
+    color: #666666;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .con01 .txtList li.active {
+    font-size: 1.875rem;
+    color: #000;
+    font-size: 6vh;
+    font-weight: bold;
+    font-family: "NationalPension";
+  }
 
-/* 플로팅 버튼 */
-#floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  text-align: center;
-  z-index: 50;
-}
-
-/*  */
-#floating .top {
-  padding-bottom: 15px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-#floating .topInner {
-  /* width: 80px; */
-  background-color: white;
-  display: inline-block;
-  padding: 10px;
-  text-align: center;
-  color: #ff8f1c;
-  border-radius: 5px;
-  /* display: none; */
-  /* transform: translateY(80px); */
-  cursor: pointer;
-}
-#floating .top i {
-  transition: 0.3s;
-}
-#floating .top:hover i {
-  transform: translateY(-5px);
-}
-
-/*  */
-#floating .floatFix {
-  width: 100px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background-color: aqua;
-  background: url(../assets/images/main-logo.png) center no-repeat;
-  background-size: cover; /*??*/
-  position: relative;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-}
-#floating .floatFix p {
-  font-size: 12px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-}
-
-/*  */
-#floating .inquery {
-  width: 500px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 50px;
-  border-radius: 30px;
-  box-sizing: border-box;
-  display: none;
-  position: absolute;
-  left: -400px;
-  top: 0;
-  /* left: -100%;*/
-  /* transform: translateX(-80%); */
-  text-align: left;
-  opacity: 0;
-  /* z-index: 50; */
-}
-/* .inquery.up {
-  top: -450px;
-  display: block;
-} */
-#floating .inquery i {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  font-size: 20px;
-  cursor: pointer;
-}
-#floating .inquery h4 {
-  font-size: 23px;
-}
-#floating .inquery p {
-  padding: 10px 0px;
-  border-bottom: 1px solid black;
-}
-#floating .inquery ul {
-}
-#floating .inquery li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0px;
-}
-#floating .inquery li input {
-  width: 250px;
-  height: 30px;
-  padding: 5px 20px;
-  border-radius: 15px;
-  border: 0.5px solid black;
-}
-#floating .inquery li:nth-child(3) {
-  align-items: flex-start; /*흠..*/
-}
-#floating .inquery li:nth-child(3) input {
-  height: 100px;
-  border-radius: 20px;
-}
-/* input::placeholder {
-        align-content: start;
-      } */
-#floating .inquery button {
-  display: block;
-  margin-left: auto;
-  background-color: #ff8f1c;
-  border: none;
-  padding: 10px;
-  border-radius: 10px; /*통일?*/
-  cursor: pointer;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  #visual ul li:nth-child(n + 6) {
+  /*imgList*/
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.9375rem);
+      scale: 1.1; /* 위로 15px 이동 */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .con01 .imgListWrap > li {
     display: none;
   }
-  #visual .keyword {
-    font-size: 3rem;
+  .con01 .imgListWrap > li.active {
+    display: block;
   }
-  #visual h2 {
-    font-size: 2rem;
+  .con01 .imgList li {
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    position: absolute;
+    animation: float 7s ease-in-out infinite alternate;
+    transition: 1s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+  .con01 .imgList li:nth-child(1) {
+    width: 20vw;
+    height: 20vw;
+    top: 18%;
+    left: 23%;
+  }
+  .con01 .imgList li:nth-child(2) {
+    width: 12vw;
+    height: 12vw;
+    top: 50%;
+    left: 10%;
+    animation-delay: -3s;
+  }
+  .con01 .imgList li:nth-child(3) {
+    width: 14vw;
+    height: 14vw;
+    top: 65%;
+    left: 25%;
+    animation-delay: -5s;
+  }
+  .con01 .imgList li:hover {
+    border-radius: 30%;
+    z-index: 10;
+  }
+  .con01 .imgList img {
+    width: 200%;
+    object-fit: cover;
+  }
+  .con01 .characterWrap {
+    width: 20vw;
+    position: absolute;
+    bottom: 20px;
+    right: 10vw;
+    /* border: 1px solid red; */
+  }
+  .con01 .characterWrap img {
+    width: 100%;
+  }
+  .con01 .sectionLine {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(rgb(199, 173, 118), white);
+    position: absolute;
+    bottom: 0;
+  }
+
+  /*con02*/
   .con02 {
+    width: 1200px;
+    margin: 100px auto 0px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    overflow: hidden;
+  }
+  .con02 .inner {
+    width: 1200px;
+  }
+  .con02 .title {
+    /* border: 1px solid red; */
     width: 100%;
-    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
     box-sizing: border-box;
   }
+  .con02 .title .txt {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .con02 .title .category li {
+    cursor: pointer;
+  }
+  .con02 .title .category li.active {
+    font-weight: 800;
+  }
+  .simply-scroll-clip {
+    width: 100vw;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
+  }
+
   .con02 ul {
-    flex-direction: column;
+    display: flex;
+    gap: 0.625rem;
   }
-  .con02 li {
+  .con02 .listWrap {
+    display: none;
+  }
+  .con02 .listWrap.active {
+    display: block;
+  }
+  .con02 .list li {
+    /* border: 1px solid red; */
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 1s;
+  }
+  .con02 .list li.on {
+    width: 500px;
+  }
+  .con02 li .imgWrap {
     width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    color: #fff;
+    position: relative;
   }
+
+  .con02 li .imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+  }
+
+  .con02 li .imgWrap .subtitle {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 200px;
+    opacity: 0;
+    transition: 1s;
+  }
+  .con02 li .imgWrap .click {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .con02 li .imgWrap:hover img {
+    filter: brightness(0.35);
+  }
+  .con02 li .imgWrap:hover p {
+    opacity: 1;
+  }
+
+  .con02 li h3 {
+    margin: 10px 0px 0px 10px;
+    font-size: 1.2rem;
+  }
+
+  /*con03*/
   .con03 {
-    width: 100%;
-    padding: 0 2rem;
-    box-sizing: border-box;
+    width: 1200px;
+    max-width: 75rem;
+    height: 100vh;
+    margin: 0 auto;
+    transition: 1s;
+    padding-top: 5vh;
+    position: relative;
+  }
+  .con03 .cardListWrap {
+    display: none;
+  }
+  .con03 .cardListWrap.active {
+    display: block;
+  }
+  .con03 .cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50vh;
   }
   .con03 .card {
+    background-color: rgb(255, 255, 215);
+    padding: 1.875rem;
+    border-radius: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    transition: 1s;
+    position: sticky;
+    top: 1.875rem;
+    transition: 1s;
+    scale: 1;
+    border: 1px solid #e8f3b5;
+  }
+
+  .con03 .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(226, 226, 100);
+    scale: 1.1;
+  }
+  .con03 .card.on {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(226, 226, 100);
+    scale: 1.1;
+    z-index: 5;
+  }
+  .con03 .card .left,
+  .con03 .card .imgWrap {
+    width: 45%;
+    /* border: 1px solid red; */
+  }
+  .con03 .card .left {
+    display: flex;
     flex-direction: column;
-    height: auto;
+    justify-content: space-between;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+  .con03 .card .left h3 {
+    font-size: 6vh;
+    margin-bottom: 1.25rem;
+    font-family: "NationalPension";
+  }
+  .card .imgWrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.875rem;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1220px) {
+  body {
+    background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+      url(../starIMG/star18.png);
+    background-repeat: no-repeat;
+    background-size: 150px, 250px, 100px;
+    background-attachment: fixed;
+    background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
+  }
+  /*con01*/
+  .con01 {
+    width: 100%;
+    height: 300vh;
+    /* border: 1px solid red; */
+    position: relative;
+    background: url(img/line01.png);
+    background-size: cover;
+  }
+  .con01 .inner {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .con01 .txtList {
+    text-align: center;
+    color: #666666;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .con01 .txtList li.active {
+    font-size: 1.875rem;
+    color: #000;
+    font-size: 6vh;
+    font-weight: bold;
+    font-family: "NationalPension";
+  }
+
+  /*imgList*/
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.9375rem);
+      scale: 1.1; /* 위로 15px 이동 */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .con01 .imgListWrap > li {
+    display: none;
+  }
+  .con01 .imgListWrap > li.active {
+    display: block;
+  }
+  .con01 .imgList li {
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    position: absolute;
+    animation: float 7s ease-in-out infinite alternate;
+    transition: 1s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .con01 .imgList li:nth-child(1) {
+    width: 20vw;
+    height: 20vw;
+    top: 18%;
+    left: 23%;
+  }
+  .con01 .imgList li:nth-child(2) {
+    width: 12vw;
+    height: 12vw;
+    top: 50%;
+    left: 10%;
+    animation-delay: -3s;
+  }
+  .con01 .imgList li:nth-child(3) {
+    width: 14vw;
+    height: 14vw;
+    top: 65%;
+    left: 25%;
+    animation-delay: -5s;
+  }
+  .con01 .imgList li:hover {
+    border-radius: 30%;
+    z-index: 10;
+  }
+  .con01 .imgList img {
+    width: 200%;
+    object-fit: cover;
+  }
+  .con01 .characterWrap {
+    width: 20vw;
+    position: absolute;
+    bottom: 20px;
+    right: 10vw;
+    /* border: 1px solid red; */
+  }
+  .con01 .characterWrap img {
+    width: 100%;
+  }
+  .con01 .sectionLine {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(rgb(199, 173, 118), white);
+    position: absolute;
+    bottom: 0;
+  }
+
+  /*con02*/
+  .con02 {
+    width: 90%;
+    margin: 100px auto 0px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    overflow: hidden;
+  }
+  .con02 .inner {
+    width: 100%;
+  }
+  .con02 .title {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+    box-sizing: border-box;
+  }
+  .con02 .title .txt {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .con02 .title .category li {
+    cursor: pointer;
+  }
+  .con02 .title .category li.active {
+    font-weight: 800;
+  }
+  .simply-scroll-clip {
+    width: 100vw;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
+  }
+
+  .con02 ul {
+    display: flex;
+    gap: 0.625rem;
+  }
+  .con02 .listWrap {
+    display: none;
+  }
+  .con02 .listWrap.active {
+    display: block;
+  }
+  .con02 .list li {
+    /* border: 1px solid red; */
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 1s;
+  }
+  .con02 .list li.on {
+    width: 500px;
+  }
+  .con02 li .imgWrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    color: #fff;
+    position: relative;
+  }
+
+  .con02 li .imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+  }
+
+  .con02 li .imgWrap .subtitle {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 200px;
+    opacity: 0;
+    transition: 1s;
+  }
+  .con02 li .imgWrap .click {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .con02 li .imgWrap:hover img {
+    filter: brightness(0.35);
+  }
+  .con02 li .imgWrap:hover p {
+    opacity: 1;
+  }
+
+  .con02 li h3 {
+    margin: 10px 0px 0px 10px;
+  }
+
+  /*con03*/
+  .con03 {
+    width: 90%;
+    max-width: 75rem;
+    height: 100vh;
+    margin: 0 auto;
+    transition: 1s;
+    padding-top: 5vh;
+    position: relative;
+  }
+  .con03 .cardListWrap {
+    display: none;
+  }
+  .con03 .cardListWrap.active {
+    display: block;
+  }
+  .con03 .cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50vh;
+  }
+  .con03 .card {
+    background-color: rgb(255, 255, 215);
+    padding: 1.875rem;
+    border-radius: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    transition: 1s;
+    position: sticky;
+    top: 1.875rem;
+    transition: 1s;
+    scale: 1;
+    border: 1px solid #e8f3b5;
+  }
+
+  .con03 .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(226, 226, 100);
+    scale: 1.1;
+  }
+  .con03 .card.on {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(226, 226, 100);
+    scale: 1.1;
+    z-index: 5;
+  }
+  .con03 .card .left,
+  .con03 .card .imgWrap {
+    width: 45%;
+    /* border: 1px solid red; */
+  }
+  .con03 .card .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+  .con03 .card .left h3 {
+    font-size: 6vh;
+    margin-bottom: 1.25rem;
+    font-family: "NationalPension";
+  }
+  .card .imgWrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.875rem;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    background: url(../starIMG/star19.png), url(../starIMG/star16.png),
+      url(../starIMG/star18.png);
+    background-repeat: no-repeat;
+    background-size: 150px, 100px, 100px;
+    background-attachment: fixed;
+    background-position: left 3% bottom 10%, right 5% top 40%, left 15% top 10%;
+  }
+  /*con01*/
+  .con01 {
+    width: 100%;
+    height: 300vh;
+    /* border: 1px solid red; */
+    position: relative;
+    background: url(img/line01.png);
+    background-size: cover;
+  }
+  .con01 .inner {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .con01 .txtList {
+    text-align: center;
+    color: #666666;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .con01 .txtList li.active {
+    font-size: 1.875rem;
+    color: #000;
+    font-size: 6vh;
+    font-weight: bold;
+    font-family: "NationalPension";
+  }
+
+  /*imgList*/
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.9375rem);
+      scale: 1.1; /* 위로 15px 이동 */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .con01 .imgListWrap > li {
+    display: none;
+  }
+  .con01 .imgListWrap > li.active {
+    display: block;
+  }
+  .con01 .imgList li {
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    position: absolute;
+    animation: float 7s ease-in-out infinite alternate;
+    transition: 1s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .con01 .imgList li:nth-child(1) {
+    width: 20vh;
+    height: 20vh;
+    top: 3%;
+    left: 10%;
+  }
+  .con01 .imgList li:nth-child(2) {
+    width: 14vh;
+    height: 14vh;
+    bottom: 18%;
+    left: 10%;
+    animation-delay: -3s;
+  }
+  .con01 .imgList li:nth-child(3) {
+    width: 12vh;
+    height: 12vh;
+    top: 20%;
+    right: 5%;
+    animation-delay: -5s;
+  }
+  .con01 .imgList li:hover {
+    border-radius: 30%;
+    z-index: 10;
+  }
+  .con01 .imgList img {
+    width: 200%;
+    object-fit: cover;
+  }
+  .con01 .characterWrap {
+    width: 15vh;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    /* border: 1px solid red; */
+  }
+  .con01 .characterWrap img {
+    width: 100%;
+  }
+  .con01 .sectionLine {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(rgb(199, 173, 118), white);
+    position: absolute;
+    bottom: 0;
+  }
+
+  /*con02*/
+  .con02 {
+    width: 90%;
+    margin: 100px auto 0px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    overflow: hidden;
+  }
+  .con02 .inner {
+    width: 100%;
+  }
+  .con02 .title {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+    box-sizing: border-box;
+  }
+  .con02 .title .txt {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .con02 .title .txt p {
+    display: none;
+  }
+  .con02 .title .category li {
+    cursor: pointer;
+  }
+  .con02 .title .category li.active {
+    font-weight: 800;
+  }
+  .simply-scroll-clip {
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 0.625rem;
+  }
+
+  .con02 ul {
+    display: flex;
+    gap: 0.625rem;
+  }
+  .con02 .listWrap {
+    display: none;
+  }
+  .con02 .listWrap.active {
+    display: block;
+  }
+  .con02 .list li {
+    /* border: 1px solid red; */
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 1s;
+  }
+  /* .con02 .list li.on {
+    height: 400px;
+  } */
+  .con02 li .imgWrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    color: #fff;
+    position: relative;
+  }
+
+  .con02 li .imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+  }
+
+  .con02 li .imgWrap .subtitle {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 200px;
+    opacity: 0;
+    transition: 1s;
+  }
+  .con02 li .imgWrap .click {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    transition: 1s;
+  }
+
+  /* .con02 li .imgWrap:hover img {
+    filter: brightness(0.35);
+  }
+  .con02 li .imgWrap:hover p {
+    opacity: 1;
+  } */
+
+  .con02 li h3 {
+    margin: 10px 0px 0px 10px;
+  }
+
+  /*con03*/
+  .con03 {
+    width: 90%;
+    max-width: 75rem;
+    height: 100vh;
+    margin: 0 auto;
+    transition: 1s;
+    padding-top: 5vh;
+    position: relative;
+  }
+  .con03 .cardListWrap {
+    display: none;
+  }
+  .con03 .cardListWrap.active {
+    display: block;
+  }
+  .con03 .cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50vh;
+  }
+  .con03 .card {
+    background-color: rgb(255, 255, 215);
+    padding: 1.875rem;
+    border-radius: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 1s;
+    position: sticky;
+    top: 1.875rem;
+    transition: 1s;
+    scale: 1;
+    border: 1px solid #e8f3b5;
+  }
+
+  .con03 .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(226, 226, 100);
+    scale: 1.1;
+  }
+  .con03 .card.on {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(226, 226, 100);
+    scale: 1.1;
+    z-index: 5;
   }
   .con03 .card .left,
   .con03 .card .imgWrap {
     width: 100%;
+    /* border: 1px solid red; */
   }
   .con03 .card .left {
-    margin-bottom: 2rem;
-  }
-
-  /*footer*/
-  footer .top {
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-  }
-  footer .top > a {
-    width: 50%;
-  }
-  footer .top img {
-    width: 100%;
-  }
-  footer .menu {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 50%;
-  }
-  footer .snsIcon {
-    width: 5%;
-    padding: 0;
-    margin: 0;
-  }
-  footer .bottom {
-    position: relative;
-  }
-  footer .link {
-    position: absolute;
-    top: -80px;
-    left: 5%;
-  }
-}
-
-@media (min-width: 769px) {
-  footer .menu > li {
-    position: relative;
-  }
-  footer .menu ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #2cb254;
-    padding: 1rem;
+    justify-content: space-between;
+    padding: 5%;
     box-sizing: border-box;
-    display: none;
+  }
+  .con03 .card .left h3 {
+    font-size: 6vw;
+    margin-bottom: 1.25rem;
+    font-family: "NationalPension";
+  }
+  .con03 .card .left p {
+    font-size: 1rem;
+  }
+  .card .imgWrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.875rem;
+    object-fit: cover;
   }
 }
