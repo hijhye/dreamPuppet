@@ -181,7 +181,7 @@ h2 {
   #visual .keyword {
     /* border: 1px solid red; */
     position: absolute;
-    font-size: 5rem;
+    font-size: 10vw;
   }
   #visual .keyword01 {
     left: 45%;
@@ -206,8 +206,7 @@ h2 {
     width: 0;
     overflow: hidden;
     color: #fff;
-    white-space: nowrap;
-    font-size: 5rem;
+    font-size: 15vw;
   }
 
   #visual ul {
