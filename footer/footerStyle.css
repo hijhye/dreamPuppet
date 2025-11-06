@@ -397,7 +397,7 @@ footer {
     /* border: 1px solid red; */
   }
   footer .link {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 0.625rem;
     /* border: 1px solid red; */

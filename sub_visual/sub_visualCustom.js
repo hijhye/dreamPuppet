@@ -1,7 +1,7 @@
 /*sub_visual*/
 gsap.registerPlugin(ScrollTrigger);
 $(window).resize(function () {
-  if ($(window).width() > 1220) {
+  if ($(window).width() > 720) {
     document.location.reload();
   }
 });
