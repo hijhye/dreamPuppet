@@ -19,7 +19,28 @@ body {
   color: #333;
   background-color: #fff;
 }
-
+body {
+  word-break: keep-all;
+  font-family: "SchoolSafeUniverse";
+  line-height: 1.5;
+}
+.section-title {
+  font-family: "NationalPension"; /*강조*/
+}
+@font-face {
+  font-family: "NationalPension";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SchoolSafeUniverse";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -1055,7 +1076,10 @@ body.nav-open #main-header {
   transform: scale(1.05);
   outline: 2px solid #333;
 }
-
+.service-wrap {
+  width: 30%;
+  padding: 2%;
+}
 .service-content {
   padding: 5% 10%;
 
@@ -1684,6 +1708,56 @@ body.nav-open #main-header {
     font-size: 18px;
   }
 
+  .service-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .service-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    flex: 1 1 auto;
+    padding: 5px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .service-tab-item {
+    flex-shrink: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+  .creative-service-section {
+    width: 100%;
+    height: 120vh;
+  }
+
+  .service-tab-item {
+    width: 30%;
+    padding: 2%;
+  }
+
+  .online-theater-section {
+    height: 100vh;
+    margin: 0px auto;
+  }
+
+  .carousel-item {
+    width: 100%;
+  }
+  .item-content {
+    width: 100%;
+  }
+
+  .item-title {
+    font-size: 1.5rem;
+  }
+  .item-description {
+    font-size: 0.8rem;
+  }
   .service-header {
     flex-direction: column;
     align-items: flex-start;
