@@ -407,6 +407,7 @@ function createDiv(height, width) {
 
 function newColour() {
   var c = new Array();
+  visual;
   c[0] = 255;
   c[1] = Math.floor(Math.random() * 256);
   c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
